@@ -1,0 +1,9 @@
+//fichier de points
+POINTS/Y_strauss_cftp_A1.txt
+//POINTS/stat_strauss_cftp_A.txt
+
+// n : nombre de points de l'axe de r
+20
+
+//"taux"% du plus petit coté
+0.2
