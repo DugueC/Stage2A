@@ -3,27 +3,21 @@
 
 #include <vector>
 
-class Point{
+#include "position.h"
+
+class Point : public Position{
 
    public:
 	Point(){};
-    	Point(double x, double y);
-	void setDistBord(double bord);
-	double getDistBord() const;
-	double getX() const;
-	double getY() const;
-	void ajouterDistance(double d);
+	~Point(){};
+    	Point(double x, double y, double dist);
+	void getListeDistance(std::vector<Point> &listePoints, int i, double rMax);
 	double getDistanceDuPoint(int i);
 	void trierListe();
 	void printListe();
 	int getSizeListe() const;
-	~Point();
-	bool operator > (const Point& p) const;
 
     private:
-	double x;
-	double y;
-	double distanceBord;
 	std::vector<double> listeDistancePoints;
 };
 

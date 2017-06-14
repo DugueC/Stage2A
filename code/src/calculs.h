@@ -3,8 +3,10 @@
 
 #include "rectangle.h"
 #include "points.h"
+#include "quadrillage.h"
 
-void calculDistances(std::vector<Point> &listePoints, Rectangle &surface, double rMax);
-void calcul(std::vector<double> &R, std::vector<Point> &point, double aire);
+void calculKG(std::vector<double> &R, std::vector<Point> &point, double aire);
+void calculF(std::vector<double> &R, std::vector<Quadrillage> &quadri);
+void calculJ();
 
 #endif

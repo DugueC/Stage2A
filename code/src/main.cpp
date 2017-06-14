@@ -15,41 +15,82 @@ int main(){
 	clock_t t1 = clock();
 
 
-
 	// variables
 	vector<Point> listePoints;
+	vector<Quadrillage> listeQuadrillage;
 	Rectangle surface;
 	vector<double> r;
 
+	string fichierParam;
+	int tailleR=0;
+	double tauxR=0;
+	int tailleQuadri=0;
+	int i=0;
+	int n = 0;
 
-	// on initialise les variables en fonction des paramètres
-	initialisation(listePoints,surface,r);
+
+	////// initialisation ///////
+
+	// lecture des paramètres
+	lectureParams(fichierParam, tailleR, tauxR, tailleQuadri);
+
+	// création de la surface
+	surface = creationSurface(fichierParam);
+
+	// création de la liste de points
+	listePoints = creationListePoints(fichierParam, surface);
+	n = (int)(listePoints.size());
+
+	// création de la liste des rayons
+	r = creationR(surface,tailleR,tauxR);
+
+	// création du quadrillage pour F
+	listeQuadrillage = creationQuadrillage(surface,tailleQuadri, listePoints);
+
+	// Calculs distances entre chaque points
+	for(i=0;i<n;i++){
+		listePoints[i].getListeDistance(listePoints, i, r.back());
+	}
+	
 
 
-	// on calcul les distance des points entre eux et aux bords
-	calculDistances(listePoints, surface, r.back());
+	////// Tris //////
 
-
-	// on trie les points en fonction de leur distance au bord
+	// on trie les points dans l'ordre décroissant de leur distance au bord
 	sort(listePoints.begin(), listePoints.end(), greater<Point>());
 
-
-	// on trie chaque liste de distance de point
-	int i;
-	for(i=0;i<(int)(listePoints.size());i++){
+	// on trie chaque liste de distance de point dans l'odre croissant
+	for(i=0;i<n;i++){
 		listePoints[i].trierListe();
 	}
 
+	// on trie les quadrillages dans l'ordre décroissant de leur distance au bord
+	sort(listeQuadrillage.begin(),listeQuadrillage.end(), greater<Quadrillage>());
+	
+
+
+
+	////// Calculs des fonctions
 
 	//calcul de K et G
-	calcul(r, listePoints, surface.getAire());
+	calculKG(r, listePoints, surface.getAire());
+	cout << "K calculé" << endl;
+	cout << "G calculé" << endl;
+
+	// calcul de F
+	calculF(r, listeQuadrillage);
+	cout << "F calculé" << endl;
+
+	// calcul de J
+	calculJ();
+	cout << "J calculé" << endl;
 
 
 
 	// temps
     	clock_t t2 = clock();
 	float temps = (float)(t2-t1)/CLOCKS_PER_SEC;
-	cout << endl << "temps: " << temps << "sec" << endl << endl;
+	cout << endl << "temps total: " << temps << " sec" << endl << endl;
 
 	return 0;
 }

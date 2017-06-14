@@ -7,3 +7,6 @@ POINTS/Y_strauss_cftp_A1.txt
 
 //"taux"% du plus petit coté
 0.2
+
+// matrice de cadrillage M x M
+100

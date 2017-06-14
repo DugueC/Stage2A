@@ -7,29 +7,39 @@ using namespace std;
 
 
 // constructeur
-Point::Point(double x0, double y0) : x(x0), y(y0) {}
+Point::Point(double x0, double y0, double dist) : Position(x0,y0,dist) {}
 
-// bord
-void Point::setDistBord(double d){
-	distanceBord = d;
-}
-double Point::getDistBord() const {
-	return distanceBord;
-}
-
-// X
-double Point::getX() const {
-	return x;
-}
-// Y
-double Point::getY() const {
-	return y;
-}
 
 // liste distances
-void Point::ajouterDistance(double dist){
-	listeDistancePoints.push_back(dist);
+void Point::getListeDistance(vector<Point> &listePoints, int i, double rMax){
+
+	int j = 0;
+	double dX = 0;
+	double dY = 0;
+	double distance = 0;
+
+	int n = (int)(listePoints.size());
+	double rMax2 = rMax*rMax;
+
+	for(j=0;j<n;j++){
+		if(j!=i){
+			// calcul distances
+			dX = listePoints[j].getX() - x;
+			dY = listePoints[j].getY() - y;
+
+ 			distance  = dX*dX + dY*dY ;
+
+			// si la distance est plus petite que rMax
+			if( distance <= rMax2 ){
+
+				// ajout dans la liste du point d'indice i
+				listeDistancePoints.push_back( distance );
+			}
+
+		}	
+	}
 }
+
 double Point::getDistanceDuPoint(int i){
 	return listeDistancePoints[i];
 }
@@ -48,11 +58,3 @@ void Point::printListe(){
 int Point::getSizeListe() const {
 	return listeDistancePoints.size();
 }
-
-bool Point::operator > (const Point& p) const{
-	return (distanceBord > p.distanceBord);
-}
-
-//destructeur
-Point::~Point(){}
-

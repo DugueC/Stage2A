@@ -44,72 +44,75 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Les Points}
 %\indent
-Une représentation spatiale de point est un ensemble de données fournissant une vue de la localisaton d'évènements ou de chose dans l'espace, son analyse statistique est utile pour de nombreux domaines. Il est important de pouvoir identifier des tendances dans la densité des points afin de pouvoir interpréter les représentations spatiales.\\
+Lorsqu'on rassemble des données pour une étude (localisation d'évènements, d'objets, de populations...), il peut être utile de représenter ces données sous forme de points. On obtient alors une répartition ponctuelle des données pouvant alors être analysée. On peut ainsi identifier des tendances selon la densité des points (si les points sont rapprochés ou non), c'est l'analyse statistique. Enfin les résultats de l'analyse peuvent être interprétés pour en tirer des conclusions.\\
 
-L'analyse statistique de la répartition de points permet de repérer objectivement des informations graphique que l'on n'aurait pas pu distiguer à l'oeil nu. De plus une répartition spatial de point est souvent un substitut à des variables innobservables physiquement (exposition à la pollution, événements historiques).\\
+L'analyse statistique d'une répartition de points est utile pour de nombreux domaines. En effet, elle permet de repérer objectivement des informations graphiques que l'on n'aurait pas pu distinguer à l'oeil nu. De plus une répartition spatial de point est souvent un substitut à des variables innobservables physiquement (exposition à la pollution, événements historiques).\\
 
-Il n'y a pas de solution toute faite pour l'analyse statistique des représentations spatiale de point. En effet chaque cas doit être analysé en fonction de son contexte (obtention des données, objectif de l'analyse).\\
+Cependant, il n'y a pas de solution toute faite pour l'analyse statistique de répartition de points. En effet chaque cas doit être analysé en fonction de son contexte (obtention des données, objectif de l'analyse).\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Les points de differents types}
 
-\begin{minipage}{0.5\linewidth}
-\indent
-Les points d'une représentation peuvent être classés en différents types. L'analyse de la distribution portera alors sur une comparaison des positions et densités des points de chaque type.\\
-
-La figure suivante montre par exemple la répartition de bouleaux et de chênes dans une foret. Une analyse pertinante serait de regarder si les 2 arbres ont la même distribution spatiale ou si la proportion relative des 2 espèces varie sur le domaine. 
-\end{minipage}\hfill
-\begin{minipage}{0.5\linewidth}
-\includegraphics[scale=0.75]{images/diffPoints.png}
+\begin{minipage}[c]{0.45\linewidth}
+ Les points d'une représentation peuvent être classés en différents types. L'analyse de la distribution portera alors sur une comparaison des positions et densités des points de chaque type.\\
+ 
+La figure 1.1.2 montre par exemple la répartition de bouleaux et de chênes dans une foret. Une analyse pertinente serait de regarder si les 2 types d'arbres ont la même distribution spatiale ou si la proportion relative des 2 espèces varie sur le domaine.
 \end{minipage}
-
+\hfill
+\begin{minipage}[c]{0.45\linewidth}
+\includegraphics[scale=0.6]{images/diffPoints.png}\\
+\small{FIGURE 1.1.2 - Exemple de répartition ponctuelle de 2 types d'arbres dans un forêt}
+\end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Répartition de point marqués}
-\begin{minipage}{0.5\linewidth}
-\indent
-Marquer un point permet d'ajouter une information auxiliaire sur ce point (taille d'un arbre, masse d'une étoile)\\
+\begin{minipage}{0.45\linewidth}
+Marquer un point permet d'ajouter une information auxiliaire sur ce point (taille d'un arbre, masse d'une étoile).\\
 
-La figure suivante montre par exemple la répartition d'arbre d'une forêt, et chaque arbre est représenté par un cercle plus ou moins gros en fonction de son diamètre en cm.
+La figure 1.1.3 montre par exemple la répartition d'arbre d'une forêt, et chaque arbre est représenté par un cercle plus ou moins gros en fonction de son diamètre en cm. On peut alors analyser la répartition des arbres en fonction de leur diamètre.
 \end{minipage}\hfill
-\begin{minipage}{0.5\linewidth}
-\includegraphics[scale=0.6]{images/pointsMarques.png}
+\begin{minipage}{0.45\linewidth}
+\includegraphics[scale=0.5]{images/pointsMarques.png}\\
+\small{FIGURE 1.1.3 - Exemple de répartition ponctuelle des diamètres des arbres d'une forêt}
 \end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Covariables}
-\begin{minipage}{0.5\linewidth}
-\indent
-Les bases de données peuvent aussi inclure des covariables, c'est à dire des données utilisées pour expliquer un phénomène, plutôt que de répondre à une question.\\
-La figure suivante montre par exemple la répartition d'arbre d'une forêt, avec une information d'altitude donnée en fond. Cette information n'est pas le but de l'étude, mais ajoute une explication possible.
+Les bases de données peuvent aussi inclure des covariables: des variables pouvant donner une explication sur le résultat de l'étude. Ces données ne répondent pas à une question statistiques, elles sont utilisées pour expliquer le phénomène mis en évidence par l'étude.\\
+
+\begin{minipage}{0.45\linewidth}
+La figure 1.1.4 montre par exemple la répartition des arbres d'une forêt, avec une information d'altitude donnée en fond. Le but de l'étude est de connaitre la répartition de densité des arbres de la forêt. Ici l'information sur l'altitude est une covariable car elle propose une explication possible du résultat de l'analyse de densité: les arbres poussent mieux à une altitude modérée.
 \end{minipage}\hfill
-\begin{minipage}{0.5\linewidth}
-\includegraphics[scale=0.5]{images/covariables.png}
+\begin{minipage}{0.45\linewidth}
+\includegraphics[scale=0.5]{images/covariables.png}\\
+\small{FIGURE 1.1.4 - Exemple de répartition ponctuelle d'abre d'une forêt avec information sur l'altitude}
 \end{minipage}
 \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Differentes dimensions spatiales}
-Les localisations des points son généralement en 2 dimensions, mais on peut tout autant avoir une représentation spatiale en 1 dimension (accidents sur un réseau routier), en 3 dimensions (observation de cellules par un microscope 3D), ou même en espace-temps (localisation spatiale et temporel des épicentres de tremblement de terre).\\
+Les localisations des points son généralement en 2 dimensions, mais on peut tout autant avoir une représentation spatiale en 1 dimension (accidents sur un réseau routier), en 3 dimensions (observation de cellules par un microscope 3D), ou même en espace-temps (localisation spatiale et temporel des épicentres de tremblement de terre). Ainsi l'analyse de répartition spatiale de points n'est pas réservée à un nombre de dimension particulier, on pourrait imaginer le faire pour n-dimensions.\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Reproduction de répartitions}
-On peut comparer des données prises à des données récoltés à des moment et endroits different pour en faire une analyse. Une reproduction d'expérience peut être traitée indépendemment ou bien apporter des informations suplémentaires à l'analyse d'une répétition d'exérience. Cela permet de séparer differentes sources de variables dans les expériences.\\
+On peut comparer des données prises à des données récoltés à des moment et endroits different pour en faire une analyse, c'est la reproduction d'expérience.\\
+Cette reproduction fournit des données pouvant être analysées indépendemment. Mais on peut aussi croiser ces nouvelles informations avec les données précédemment analysées pour minimiser des facteurs extérieurs.\\
+Par exemple, une répartition de population dans une ville peut être très dense autour d'un stade s'il y a un événement sportif dans la ville. Ainsi la répétition de l'expérience sur plusieurs semaines permettra, en prenant la moyenne des résultats, d'avoir une analyse non biaisée par l'événement.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Méthodes statistiques pour la répartition de point}
+\section{Méthodes statistiques pour l'analyse de répartition de point}
 
 \subsection{Statistiques sommaires}
-aaa\\
+L'approche traditionnelle pour analyser une répartition de point est de calculer une statistique sommaire qui est censée capturer une caractéristique importante de la répartition ponctuelle.\\
 
 \subsection{Modèle statistique et inférence}
-bbb\\
+"à faire"\\
 
 \subsection{Validation}
-cc\\
+"à faire"\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -118,44 +121,45 @@ cc\\
 
 \section{Introduction}
 
-Le but de l'analyse d'une répartition de données ponctuelles est en général de déterminer si la position d'un points est indépendante ou non de celle d'un autre. Il y a alors 3 formes typiques de représentation:
+Le but de l'analyse d'une répartition de données ponctuelles est en général de déterminer si la position d'un point est indépendante ou non de celle d'un autre. Il y a alors 3 formes typiques de représentations:
 \begin{itemize}
-\item répulsif (points ont tous une certaine distance les uns des autres);
-\item aléatoire (points n'ont pas de dépendance);
-\item agrégée (points formes des groupes de points).\\
+\item répulsif (les points ont tous une certaine distance les uns des autres);
+\item aléatoire (les points n'ont pas de dépendance);
+\item agrégée (les points forment des groupes de points).\\
 \end{itemize}
 
 \begin{center} \includegraphics[scale=0.8]{images/repartition.png} \end{center}
 
-Un outil standard pour mesurer cette dépendance est la covariance (2nd moment), c'est facile à calculer et à manipuler, mais cela requière une bonne estimation de la moyenne (1er moment) et cela ne permet pas de determiner le cause des regroupement de point (car c'est une statistique sommaire).
+Un outil standard pour mesurer cette dépendance est la covariance (moment d'ordre 2). La variance d'une variable aléatoire permet de quantifier les variations d’une variable par rapport à sa moyenne (moment d'ordre 1). La covariance va alors permettre de quantifier les variations simultanées de deux variables aléatoires par rapport à leur moyenne respective.
+Les avantages de la covariance sont qu'elle est facile à calculer et à manipuler. Ses inconvénients sont qu'elle requière une bonne estimation de la moyenne  et ne permet pas de determiner la cause des regroupements de point (car c'est une statistique sommaire).
+Il faut alors trouver d'autre fonctions pour analyser les dépendances de position des points.\\
+%%%%%%%%%%%%
+
+\section{La fonction K}
+
+\subsection{Définition}
+La fonction \begin{math}\hat{K}(r) \end{math} empirique est la moyenne cumulée des points se trouvant à une distance r de chaque point, corrigé pour les effets de bord et standardisé:
+\begin{center}\begin{math} \hat{K}(r) = \mathbb{P}\{ d(u,X) \leq r \} \end{math}\end{center}
 
 %%%%%%%%%%%%
 
-\section{La fonction k}
-\subsection{La fonction K empirique}
-La fonction \begin{math}\hat{K}(r) \end{math} empirique est la moyenne cumulée des points se trouvant à une distance r de chaque point, corrigé pour les effets de bord et standardisé:
-\begin{center}\begin{math} \hat{K}(r) = \mathbb{P}\{ d(u,X) \leq r \} \end{math}\end{center}
-\subsection{La vraie fonction K d'un processus de point}
-\subsection{Utilisation de la fonction K empirique}
+\subsection{Valeurs pour un aléatoire complet}
+"à faire"
 
+%%%%%%%%%%%%
 
-\section{Correction des bords pour la fonction K}
-\subsection{Estimation sans les effets de bords}
-\subsection{Effets de bords}
-\subsection{Correction des bords}
-\subsection{Correction isotrope}
-\subsection{Correction par translation}
-\subsection{Discussion}
+\subsection{Estimation discrète de K}
+"à faire"
 
-\section{Erreurs standard et interval de confiance}
-\subsection{Variance sous CSR}
-\subsection{Démarrage du system bloqué}
-\subsection{Interval de confiance du syteme de démarrage de Loh}
+%%%%%%%%%%%%
 
-\section{Tester si une répartition est complètement aléatoire}
-\subsection{Enveloppes de point}
-\subsection{Enveloppes globale}
-\subsection{Tests non-graphiques}
+\subsection{Inteprétation de K}
+"à faire"
+
+%%%%%%%%%%%%
+
+\section{Correction des bords}
+"à faire"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -163,7 +167,7 @@ La fonction \begin{math}\hat{K}(r) \end{math} empirique est la moyenne cumulée 
 \chapter{Espacement (chap. 8)}
 
 \section{Introduction}
-Les fonction statistique, telle que la fonction K, mesurant la correlation spatiale dans un processus de point sont des outils très populaire pour évaluer la dépendence. Cependant avec cette méthode, certain aspect de la dépendence ne peuvent être observés. Il faut alors utiliser les mesures sur les espaces ou les plus petites distances entre les points.
+Les fonctions statistiques, telle que la fonction K, mesurant la corrélation spatiale dans un processus de point sont des outils très populaire pour évaluer la dépendance. Cependant avec cette méthode, certains aspects de la dépendance ne peuvent être observés. Il faut alors utiliser des mesures sur les espaces vides ou bien sur les plus petites distances entre les points.
 
 %%%%%%%%%%%%%%%%
 
@@ -183,17 +187,22 @@ Les valeurs de F(r) sont les probabilités (entre 0 et 1) pour n'importe quel po
 
 \subsection{Valeurs pour un aléatoire complet}
 
-\begin{minipage}{0.5\linewidth}
-\indent
-Pour un aléatoire complet, la fonction F suit une fonction de répatition de Poisson uniforme sur la surface d'un cercle (\begin{math} \pi r^2 \end{math}) soit pour une intensité \begin{math} \lambda \end{math} : 
+\begin{minipage}{0.45\linewidth}
+Pour un aléatoire complet, la fonction F suit une fonction de répartition de Poisson uniforme sur la surface d'un cercle (\begin{math} \pi r^2 \end{math}) soit pour une intensité \begin{math} \lambda \end{math} : 
 \begin{center}\begin{math} F_{pois}(r) = 1 - exp(-\lambda \pi r^2) \end{math}\end{center}
 C'est la fonction d'espace vide F théorique pour un aléatoire total.\\
-\indent
-La figure suivante montre la représentation en fonction de r de cette fonction théorique.
+La figure 3.2.2 montre la représentation en fonction de r de cette fonction théorique.
 \end{minipage}\hfill
-\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
 \includegraphics[scale=0.7]{images/poisson.png}
+\small{FIGURE 3.2.2 - Représentation de la fonction de répartition de Poisson}
 \end{minipage}
+
+%%%%%%%%%%%%%%%%
+
+\subsection{Estimation discrète de F}
+"à faire"
+Montrer la somme avec explication et la correction d'effets de bords
 
 %%%%%%%%%%%%%%%%
 
@@ -206,6 +215,8 @@ Sur la gauche, la courbe de la fonction calculée est au dessus de celle pour un
 \indent
 Sur la droite, la courbe de la fonction calculée est en dessous de celle pour une répartition totalement aléatoire (\begin{math}\hat{F}(r) < F_p{pois}(r) \end{math}). Ainsi, pour une distance r, la probabilité que \begin{math} d(u,X) \leq r \end{math} est plus petite quelle ne l'est pour une répartition aléatoire, les espaces vides sont donc plus grands que prévu. Donc la répartition est agrégée.
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Fonction de plus proche voisins G}
@@ -214,7 +225,7 @@ Sur la droite, la courbe de la fonction calculée est en dessous de celle pour u
 Si \begin{math}x_i\end{math} est un des points d'une représentation de points \textbf{x}, la distance du plus proche voisin de  \begin{math}x_i\end{math} est écrite telle que:
 \begin{center}\begin{math} d_i = d(x_i,\textbf{x}\backslash x_i ) \end{math}\end{center}
 la plus courte distance de \begin{math} x_i \end{math} à un autre point de \textbf{x} excepté \begin{math} x_i \end{math}.
-Pour un processus de point stationnaire X, la fonction de distance du plus proch voisin est:
+Pour un processus de point stationnaire X, la fonction de distance du plus proche voisin est:
 \begin{center}\begin{math} G(r) = \mathbb{P}\{ d(u,X\backslash u) \leq r | u \in X\} \end{math}\end{center}
 définie pour toute distance \begin{math} r \geq 0 \end{math}, où u est une position quelconque.\\
 
@@ -224,12 +235,18 @@ définie pour toute distance \begin{math} r \geq 0 \end{math}, où u est une pos
 
 Pour un aléatoire complet, la fonction G est égale à la fonction d'espace vide F. Soit pour un un processus homogène de Poisson: 
 \begin{center}\begin{math} G_{pois}(r) = 1 - exp(-\lambda \pi r^2) \end{math}\end{center}
-Cela n'est vrai que pour une répartition totalement aléatoire, en général F et G seront des fonctions différentes.\\
+Celà n'est vrai que pour une répartition totalement aléatoire, en général F et G seront des fonctions différentes.\\
+
+%%%%%%%%%%%%%%%%
+
+\subsection{Estimation discrète de G}
+"à faire"
+Montrer la somme avec explication et la correction d'effets de bords
 
 %%%%%%%%%%%%%%%%
 
 \subsection{Interprétation de G }
-La figure ci dessous montre la fonction estimé de G selon si la répartition est agrégée aléatoire ou bien répulsif. Les traits discontinues sont les représentation graphique de la fonction F théorique pour un aléatoire total.\\
+La figure ci-dessous montre la fonction estimée de G selon si la répartition est agrégée aléatoire ou bien répulsif. Les traits discontinus sont les représentation graphique de la fonction G théorique pour un aléatoire total.\\
 
 \includegraphics[scale=0.7]{images/interpret2.png}
 
@@ -238,31 +255,17 @@ Sur la gauche, la courbe de la fonction calculée est en dessous de celle pour u
 Sur la droite, la courbe de la fonction calculée est au dessus de celle pour une répartition totalement aléatoire (\begin{math}\hat{G}(r) > G_p{pois}(r) \end{math}). Ainsi, les distances des plus proches voisins sont plus petites que celles prévues pour une répartiton aléatoire. Donc la répartion est agrégée.\\
 
 
-\section{Intervals de confiance et enveloppes de simulation}
-
-\section{Hasard de l'espace vide (désavantages)}
-
 %%%%%%%%%%%%%%%%
 \section{Fonction J}
 
-Les distances du plus proche voisin et les distances d'espace-vide ont la même distribution de probabilité si la répartition des point est totalement aléatoire. Pour les départs des expériences avec une répartission aléatoire complète, ces distances ont tendance à répondre dans des directions opposées: l'un devient plus grand et l'autre plus petit. Cela suggère qu'une comparaison de ces 2 types de distance pourrait s'avérer utile pour évaluer les départ d'une répartion aléatoire.\\
+Les distances du plus proche voisin et les distances d'espace-vide ont la même distribution de probabilité si la répartition des point est totalement aléatoire. Pour les départs des expériences avec une répartission aléatoire complète, ces distances ont tendance à répondre dans des directions opposées: l'un devient plus grand et l'autre plus petit. Cela suggère qu'une comparaison de ces 2 types de distance pourrait être utile pour évaluer les départs d'une répartition aléatoire.\\
 
 Une combinaison pratique de G et F, suggérée par la théorie fondamentale, est la fonction J d'un processus stationnaire ponctuel:
 \begin{center}\begin{math} J(r) = \frac{1-G(r)}{1-F(r)} \end{math}\end{center}
-définie pour tout \begin{math} r \geq 0 \end{math} telle que F(r)<1. Pour un processus de Poisson homogène, \begin{math} F_{pois} \equiv G_{pois} \end{math} ainsi les valeures de J(r) > 1 son cohérent avec une représentation répulsive, tandis que les valeures de J(r) < 1 sont cohérente avec une représentation agrégée.
+définie pour tout \begin{math} r \geq 0 \end{math} telle que F(r) < 1. Pour un processus de Poisson homogène, \begin{math} F_{pois} \equiv G_{pois} \end{math} ainsi les valeures de J(r) > 1 son cohérent avec une représentation répulsive, tandis que les valeures de J(r) < 1 sont cohérente avec une représentation agrégée.
 
-La fonction J empirique est insemsible aux effets de bords, car ceux-ci s'annulent dans le ratio (1 - G)/(1 - F).
+La fonction J empirique est insensible aux effets de bords, car ceux-ci s'annulent dans le ratio (1 - G)/(1 - F).
 
 %%%%%%%%%%%%%%%%
-
-\section{Théorie pour la correction des bords}
-\subsection{Estimation de F et G sans effets de bord}
-\subsection{Effets de bords pour F et G}
-\subsection{Correction des bords}
-\subsection{Correction de Kaplan-Meier}
-\subsection{Correction de Hanisch-Chiu-Stoyan}
-\subsection{Comparaison des méthodes}
-
-
 
 \end{document}
