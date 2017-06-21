@@ -9,7 +9,8 @@
 void lectureParams(std::string &fichier, int &n, double &taux, int &tailleQuadri);
 Rectangle creationSurface(std::string fichier0);
 std::vector<Point> creationListePoints(std::string fichier0, Rectangle &surface);
-std::vector<double> creationR(Rectangle &surface, int tailleR, double tauxR);
+std::vector<double> creationRdeK(Rectangle &surface);
+std::vector<double> creationRdeFGJ(int n, double W, int tailleR);
 std::vector<Quadrillage> creationQuadrillage(Rectangle &surface, int tailleQuadri, std::vector<Point> &listePoints);
 
 #endif

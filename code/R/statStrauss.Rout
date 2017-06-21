@@ -1,0 +1,73 @@
+
+R version 3.3.3 (2017-03-06) -- "Another Canoe"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R est un logiciel libre livré sans AUCUNE GARANTIE.
+Vous pouvez le redistribuer sous certaines conditions.
+Tapez 'license()' ou 'licence()' pour plus de détails.
+
+R est un projet collaboratif avec de nombreux contributeurs.
+Tapez 'contributors()' pour plus d'information et
+'citation()' pour la façon de le citer dans les publications.
+
+Tapez 'demo()' pour des démonstrations, 'help()' pour l'aide
+en ligne ou 'help.start()' pour obtenir l'aide au format HTML.
+Tapez 'q()' pour quitter R.
+
+> #
+> # Clean memory
+> #
+> rm(list=ls())
+> 
+> #
+> # Load necessary libraries
+> #
+> library(spatstat)
+Le chargement a nécessité le package : nlme
+Le chargement a nécessité le package : rpart
+
+spatstat 1.47-0       (nickname: ‘Responsible Gambler’) 
+For an introduction to spatstat, type ‘beginner’ 
+
+
+Note: spatstat version 1.47-0 is out of date by more than 8 months; we recommend upgrading to the latest version.
+> 
+> 
+> #
+> # Set working directory
+> #
+> setwd("~/ownCloud/RECHERCHE/CLEMENT DUGUE/R")
+> 
+> #
+> # Source program functions
+> #
+> source("pointPatternAnalysisTools.R")
+> 
+> 
+> name.file.stat="../C++/RESULTS/stat_strauss_cftp_A.txt"
+> stat=read.stat.strauss(name.file.stat)
+> #print.stat.strauss(name.file.stat)
+> 
+> name.file.pattern="../C++/RESULTS/Y_strauss_cftp_A.txt"
+> #print.pattern.strauss(name.file.pattern)
+> 
+> #
+> # Sauvegarde des resultats et quitter
+> #
+> name.file.savedata="res_strauss_A.RData"
+> save(stat,file=name.file.savedata)
+> #save.image(name.file.savedata)
+> #load(name.file.savedata)
+> 
+> #quit()
+> 
+> #
+> # Analyse exploratoire de X
+> #
+> #x11()
+> #plot(allstats(X),main="Analyse exploratoire - Strauss")
+> 
+> proc.time()
+utilisateur     système      écoulé 
+      0.908       0.032       0.934 

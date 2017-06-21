@@ -19,6 +19,7 @@
 \usepackage[]{algorithm2e}
 \usepackage{hyperref}
 \usepackage{amsfonts}
+\usepackage{dsfont}
 
 \begin{titlepage}
 \newcommand*{\defeq}{\stackrel{\mathsmaller{\mathsf{def}}}{=}}
@@ -106,13 +107,24 @@ Par exemple, une répartition de population dans une ville peut être très dens
 \section{Méthodes statistiques pour l'analyse de répartition de point}
 
 \subsection{Statistiques sommaires}
-L'approche traditionnelle pour analyser une répartition de point est de calculer une statistique sommaire qui est censée capturer une caractéristique importante de la répartition ponctuelle.\\
+L'approche traditionnelle pour analyser une répartition de point est de calculer une statistique sommaire qui est censée capturer une caractéristique importante de la répartition ponctuelle. Par exemple connaître la distance du plus proche voisin moyenne pour une répartiton d'arbre dans une forêt. Une statistique sommaire peut être pratique si elle est utilisée de façon simple et appropriée, afin que ses valeurs puissent être facilement interprétés.\\
+Cependant en réduisant une répartition spatiale de point à une simple information, on perd beaucoup d'information. On peut avoir un même résultat pour des répartitons spatiales de point totalement differentes. Trouver une expliquation n'est alors pas simple, on ne peut pas forcement en tirer de conclusion.
 
 \subsection{Modèle statistique et inférence}
-"à faire"\\
+Les statistiques sommaire marchent bien pour des situations simples. Pour des situations plus complexes, il est plus commode d'utiliser un modèle statistique. C'est une description d'un essemble de données décrivant les moyennes, tendance et relations systématiques entre les données, mais aussi la variabilité de la donnée. Par exemple lorsqu'on trace une ligne sur un nuage de point, un modèle regressif nous donne la position de la ligne mais également le regroupement des points autour de cette ligne. On peut ainsi générer de nouveaux nuages de points ayant les mêmes propriétés.
 
 \subsection{Validation}
-"à faire"\\
+
+La préocupation principale lors d'une modélisation est de savoir si le modèle peut être faux. Les techniques pour valider le modèle permettent de savoir si le modèle est plutôt bon dans l'ensemble, de critiquer chaque supposition du modèle, de comprendre les faiblesses de l'analyse et de détecter les anomalies.\\
+
+\begin{minipage}[c]{0.45\linewidth}
+La figure 1.2.3 montre par exemple l'influence de chaque donnée: plus un point modifie le modèle si on l'enlève plus sa représentation est grosse sur la figure. Ainsi le diamètre des cercles est proportinnel à l'influence des points sur le modèle. On voit une influence disproportionnée en bas à gauche de l'image, ainsi soit les données de ce coin sont des anomalies, soit le modèle n'est pas approprié.
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.45\linewidth}
+\includegraphics[scale=0.8]{images/validation.png}\\
+\small{FIGURE 1.2.3 - Influence de chaque point sur le modèle}
+\end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -135,31 +147,75 @@ Les avantages de la covariance sont qu'elle est facile à calculer et à manipul
 Il faut alors trouver d'autre fonctions pour analyser les dépendances de position des points.\\
 %%%%%%%%%%%%
 
-\section{La fonction K}
+\section{L'indice de Ripley : fonction K}
 
-\subsection{Définition}
-La fonction \begin{math}\hat{K}(r) \end{math} empirique est la moyenne cumulée des points se trouvant à une distance r de chaque point, corrigé pour les effets de bord et standardisé:
-\begin{center}\begin{math} \hat{K}(r) = \mathbb{P}\{ d(u,X) \leq r \} \end{math}\end{center}
+\subsection{La fonction K empirique}
+Supposons qu'on se pose une question sur l'espacement entre les points dans un ensemble de points. Il serait alors naturel de mesurer la distance \begin{math} d_{ij} = ||x_i-x_j||\end{math} entre chaque point distinct \begin{math} x_i \end{math} et \begin{math} x_j \end{math} de l'ensemble \textbf{X} considéré. Si ces distances sont grandes, la répartition de point serait plutôt répulsive. Alors que si elles sont petites, la répartition de point serait plutôt aggrégée.\\
+
+Considérons alors la fonction de distribution cumulative empirique des distances par paires:
+\begin{align*}
+\hat{H}(r) &= \text{taux des valeurs } d_{ij} \text{ plus petites que r } \\
+        &= \frac{1}{n(n-1)} \sum_{i=1}^n \sum_{\underset{j \neq i}{j=1}}^n \mathds{1} \{d_{ij} \leq r \}
+\end{align*}
+défini pour chaque distance \begin{math} r \geq 0 \end{math}. La fonction indicatrice  \begin{math} \mathds{1} \{...\}\end{math} vaut 1 si son contenu est vrai et 0 sinon. La somme de ces indicatrices est simplement le nombre de fois où le contenu est vrai: le nombre de distance entre chaque point inférieur ou égal à r. Le déniominateur n(n-1) est le nombre total des paires de points distincts.\\
+
+\begin{minipage}[c]{0.45\linewidth}
+\includegraphics[scale=0.9]{images/nombreVoisins.png}\\
+\small{FIGURE 2.2.1 - Nombre de points voisin dans un certain rayon}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.45\linewidth}
+Comme le montre la figure 2.2.1, on cherche à estimer le nombre moyen de voisin dans un certain rayon r sur une certaine surface. Ainsi pour standardiser l'équation, il faut diviser l'expression par l'intensité \begin{math}\lambda \end{math} et pas seulement par (n-1). On peut alors approximer l'intensité sur la surface telle que: \begin{math}\lambda = (n-1)/|W|\end{math} où |W| est l'aire de la surface étudiée.\begin{math}|W|\end{math}. Les points où le rayon dépassent du bord de la surface ne donneront pas des résultats exactes, il ne faut donc pas non plus négliger les effets de bords.
+\end{minipage}\\
+
+La fonction \begin{math}|W|\hat{H}(r)\end{math} est la moyenne standardisée du nombre de points voisins dans un rayon r pour un point type. Afin de prendre en compte les effets de bords, on ajoute une correction pour les effets de bords à \begin{math}\hat{H}\end{math}, ce qui nous donne la fonction K empirique:
+\begin{align*}
+\hat{K}(r) = \frac{|W|}{n(n-1)} \sum_{i=1}^n \sum_{\underset{j \neq i}{j=1}}^n \mathds{1} \{d_{ij} \leq r \} e_{ij}(r)
+\end{align*}
+où \begin{math}e_{ij}(r)\end{math} est une correction pour les effets de bords qui sera expliquée plus loin.\\
 
 %%%%%%%%%%%%
 
-\subsection{Valeurs pour un aléatoire complet}
-"à faire"
+\subsection{La vraie fonction K pour un processus de points}
 
-%%%%%%%%%%%%
-
-\subsection{Estimation discrète de K}
-"à faire"
+\begin{minipage}{0.45\linewidth}
+La fonction empirique \begin{math}\hat{K}(r)\end{math} est un relevé des distances des paires de points dans la répartition de points. Mais pour connaître les informations que nous donne cette cette fonction il faut la comparer avec la vraie fonction K théorique pour un processus de Poisson homogène. C'est à dire qu'il faut connaître la fonction K dans le cas d'une répartition des point totalement aléatoire. Cette fonction qu'on appellera \begin{math}K_{pois}(r)\end{math} est donnée par la surface couverte par r:
+\begin{center}\begin{math} K_{pois}(r) = \pi r^2 \end{math}\end{center}
+La figure 2.2.2 montre alors la représentation en fonction de r de la fonction K théorique.
+\end{minipage}\hfill
+\begin{minipage}{0.45\linewidth}
+\includegraphics[scale=0.9]{images/Kpoiss.png}
+\small{FIGURE 2.2.2 - Représentation de la fonction K pour une répartition totalement aléatoire}
+\end{minipage}
 
 %%%%%%%%%%%%
 
 \subsection{Inteprétation de K}
-"à faire"
+La figure ci dessous montre la fonction estimé de K selon si la répartition est agrégée aléatoire ou bien répulsif. Les traits discontinues sont la représentation graphique de la fonction K théorique pour un aléatoire total.\\
+
+\includegraphics[scale=0.7]{images/interpret3.png}
+
+Sur la gauche, la courbe de la fonction calculée est en dessous de celle pour une répartition totalement aléatoire (\begin{math}\hat{K}(r) < K_{pois}(r) \end{math}). Ainsi, pour une distance r, un point quelconque a en moyenne moins de voisins qu'il aurait pu espérer avoir avec une répartition totalement aléatoire. Donc la répartition est répulsive.\\
+\indent
+Sur la droite, la courbe de la fonction calculée est au dessus de celle pour une répartition totalement aléatoire (\begin{math}\hat{K}(r) > K_{pois}(r) \end{math}). Ainsi, pour une distance r, un point quelconque a en moyenne plus de voisins qu'il aurait pu espérer avoir avec une répartition totalement aléatoire. Donc la répartition est agrégée.\\
 
 %%%%%%%%%%%%
 
 \section{Correction des bords}
-"à faire"
+
+
+Une stratégie simple pour corriger les problèmes d'estimation sur les bords est la méthode de restriction des bords. Lorsqu'on fait une estimation de K(r) pour une distance r, on limite les calculs aux point se trouvant à une distance r du bord de la surface étudiée. Ainsi le cercle de rayon r autour du point loge entièrement dans la surface comme le montre la figure 2.3.
+
+\begin{center}
+\includegraphics[scale=0.7]{images/bords.png}\\
+\small{FIGURE 2.2.3 -Exemple de zone de sureté pour un certain rayon}\\
+\end{center}
+
+Ainsi en prenant en compte que les points dans la zone de sureté pour chaque r, on peut réécrire \begin{math} \hat{K}(r) \end{math}. Ainsi en gardant les même notation qu'au 2.2.1, on a peut écrire la fonction K avec correction des bords \begin{math} \hat{K}_{bord}(r) \end{math} telle que:
+\begin{align*}
+\hat{K}_{bord}(r) = \frac{  \sum_{i=1}^n \mathds{1} \{b_i \geq r \} \sum_{\underset{j \neq i}{j=1}}^n \mathds{1} \{d_{ij} \leq r \}}{\lambda \sum_{i=1}^n \mathds{1} \{b_i \geq r \}}
+\end{align*}
+où \begin{math}b_i\end{math} est la distance d'un point \begin{math}x_i\end{math} au bord de la surface, et \begin{math}\lambda\end{math} est l'estimation de l'intensité soit \begin{math}\lambda = n/|W|\end{math} avec |W| aire de la surface.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -207,13 +263,13 @@ Montrer la somme avec explication et la correction d'effets de bords
 %%%%%%%%%%%%%%%%
 
 \subsection{Interprétation de F}
-La figure ci dessous montre la fonction estimé de F selon si la répartition est agrégée aléatoire ou bien répulsif. Les traits discontinues sont les représentation graphique de la fonction F théorique pour un aléatoire total.\\
+La figure ci dessous montre la fonction estimé de F selon si la répartition est agrégée aléatoire ou bien répulsif. Les traits discontinues sont la représentation graphique de la fonction F théorique pour un aléatoire total.\\
 
 \includegraphics[scale=0.7]{images/interpret.png}
 
-Sur la gauche, la courbe de la fonction calculée est au dessus de celle pour une répartition totalement aléatoire (\begin{math}\hat{F}(r) > F_p{pois}(r) \end{math}). Ainsi, pour une distance r, la probabilité que \begin{math} d(u,X) \leq r \end{math} est plus grande quelle ne l'est pour une répartition aléatoire, les espaces vides sont donc plus petits que prévu. Donc la répartition est répulsive.\\
+Sur la gauche, la courbe de la fonction calculée est au dessus de celle pour une répartition totalement aléatoire (\begin{math}\hat{F}(r) > F_{pois}(r) \end{math}). Ainsi, pour une distance r, la probabilité que \begin{math} d(u,X) \leq r \end{math} est plus grande quelle ne l'est pour une répartition aléatoire, les espaces vides sont donc plus petits que prévu. Donc la répartition est répulsive.\\
 \indent
-Sur la droite, la courbe de la fonction calculée est en dessous de celle pour une répartition totalement aléatoire (\begin{math}\hat{F}(r) < F_p{pois}(r) \end{math}). Ainsi, pour une distance r, la probabilité que \begin{math} d(u,X) \leq r \end{math} est plus petite quelle ne l'est pour une répartition aléatoire, les espaces vides sont donc plus grands que prévu. Donc la répartition est agrégée.
+Sur la droite, la courbe de la fonction calculée est en dessous de celle pour une répartition totalement aléatoire (\begin{math}\hat{F}(r) < F_{pois}(r) \end{math}). Ainsi, pour une distance r, la probabilité que \begin{math} d(u,X) \leq r \end{math} est plus petite quelle ne l'est pour une répartition aléatoire, les espaces vides sont donc plus grands que prévu. Donc la répartition est agrégée.
 
 
 
@@ -246,13 +302,13 @@ Montrer la somme avec explication et la correction d'effets de bords
 %%%%%%%%%%%%%%%%
 
 \subsection{Interprétation de G }
-La figure ci-dessous montre la fonction estimée de G selon si la répartition est agrégée aléatoire ou bien répulsif. Les traits discontinus sont les représentation graphique de la fonction G théorique pour un aléatoire total.\\
+La figure ci-dessous montre la fonction estimée de G selon si la répartition est agrégée aléatoire ou bien répulsif. Les traits discontinus sont la représentation graphique de la fonction G théorique pour un aléatoire total.\\
 
 \includegraphics[scale=0.7]{images/interpret2.png}
 
-Sur la gauche, la courbe de la fonction calculée est en dessous de celle pour une répartition totalement aléatoire (\begin{math}\hat{G}(r) < G_p{pois}(r) \end{math}). Ainsi, les distances des plus proches voisins sont plus grandes que celles prévues pour une répartiton aléatoire. Donc la répartion est répulsive.\\
+Sur la gauche, la courbe de la fonction calculée est en dessous de celle pour une répartition totalement aléatoire (\begin{math}\hat{G}(r) < G_{pois}(r) \end{math}). Ainsi, les distances des plus proches voisins sont plus grandes que celles prévues pour une répartiton aléatoire. Donc la répartion est répulsive.\\
 \indent
-Sur la droite, la courbe de la fonction calculée est au dessus de celle pour une répartition totalement aléatoire (\begin{math}\hat{G}(r) > G_p{pois}(r) \end{math}). Ainsi, les distances des plus proches voisins sont plus petites que celles prévues pour une répartiton aléatoire. Donc la répartion est agrégée.\\
+Sur la droite, la courbe de la fonction calculée est au dessus de celle pour une répartition totalement aléatoire (\begin{math}\hat{G}(r) > G_{pois}(r) \end{math}). Ainsi, les distances des plus proches voisins sont plus petites que celles prévues pour une répartiton aléatoire. Donc la répartion est agrégée.\\
 
 
 %%%%%%%%%%%%%%%%

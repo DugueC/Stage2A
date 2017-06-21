@@ -5,7 +5,8 @@
 #include "points.h"
 #include "quadrillage.h"
 
-void calculKG(std::vector<double> &R, std::vector<Point> &point, double aire);
+void calculK(std::vector<double> &R, std::vector<Point> &point, double aire);
+void calculG(std::vector<double> &R, std::vector<Point> &point, double aire);
 void calculF(std::vector<double> &R, std::vector<Quadrillage> &quadri);
 void calculJ();
 

@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void calculKG(vector<double> &R, vector<Point> &point, double aire){
+void calculK(vector<double> &R, vector<Point> &point, double aire){
 	
 	int k = 0; //indiceDeR
 	int i = 0; //nbPointsDansZone
@@ -17,18 +17,13 @@ void calculKG(vector<double> &R, vector<Point> &point, double aire){
 	int nR= (int)( R.size() );
 
 	int sommeK = 0;
-	int sommeG = 0;
 
 
 	// ouverture en écriture avec effacement du fichier ouvert
         ofstream fichierK("RESULTS/K.txt", ios::out | ios::trunc);  
-	ofstream fichierG("RESULTS/G.txt", ios::out | ios::trunc);  
 
         if(!fichierK){
 		cerr << "Impossible d'ouvrir le fichier pour écrire K !" << endl;
-	}
-        if(!fichierG){
-		cerr << "Impossible d'ouvrir le fichier pour écrire G !" << endl;
 	}
 
 
@@ -38,7 +33,6 @@ void calculKG(vector<double> &R, vector<Point> &point, double aire){
 		r = R[k];
 		r2= r*r;
 		sommeK = 0;
-		sommeG = 0;
 		i = 0;
 
 		// pour chaque point dans la zone de sureté
@@ -51,6 +45,47 @@ void calculKG(vector<double> &R, vector<Point> &point, double aire){
 			}
 			sommeK += j;
 
+			//incrémentation du nombre de point dans la zone de sureté
+			i++;
+		}
+
+		fichierK << sommeK*aire/((n-1)*i) << endl;
+	}
+
+
+	fichierK.close();
+}
+
+void calculG(vector<double> &R, vector<Point> &point, double aire){
+	int k = 0; //indiceDeR
+	int i = 0; //nbPointsDansZone
+	double r = 0;
+	double r2= 0;
+	int n = (int)( point.size() );
+	int nR= (int)( R.size() );
+
+	int sommeG = 0;
+
+
+	// ouverture en écriture avec effacement du fichier ouvert
+	ofstream fichierG("RESULTS/G.txt", ios::out | ios::trunc);  
+
+        if(!fichierG){
+		cerr << "Impossible d'ouvrir le fichier pour écrire G !" << endl;
+	}
+
+
+	// pour chaque r
+	for(k=0;k<nR;k++){
+
+		r = R[k];
+		r2= r*r;
+		sommeG = 0;
+		i = 0;
+
+		// pour chaque point dans la zone de sureté
+		while( ( point[i].getDistBord() >= r) && (i < n) ){
+
 			// G : on incrémente si le point a un voisin dans le cercle de rayon R
 			if( (point[i].getSizeListe() != 0) && (point[i].getDistanceDuPoint(0) <= r2) ){
 				sommeG++;
@@ -60,14 +95,11 @@ void calculKG(vector<double> &R, vector<Point> &point, double aire){
 			i++;
 		}
 
-		fichierK << sommeK*aire/((n-1)*i) << endl;
 		fichierG << 1.0*sommeG/i << endl;
 	}
 
-	fichierK.close();
 	fichierG.close();
 }
-
 
 
 void calculF(vector<double> &R, vector<Quadrillage> &quadri){

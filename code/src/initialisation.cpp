@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream> 
 #include <fstream>
+#include <cmath>
 
 #include "initialisation.h"
 
@@ -68,6 +69,20 @@ Rectangle creationSurface(string fichier0){
 		cerr << "Impossible d'ouvrir le fichier contenant les points!" << endl;
         }	
 
+
+
+	// ouverture en écriture avec effacement du fichier ouvert
+ /*     ofstream fichier2("POINTS/test.txt", ios::out | ios::trunc);  
+
+        if(!fichier){
+		cerr << "Impossible d'ouvrir le fichier test" << endl;
+	}
+	int i;*/
+
+	
+
+	
+
 	// lecture fichier par lignes
 	while(getline(fichier, ligne)){ 
 
@@ -90,16 +105,25 @@ Rectangle creationSurface(string fichier0){
 		// yMax
 		if(y>yMax) { yMax = y; }
 		if(y<yMin) { yMin = y; }
+
+
+
+		/*for(i=0;i<6;i++){
+			fichier2 << x+i << " " << y+i << endl;
+
+		}*/
 	}
 
         fichier.close();
-
+//fichier2.close();
 	cout << "xMin : " << xMin << endl;
 	cout << "xMax : " << xMax << endl;
 	cout << "yMin : " << yMin << endl;
 	cout << "yMax : " << yMax << endl << endl;
 
 	Rectangle rectangle(xMin,xMax,yMin,yMax);
+
+	cout << "aire : " << rectangle.getAire() << endl << endl;
 
 	return rectangle;
 }
@@ -148,7 +172,7 @@ vector<Point> creationListePoints(string fichier0, Rectangle &surface){
 	return listePoints;
 }
 
-vector<double> creationR(Rectangle &surface, int tailleR, double tauxR){
+vector<double> creationRdeK(Rectangle &surface){
 	
 	vector<double> r;	
 
@@ -158,17 +182,46 @@ vector<double> creationR(Rectangle &surface, int tailleR, double tauxR){
 	double yMin = surface.getYmin();
 
 	// on prend le R maximum égale à "taux"% du plus petit coté
-	double rMax = ( xMax-xMin < yMax-yMin ) ? tauxR*(xMax-xMin) : tauxR*(yMax-yMin);
+	double rMax = ( xMax-xMin < yMax-yMin ) ? 0.25*(xMax-xMin) : 0.25*(yMax-yMin);
 
-	cout << "rMax : " << rMax << endl << endl;
+	cout << "rMaxK : " << rMax << endl;
 
 
 
 	// ouverture en écriture avec effacement du fichier ouvert
-        ofstream fichier("RESULTS/rayons.txt", ios::out | ios::trunc);  
+        ofstream fichier("RESULTS/rayonsK.txt", ios::out | ios::trunc);  
 
         if(!fichier){
-		cerr << "Impossible d'ouvrir le fichier pour écrire les rayons !" << endl;
+		cerr << "Impossible d'ouvrir le fichier pour écrire les rayons K !" << endl;
+	}
+
+	
+	// on remplit la liste et le fichier de sortie
+	int i;
+	double pas = rMax/512;
+	for(i=0;i<513;i++){
+		r.push_back(pas*i);
+		fichier << pas*i << endl;
+	}
+
+	fichier.close();
+
+
+	return r;
+}
+
+vector<double> creationRdeFGJ(int n,double W,int tailleR){
+
+	vector<double> r;
+
+	double rMax = sqrt(W/n);
+	cout << "rMaxFGJ : " << rMax << endl << endl;
+
+	// ouverture en écriture avec effacement du fichier ouvert
+        ofstream fichier("RESULTS/rayonsFGJ.txt", ios::out | ios::trunc);  
+
+        if(!fichier){
+		cerr << "Impossible d'ouvrir le fichier pour écrire les rayons FGJ !" << endl;
 	}
 
 	
@@ -181,7 +234,6 @@ vector<double> creationR(Rectangle &surface, int tailleR, double tauxR){
 	}
 
 	fichier.close();
-
 
 	return r;
 }
