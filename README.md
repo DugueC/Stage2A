@@ -7,7 +7,11 @@
 
 
 ### TO DO
- - F(r)
- - G(r)
- - J(r)
- - K(r)
+ - F(r) DONE
+ - G(r) DONE
+ - J(r) DONE
+ - K(r) DONE
+ - affiche/comparaison courbe DONE
+
+ - tests enveloppe
+ - ajout Threads

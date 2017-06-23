@@ -1,0 +1,2019 @@
+Area interaction process on [0, 1.000] x [0, 1.000] with range 0.100
+ intensity parameter 5.290
+ interaction parameter 0.000
+ area element 0.003
+ total area   1.0000
+Adapted Metropolis-Hastings
+with the proposal probabilities
+0.5
+0.5
+0
+0
+0
+and the time for generating a sample 1000
+Prior ...
+Area interaction process on [0, 1.000] x [0, 1.000] with range 0.100
+ intensity parameter 5.290
+ interaction parameter 0.000
+ area element 0.003
+ total area   1.0000
+Iteration : 0
+Area pattern :nt = 199, area = 0.77875
+Iteration : 1
+Area pattern :nt = 204, area = 0.738975
+Iteration : 2
+Area pattern :nt = 197, area = 0.78785
+Iteration : 3
+Area pattern :nt = 200, area = 0.771125
+Iteration : 4
+Area pattern :nt = 188, area = 0.747725
+Iteration : 5
+Area pattern :nt = 213, area = 0.794925
+Iteration : 6
+Area pattern :nt = 215, area = 0.78865
+Iteration : 7
+Area pattern :nt = 187, area = 0.7409
+Iteration : 8
+Area pattern :nt = 170, area = 0.701325
+Iteration : 9
+Area pattern :nt = 209, area = 0.783675
+Iteration : 10
+Area pattern :nt = 182, area = 0.7405
+Iteration : 11
+Area pattern :nt = 195, area = 0.774175
+Iteration : 12
+Area pattern :nt = 188, area = 0.754625
+Iteration : 13
+Area pattern :nt = 203, area = 0.774975
+Iteration : 14
+Area pattern :nt = 189, area = 0.75535
+Iteration : 15
+Area pattern :nt = 188, area = 0.765425
+Iteration : 16
+Area pattern :nt = 211, area = 0.805375
+Iteration : 17
+Area pattern :nt = 208, area = 0.82645
+Iteration : 18
+Area pattern :nt = 216, area = 0.832525
+Iteration : 19
+Area pattern :nt = 189, area = 0.791925
+Iteration : 20
+Area pattern :nt = 178, area = 0.75405
+Iteration : 21
+Area pattern :nt = 206, area = 0.816975
+Iteration : 22
+Area pattern :nt = 201, area = 0.7877
+Iteration : 23
+Area pattern :nt = 203, area = 0.77525
+Iteration : 24
+Area pattern :nt = 203, area = 0.7808
+Iteration : 25
+Area pattern :nt = 171, area = 0.71945
+Iteration : 26
+Area pattern :nt = 180, area = 0.75465
+Iteration : 27
+Area pattern :nt = 174, area = 0.72635
+Iteration : 28
+Area pattern :nt = 218, area = 0.815575
+Iteration : 29
+Area pattern :nt = 201, area = 0.808725
+Iteration : 30
+Area pattern :nt = 189, area = 0.766825
+Iteration : 31
+Area pattern :nt = 195, area = 0.764325
+Iteration : 32
+Area pattern :nt = 184, area = 0.76285
+Iteration : 33
+Area pattern :nt = 219, area = 0.805925
+Iteration : 34
+Area pattern :nt = 198, area = 0.78285
+Iteration : 35
+Area pattern :nt = 196, area = 0.7839
+Iteration : 36
+Area pattern :nt = 200, area = 0.776625
+Iteration : 37
+Area pattern :nt = 213, area = 0.79085
+Iteration : 38
+Area pattern :nt = 195, area = 0.76585
+Iteration : 39
+Area pattern :nt = 204, area = 0.774625
+Iteration : 40
+Area pattern :nt = 186, area = 0.7309
+Iteration : 41
+Area pattern :nt = 200, area = 0.7674
+Iteration : 42
+Area pattern :nt = 196, area = 0.79235
+Iteration : 43
+Area pattern :nt = 195, area = 0.757925
+Iteration : 44
+Area pattern :nt = 212, area = 0.782625
+Iteration : 45
+Area pattern :nt = 215, area = 0.762725
+Iteration : 46
+Area pattern :nt = 220, area = 0.808625
+Iteration : 47
+Area pattern :nt = 200, area = 0.7934
+Iteration : 48
+Area pattern :nt = 222, area = 0.829775
+Iteration : 49
+Area pattern :nt = 218, area = 0.8246
+Iteration : 50
+Area pattern :nt = 208, area = 0.782475
+Iteration : 51
+Area pattern :nt = 218, area = 0.8358
+Iteration : 52
+Area pattern :nt = 196, area = 0.758675
+Iteration : 53
+Area pattern :nt = 203, area = 0.783325
+Iteration : 54
+Area pattern :nt = 221, area = 0.806675
+Iteration : 55
+Area pattern :nt = 171, area = 0.727575
+Iteration : 56
+Area pattern :nt = 193, area = 0.7772
+Iteration : 57
+Area pattern :nt = 202, area = 0.7698
+Iteration : 58
+Area pattern :nt = 167, area = 0.705625
+Iteration : 59
+Area pattern :nt = 186, area = 0.753225
+Iteration : 60
+Area pattern :nt = 185, area = 0.750875
+Iteration : 61
+Area pattern :nt = 192, area = 0.77305
+Iteration : 62
+Area pattern :nt = 173, area = 0.747975
+Iteration : 63
+Area pattern :nt = 179, area = 0.738275
+Iteration : 64
+Area pattern :nt = 210, area = 0.785125
+Iteration : 65
+Area pattern :nt = 207, area = 0.805075
+Iteration : 66
+Area pattern :nt = 204, area = 0.778725
+Iteration : 67
+Area pattern :nt = 188, area = 0.765075
+Iteration : 68
+Area pattern :nt = 174, area = 0.7205
+Iteration : 69
+Area pattern :nt = 193, area = 0.75425
+Iteration : 70
+Area pattern :nt = 191, area = 0.780075
+Iteration : 71
+Area pattern :nt = 214, area = 0.8038
+Iteration : 72
+Area pattern :nt = 206, area = 0.755075
+Iteration : 73
+Area pattern :nt = 245, area = 0.837175
+Iteration : 74
+Area pattern :nt = 207, area = 0.7745
+Iteration : 75
+Area pattern :nt = 234, area = 0.81325
+Iteration : 76
+Area pattern :nt = 172, area = 0.7085
+Iteration : 77
+Area pattern :nt = 188, area = 0.73855
+Iteration : 78
+Area pattern :nt = 201, area = 0.76325
+Iteration : 79
+Area pattern :nt = 207, area = 0.77455
+Iteration : 80
+Area pattern :nt = 200, area = 0.789575
+Iteration : 81
+Area pattern :nt = 205, area = 0.79465
+Iteration : 82
+Area pattern :nt = 221, area = 0.819725
+Iteration : 83
+Area pattern :nt = 197, area = 0.7913
+Iteration : 84
+Area pattern :nt = 205, area = 0.7859
+Iteration : 85
+Area pattern :nt = 220, area = 0.811375
+Iteration : 86
+Area pattern :nt = 193, area = 0.76325
+Iteration : 87
+Area pattern :nt = 206, area = 0.782725
+Iteration : 88
+Area pattern :nt = 197, area = 0.776075
+Iteration : 89
+Area pattern :nt = 215, area = 0.77705
+Iteration : 90
+Area pattern :nt = 159, area = 0.695025
+Iteration : 91
+Area pattern :nt = 200, area = 0.776325
+Iteration : 92
+Area pattern :nt = 195, area = 0.79215
+Iteration : 93
+Area pattern :nt = 205, area = 0.772275
+Iteration : 94
+Area pattern :nt = 190, area = 0.789975
+Iteration : 95
+Area pattern :nt = 207, area = 0.792475
+Iteration : 96
+Area pattern :nt = 210, area = 0.803375
+Iteration : 97
+Area pattern :nt = 202, area = 0.76855
+Iteration : 98
+Area pattern :nt = 204, area = 0.780575
+Iteration : 99
+Area pattern :nt = 177, area = 0.73955
+Iteration : 100
+Area pattern :nt = 214, area = 0.811275
+Iteration : 101
+Area pattern :nt = 206, area = 0.779175
+Iteration : 102
+Area pattern :nt = 190, area = 0.73105
+Iteration : 103
+Area pattern :nt = 198, area = 0.7681
+Iteration : 104
+Area pattern :nt = 203, area = 0.7786
+Iteration : 105
+Area pattern :nt = 188, area = 0.765075
+Iteration : 106
+Area pattern :nt = 187, area = 0.75405
+Iteration : 107
+Area pattern :nt = 187, area = 0.70615
+Iteration : 108
+Area pattern :nt = 204, area = 0.78375
+Iteration : 109
+Area pattern :nt = 211, area = 0.810125
+Iteration : 110
+Area pattern :nt = 224, area = 0.827375
+Iteration : 111
+Area pattern :nt = 231, area = 0.800025
+Iteration : 112
+Area pattern :nt = 229, area = 0.82545
+Iteration : 113
+Area pattern :nt = 195, area = 0.7734
+Iteration : 114
+Area pattern :nt = 211, area = 0.805925
+Iteration : 115
+Area pattern :nt = 215, area = 0.768875
+Iteration : 116
+Area pattern :nt = 203, area = 0.796875
+Iteration : 117
+Area pattern :nt = 206, area = 0.7892
+Iteration : 118
+Area pattern :nt = 208, area = 0.793875
+Iteration : 119
+Area pattern :nt = 180, area = 0.752275
+Iteration : 120
+Area pattern :nt = 197, area = 0.77255
+Iteration : 121
+Area pattern :nt = 198, area = 0.78095
+Iteration : 122
+Area pattern :nt = 205, area = 0.7893
+Iteration : 123
+Area pattern :nt = 187, area = 0.73075
+Iteration : 124
+Area pattern :nt = 201, area = 0.783725
+Iteration : 125
+Area pattern :nt = 202, area = 0.767175
+Iteration : 126
+Area pattern :nt = 192, area = 0.76985
+Iteration : 127
+Area pattern :nt = 226, area = 0.80795
+Iteration : 128
+Area pattern :nt = 215, area = 0.78545
+Iteration : 129
+Area pattern :nt = 218, area = 0.832275
+Iteration : 130
+Area pattern :nt = 211, area = 0.8128
+Iteration : 131
+Area pattern :nt = 186, area = 0.762025
+Iteration : 132
+Area pattern :nt = 210, area = 0.773725
+Iteration : 133
+Area pattern :nt = 210, area = 0.787775
+Iteration : 134
+Area pattern :nt = 199, area = 0.7157
+Iteration : 135
+Area pattern :nt = 185, area = 0.746825
+Iteration : 136
+Area pattern :nt = 192, area = 0.8207
+Iteration : 137
+Area pattern :nt = 205, area = 0.79765
+Iteration : 138
+Area pattern :nt = 227, area = 0.840375
+Iteration : 139
+Area pattern :nt = 210, area = 0.798075
+Iteration : 140
+Area pattern :nt = 196, area = 0.76665
+Iteration : 141
+Area pattern :nt = 212, area = 0.785525
+Iteration : 142
+Area pattern :nt = 185, area = 0.775775
+Iteration : 143
+Area pattern :nt = 208, area = 0.8028
+Iteration : 144
+Area pattern :nt = 205, area = 0.7776
+Iteration : 145
+Area pattern :nt = 192, area = 0.748075
+Iteration : 146
+Area pattern :nt = 201, area = 0.788275
+Iteration : 147
+Area pattern :nt = 187, area = 0.757025
+Iteration : 148
+Area pattern :nt = 205, area = 0.7734
+Iteration : 149
+Area pattern :nt = 199, area = 0.7885
+Iteration : 150
+Area pattern :nt = 198, area = 0.7847
+Iteration : 151
+Area pattern :nt = 188, area = 0.749975
+Iteration : 152
+Area pattern :nt = 199, area = 0.7631
+Iteration : 153
+Area pattern :nt = 195, area = 0.773075
+Iteration : 154
+Area pattern :nt = 200, area = 0.78295
+Iteration : 155
+Area pattern :nt = 180, area = 0.731075
+Iteration : 156
+Area pattern :nt = 204, area = 0.78355
+Iteration : 157
+Area pattern :nt = 189, area = 0.76535
+Iteration : 158
+Area pattern :nt = 201, area = 0.773125
+Iteration : 159
+Area pattern :nt = 206, area = 0.7832
+Iteration : 160
+Area pattern :nt = 210, area = 0.7771
+Iteration : 161
+Area pattern :nt = 204, area = 0.775575
+Iteration : 162
+Area pattern :nt = 207, area = 0.7877
+Iteration : 163
+Area pattern :nt = 213, area = 0.812275
+Iteration : 164
+Area pattern :nt = 221, area = 0.815875
+Iteration : 165
+Area pattern :nt = 173, area = 0.71675
+Iteration : 166
+Area pattern :nt = 192, area = 0.76355
+Iteration : 167
+Area pattern :nt = 194, area = 0.772025
+Iteration : 168
+Area pattern :nt = 204, area = 0.776075
+Iteration : 169
+Area pattern :nt = 210, area = 0.803075
+Iteration : 170
+Area pattern :nt = 203, area = 0.794075
+Iteration : 171
+Area pattern :nt = 202, area = 0.7652
+Iteration : 172
+Area pattern :nt = 184, area = 0.750625
+Iteration : 173
+Area pattern :nt = 181, area = 0.732125
+Iteration : 174
+Area pattern :nt = 179, area = 0.776275
+Iteration : 175
+Area pattern :nt = 191, area = 0.7773
+Iteration : 176
+Area pattern :nt = 204, area = 0.7739
+Iteration : 177
+Area pattern :nt = 196, area = 0.7646
+Iteration : 178
+Area pattern :nt = 204, area = 0.781125
+Iteration : 179
+Area pattern :nt = 169, area = 0.720775
+Iteration : 180
+Area pattern :nt = 201, area = 0.77435
+Iteration : 181
+Area pattern :nt = 188, area = 0.73355
+Iteration : 182
+Area pattern :nt = 185, area = 0.7288
+Iteration : 183
+Area pattern :nt = 213, area = 0.7676
+Iteration : 184
+Area pattern :nt = 189, area = 0.75535
+Iteration : 185
+Area pattern :nt = 218, area = 0.795075
+Iteration : 186
+Area pattern :nt = 206, area = 0.78055
+Iteration : 187
+Area pattern :nt = 213, area = 0.788025
+Iteration : 188
+Area pattern :nt = 217, area = 0.798725
+Iteration : 189
+Area pattern :nt = 180, area = 0.74215
+Iteration : 190
+Area pattern :nt = 205, area = 0.80555
+Iteration : 191
+Area pattern :nt = 211, area = 0.7954
+Iteration : 192
+Area pattern :nt = 197, area = 0.72125
+Iteration : 193
+Area pattern :nt = 202, area = 0.77075
+Iteration : 194
+Area pattern :nt = 219, area = 0.804175
+Iteration : 195
+Area pattern :nt = 205, area = 0.774275
+Iteration : 196
+Area pattern :nt = 188, area = 0.735825
+Iteration : 197
+Area pattern :nt = 197, area = 0.7612
+Iteration : 198
+Area pattern :nt = 184, area = 0.737175
+Iteration : 199
+Area pattern :nt = 204, area = 0.763425
+Iteration : 200
+Area pattern :nt = 229, area = 0.822375
+Iteration : 201
+Area pattern :nt = 190, area = 0.738475
+Iteration : 202
+Area pattern :nt = 168, area = 0.7396
+Iteration : 203
+Area pattern :nt = 206, area = 0.75325
+Iteration : 204
+Area pattern :nt = 212, area = 0.7838
+Iteration : 205
+Area pattern :nt = 194, area = 0.771125
+Iteration : 206
+Area pattern :nt = 187, area = 0.75365
+Iteration : 207
+Area pattern :nt = 192, area = 0.7796
+Iteration : 208
+Area pattern :nt = 208, area = 0.7726
+Iteration : 209
+Area pattern :nt = 183, area = 0.765425
+Iteration : 210
+Area pattern :nt = 196, area = 0.726525
+Iteration : 211
+Area pattern :nt = 195, area = 0.773225
+Iteration : 212
+Area pattern :nt = 182, area = 0.760225
+Iteration : 213
+Area pattern :nt = 183, area = 0.758
+Iteration : 214
+Area pattern :nt = 195, area = 0.770425
+Iteration : 215
+Area pattern :nt = 195, area = 0.758925
+Iteration : 216
+Area pattern :nt = 230, area = 0.836725
+Iteration : 217
+Area pattern :nt = 196, area = 0.794225
+Iteration : 218
+Area pattern :nt = 208, area = 0.814225
+Iteration : 219
+Area pattern :nt = 166, area = 0.7113
+Iteration : 220
+Area pattern :nt = 201, area = 0.782275
+Iteration : 221
+Area pattern :nt = 195, area = 0.7714
+Iteration : 222
+Area pattern :nt = 195, area = 0.79505
+Iteration : 223
+Area pattern :nt = 171, area = 0.724
+Iteration : 224
+Area pattern :nt = 191, area = 0.780725
+Iteration : 225
+Area pattern :nt = 179, area = 0.701875
+Iteration : 226
+Area pattern :nt = 200, area = 0.792475
+Iteration : 227
+Area pattern :nt = 187, area = 0.74935
+Iteration : 228
+Area pattern :nt = 186, area = 0.758825
+Iteration : 229
+Area pattern :nt = 217, area = 0.81075
+Iteration : 230
+Area pattern :nt = 181, area = 0.720975
+Iteration : 231
+Area pattern :nt = 219, area = 0.82035
+Iteration : 232
+Area pattern :nt = 210, area = 0.76725
+Iteration : 233
+Area pattern :nt = 186, area = 0.781925
+Iteration : 234
+Area pattern :nt = 179, area = 0.75505
+Iteration : 235
+Area pattern :nt = 210, area = 0.7931
+Iteration : 236
+Area pattern :nt = 171, area = 0.711225
+Iteration : 237
+Area pattern :nt = 203, area = 0.80985
+Iteration : 238
+Area pattern :nt = 195, area = 0.739225
+Iteration : 239
+Area pattern :nt = 201, area = 0.77085
+Iteration : 240
+Area pattern :nt = 205, area = 0.763025
+Iteration : 241
+Area pattern :nt = 183, area = 0.76615
+Iteration : 242
+Area pattern :nt = 200, area = 0.777025
+Iteration : 243
+Area pattern :nt = 203, area = 0.786775
+Iteration : 244
+Area pattern :nt = 179, area = 0.72
+Iteration : 245
+Area pattern :nt = 211, area = 0.778575
+Iteration : 246
+Area pattern :nt = 196, area = 0.778775
+Iteration : 247
+Area pattern :nt = 201, area = 0.76405
+Iteration : 248
+Area pattern :nt = 183, area = 0.76275
+Iteration : 249
+Area pattern :nt = 183, area = 0.72885
+Iteration : 250
+Area pattern :nt = 202, area = 0.78805
+Iteration : 251
+Area pattern :nt = 194, area = 0.74705
+Iteration : 252
+Area pattern :nt = 159, area = 0.70725
+Iteration : 253
+Area pattern :nt = 179, area = 0.75435
+Iteration : 254
+Area pattern :nt = 195, area = 0.77835
+Iteration : 255
+Area pattern :nt = 194, area = 0.73985
+Iteration : 256
+Area pattern :nt = 209, area = 0.837375
+Iteration : 257
+Area pattern :nt = 193, area = 0.77455
+Iteration : 258
+Area pattern :nt = 224, area = 0.812
+Iteration : 259
+Area pattern :nt = 208, area = 0.768625
+Iteration : 260
+Area pattern :nt = 189, area = 0.750675
+Iteration : 261
+Area pattern :nt = 198, area = 0.777175
+Iteration : 262
+Area pattern :nt = 189, area = 0.78675
+Iteration : 263
+Area pattern :nt = 190, area = 0.794475
+Iteration : 264
+Area pattern :nt = 204, area = 0.7788
+Iteration : 265
+Area pattern :nt = 212, area = 0.797525
+Iteration : 266
+Area pattern :nt = 198, area = 0.767675
+Iteration : 267
+Area pattern :nt = 213, area = 0.799425
+Iteration : 268
+Area pattern :nt = 224, area = 0.824125
+Iteration : 269
+Area pattern :nt = 206, area = 0.7921
+Iteration : 270
+Area pattern :nt = 183, area = 0.748375
+Iteration : 271
+Area pattern :nt = 228, area = 0.834625
+Iteration : 272
+Area pattern :nt = 217, area = 0.80335
+Iteration : 273
+Area pattern :nt = 205, area = 0.805475
+Iteration : 274
+Area pattern :nt = 211, area = 0.8205
+Iteration : 275
+Area pattern :nt = 203, area = 0.773475
+Iteration : 276
+Area pattern :nt = 167, area = 0.727525
+Iteration : 277
+Area pattern :nt = 219, area = 0.80155
+Iteration : 278
+Area pattern :nt = 171, area = 0.699525
+Iteration : 279
+Area pattern :nt = 214, area = 0.76865
+Iteration : 280
+Area pattern :nt = 210, area = 0.74805
+Iteration : 281
+Area pattern :nt = 198, area = 0.783725
+Iteration : 282
+Area pattern :nt = 183, area = 0.759975
+Iteration : 283
+Area pattern :nt = 197, area = 0.77145
+Iteration : 284
+Area pattern :nt = 204, area = 0.778775
+Iteration : 285
+Area pattern :nt = 179, area = 0.75025
+Iteration : 286
+Area pattern :nt = 199, area = 0.7617
+Iteration : 287
+Area pattern :nt = 219, area = 0.803725
+Iteration : 288
+Area pattern :nt = 221, area = 0.830925
+Iteration : 289
+Area pattern :nt = 184, area = 0.75005
+Iteration : 290
+Area pattern :nt = 212, area = 0.807075
+Iteration : 291
+Area pattern :nt = 211, area = 0.829225
+Iteration : 292
+Area pattern :nt = 195, area = 0.76955
+Iteration : 293
+Area pattern :nt = 212, area = 0.7967
+Iteration : 294
+Area pattern :nt = 191, area = 0.7842
+Iteration : 295
+Area pattern :nt = 187, area = 0.756575
+Iteration : 296
+Area pattern :nt = 211, area = 0.79055
+Iteration : 297
+Area pattern :nt = 188, area = 0.77505
+Iteration : 298
+Area pattern :nt = 189, area = 0.7662
+Iteration : 299
+Area pattern :nt = 171, area = 0.71475
+Iteration : 300
+Area pattern :nt = 212, area = 0.810375
+Iteration : 301
+Area pattern :nt = 200, area = 0.781775
+Iteration : 302
+Area pattern :nt = 207, area = 0.810025
+Iteration : 303
+Area pattern :nt = 198, area = 0.75685
+Iteration : 304
+Area pattern :nt = 211, area = 0.799525
+Iteration : 305
+Area pattern :nt = 213, area = 0.814925
+Iteration : 306
+Area pattern :nt = 196, area = 0.757075
+Iteration : 307
+Area pattern :nt = 197, area = 0.791975
+Iteration : 308
+Area pattern :nt = 211, area = 0.820125
+Iteration : 309
+Area pattern :nt = 218, area = 0.79715
+Iteration : 310
+Area pattern :nt = 187, area = 0.787125
+Iteration : 311
+Area pattern :nt = 194, area = 0.78625
+Iteration : 312
+Area pattern :nt = 239, area = 0.837725
+Iteration : 313
+Area pattern :nt = 194, area = 0.7398
+Iteration : 314
+Area pattern :nt = 197, area = 0.78615
+Iteration : 315
+Area pattern :nt = 230, area = 0.8161
+Iteration : 316
+Area pattern :nt = 175, area = 0.720975
+Iteration : 317
+Area pattern :nt = 179, area = 0.782725
+Iteration : 318
+Area pattern :nt = 198, area = 0.760275
+Iteration : 319
+Area pattern :nt = 206, area = 0.784775
+Iteration : 320
+Area pattern :nt = 206, area = 0.791825
+Iteration : 321
+Area pattern :nt = 208, area = 0.792075
+Iteration : 322
+Area pattern :nt = 209, area = 0.786775
+Iteration : 323
+Area pattern :nt = 202, area = 0.770925
+Iteration : 324
+Area pattern :nt = 207, area = 0.7909
+Iteration : 325
+Area pattern :nt = 214, area = 0.803
+Iteration : 326
+Area pattern :nt = 197, area = 0.7578
+Iteration : 327
+Area pattern :nt = 184, area = 0.759925
+Iteration : 328
+Area pattern :nt = 197, area = 0.804
+Iteration : 329
+Area pattern :nt = 214, area = 0.7963
+Iteration : 330
+Area pattern :nt = 201, area = 0.7875
+Iteration : 331
+Area pattern :nt = 179, area = 0.717625
+Iteration : 332
+Area pattern :nt = 188, area = 0.7469
+Iteration : 333
+Area pattern :nt = 192, area = 0.7662
+Iteration : 334
+Area pattern :nt = 183, area = 0.762975
+Iteration : 335
+Area pattern :nt = 209, area = 0.825175
+Iteration : 336
+Area pattern :nt = 193, area = 0.76065
+Iteration : 337
+Area pattern :nt = 217, area = 0.7936
+Iteration : 338
+Area pattern :nt = 194, area = 0.767675
+Iteration : 339
+Area pattern :nt = 204, area = 0.778175
+Iteration : 340
+Area pattern :nt = 209, area = 0.790525
+Iteration : 341
+Area pattern :nt = 187, area = 0.71475
+Iteration : 342
+Area pattern :nt = 206, area = 0.793075
+Iteration : 343
+Area pattern :nt = 215, area = 0.8223
+Iteration : 344
+Area pattern :nt = 220, area = 0.810525
+Iteration : 345
+Area pattern :nt = 220, area = 0.81945
+Iteration : 346
+Area pattern :nt = 232, area = 0.8542
+Iteration : 347
+Area pattern :nt = 213, area = 0.7981
+Iteration : 348
+Area pattern :nt = 186, area = 0.779125
+Iteration : 349
+Area pattern :nt = 213, area = 0.78045
+Iteration : 350
+Area pattern :nt = 209, area = 0.802025
+Iteration : 351
+Area pattern :nt = 210, area = 0.7782
+Iteration : 352
+Area pattern :nt = 202, area = 0.7645
+Iteration : 353
+Area pattern :nt = 192, area = 0.789575
+Iteration : 354
+Area pattern :nt = 238, area = 0.81495
+Iteration : 355
+Area pattern :nt = 190, area = 0.753075
+Iteration : 356
+Area pattern :nt = 189, area = 0.767325
+Iteration : 357
+Area pattern :nt = 190, area = 0.753375
+Iteration : 358
+Area pattern :nt = 201, area = 0.7782
+Iteration : 359
+Area pattern :nt = 188, area = 0.736675
+Iteration : 360
+Area pattern :nt = 204, area = 0.7828
+Iteration : 361
+Area pattern :nt = 198, area = 0.7889
+Iteration : 362
+Area pattern :nt = 220, area = 0.8195
+Iteration : 363
+Area pattern :nt = 198, area = 0.778875
+Iteration : 364
+Area pattern :nt = 202, area = 0.7774
+Iteration : 365
+Area pattern :nt = 188, area = 0.76065
+Iteration : 366
+Area pattern :nt = 211, area = 0.800125
+Iteration : 367
+Area pattern :nt = 209, area = 0.8172
+Iteration : 368
+Area pattern :nt = 201, area = 0.765825
+Iteration : 369
+Area pattern :nt = 204, area = 0.779575
+Iteration : 370
+Area pattern :nt = 189, area = 0.7387
+Iteration : 371
+Area pattern :nt = 172, area = 0.730925
+Iteration : 372
+Area pattern :nt = 209, area = 0.81635
+Iteration : 373
+Area pattern :nt = 192, area = 0.787675
+Iteration : 374
+Area pattern :nt = 179, area = 0.733025
+Iteration : 375
+Area pattern :nt = 193, area = 0.756125
+Iteration : 376
+Area pattern :nt = 205, area = 0.7895
+Iteration : 377
+Area pattern :nt = 207, area = 0.8065
+Iteration : 378
+Area pattern :nt = 202, area = 0.7617
+Iteration : 379
+Area pattern :nt = 192, area = 0.739675
+Iteration : 380
+Area pattern :nt = 202, area = 0.754125
+Iteration : 381
+Area pattern :nt = 192, area = 0.73
+Iteration : 382
+Area pattern :nt = 201, area = 0.78035
+Iteration : 383
+Area pattern :nt = 213, area = 0.78595
+Iteration : 384
+Area pattern :nt = 180, area = 0.75575
+Iteration : 385
+Area pattern :nt = 192, area = 0.74905
+Iteration : 386
+Area pattern :nt = 199, area = 0.780375
+Iteration : 387
+Area pattern :nt = 201, area = 0.747
+Iteration : 388
+Area pattern :nt = 202, area = 0.777125
+Iteration : 389
+Area pattern :nt = 214, area = 0.78585
+Iteration : 390
+Area pattern :nt = 195, area = 0.780825
+Iteration : 391
+Area pattern :nt = 160, area = 0.703275
+Iteration : 392
+Area pattern :nt = 197, area = 0.784975
+Iteration : 393
+Area pattern :nt = 208, area = 0.7717
+Iteration : 394
+Area pattern :nt = 225, area = 0.806675
+Iteration : 395
+Area pattern :nt = 190, area = 0.75235
+Iteration : 396
+Area pattern :nt = 198, area = 0.7649
+Iteration : 397
+Area pattern :nt = 187, area = 0.75015
+Iteration : 398
+Area pattern :nt = 182, area = 0.778175
+Iteration : 399
+Area pattern :nt = 217, area = 0.7812
+Iteration : 400
+Area pattern :nt = 210, area = 0.78025
+Iteration : 401
+Area pattern :nt = 193, area = 0.720675
+Iteration : 402
+Area pattern :nt = 204, area = 0.776925
+Iteration : 403
+Area pattern :nt = 206, area = 0.810875
+Iteration : 404
+Area pattern :nt = 198, area = 0.772475
+Iteration : 405
+Area pattern :nt = 194, area = 0.769025
+Iteration : 406
+Area pattern :nt = 208, area = 0.81945
+Iteration : 407
+Area pattern :nt = 219, area = 0.769175
+Iteration : 408
+Area pattern :nt = 198, area = 0.75665
+Iteration : 409
+Area pattern :nt = 193, area = 0.7501
+Iteration : 410
+Area pattern :nt = 188, area = 0.750525
+Iteration : 411
+Area pattern :nt = 200, area = 0.802625
+Iteration : 412
+Area pattern :nt = 185, area = 0.75625
+Iteration : 413
+Area pattern :nt = 229, area = 0.83915
+Iteration : 414
+Area pattern :nt = 207, area = 0.78505
+Iteration : 415
+Area pattern :nt = 162, area = 0.718475
+Iteration : 416
+Area pattern :nt = 183, area = 0.732675
+Iteration : 417
+Area pattern :nt = 223, area = 0.8226
+Iteration : 418
+Area pattern :nt = 205, area = 0.802325
+Iteration : 419
+Area pattern :nt = 191, area = 0.7891
+Iteration : 420
+Area pattern :nt = 186, area = 0.763075
+Iteration : 421
+Area pattern :nt = 207, area = 0.7677
+Iteration : 422
+Area pattern :nt = 204, area = 0.759575
+Iteration : 423
+Area pattern :nt = 181, area = 0.729175
+Iteration : 424
+Area pattern :nt = 211, area = 0.811825
+Iteration : 425
+Area pattern :nt = 211, area = 0.7678
+Iteration : 426
+Area pattern :nt = 210, area = 0.764625
+Iteration : 427
+Area pattern :nt = 211, area = 0.7969
+Iteration : 428
+Area pattern :nt = 214, area = 0.7929
+Iteration : 429
+Area pattern :nt = 204, area = 0.760925
+Iteration : 430
+Area pattern :nt = 191, area = 0.744825
+Iteration : 431
+Area pattern :nt = 202, area = 0.774425
+Iteration : 432
+Area pattern :nt = 185, area = 0.770175
+Iteration : 433
+Area pattern :nt = 209, area = 0.792275
+Iteration : 434
+Area pattern :nt = 206, area = 0.801125
+Iteration : 435
+Area pattern :nt = 203, area = 0.782175
+Iteration : 436
+Area pattern :nt = 200, area = 0.76535
+Iteration : 437
+Area pattern :nt = 211, area = 0.77465
+Iteration : 438
+Area pattern :nt = 198, area = 0.7719
+Iteration : 439
+Area pattern :nt = 200, area = 0.78905
+Iteration : 440
+Area pattern :nt = 202, area = 0.757475
+Iteration : 441
+Area pattern :nt = 219, area = 0.82245
+Iteration : 442
+Area pattern :nt = 187, area = 0.739325
+Iteration : 443
+Area pattern :nt = 179, area = 0.752825
+Iteration : 444
+Area pattern :nt = 177, area = 0.72125
+Iteration : 445
+Area pattern :nt = 179, area = 0.713425
+Iteration : 446
+Area pattern :nt = 201, area = 0.790075
+Iteration : 447
+Area pattern :nt = 204, area = 0.77165
+Iteration : 448
+Area pattern :nt = 205, area = 0.77185
+Iteration : 449
+Area pattern :nt = 215, area = 0.822875
+Iteration : 450
+Area pattern :nt = 220, area = 0.821975
+Iteration : 451
+Area pattern :nt = 208, area = 0.775875
+Iteration : 452
+Area pattern :nt = 181, area = 0.747175
+Iteration : 453
+Area pattern :nt = 204, area = 0.7665
+Iteration : 454
+Area pattern :nt = 209, area = 0.821575
+Iteration : 455
+Area pattern :nt = 205, area = 0.8029
+Iteration : 456
+Area pattern :nt = 212, area = 0.799025
+Iteration : 457
+Area pattern :nt = 176, area = 0.7358
+Iteration : 458
+Area pattern :nt = 188, area = 0.777925
+Iteration : 459
+Area pattern :nt = 196, area = 0.76725
+Iteration : 460
+Area pattern :nt = 194, area = 0.753575
+Iteration : 461
+Area pattern :nt = 205, area = 0.781175
+Iteration : 462
+Area pattern :nt = 202, area = 0.800375
+Iteration : 463
+Area pattern :nt = 225, area = 0.81075
+Iteration : 464
+Area pattern :nt = 180, area = 0.6956
+Iteration : 465
+Area pattern :nt = 223, area = 0.808125
+Iteration : 466
+Area pattern :nt = 186, area = 0.7587
+Iteration : 467
+Area pattern :nt = 187, area = 0.719875
+Iteration : 468
+Area pattern :nt = 193, area = 0.79255
+Iteration : 469
+Area pattern :nt = 188, area = 0.75945
+Iteration : 470
+Area pattern :nt = 213, area = 0.7746
+Iteration : 471
+Area pattern :nt = 193, area = 0.751925
+Iteration : 472
+Area pattern :nt = 175, area = 0.738825
+Iteration : 473
+Area pattern :nt = 213, area = 0.79015
+Iteration : 474
+Area pattern :nt = 215, area = 0.760925
+Iteration : 475
+Area pattern :nt = 186, area = 0.76175
+Iteration : 476
+Area pattern :nt = 189, area = 0.7676
+Iteration : 477
+Area pattern :nt = 197, area = 0.789075
+Iteration : 478
+Area pattern :nt = 201, area = 0.7961
+Iteration : 479
+Area pattern :nt = 195, area = 0.764375
+Iteration : 480
+Area pattern :nt = 178, area = 0.760675
+Iteration : 481
+Area pattern :nt = 194, area = 0.773125
+Iteration : 482
+Area pattern :nt = 201, area = 0.7852
+Iteration : 483
+Area pattern :nt = 175, area = 0.742775
+Iteration : 484
+Area pattern :nt = 189, area = 0.75155
+Iteration : 485
+Area pattern :nt = 184, area = 0.711725
+Iteration : 486
+Area pattern :nt = 211, area = 0.791675
+Iteration : 487
+Area pattern :nt = 214, area = 0.8075
+Iteration : 488
+Area pattern :nt = 201, area = 0.78485
+Iteration : 489
+Area pattern :nt = 196, area = 0.7717
+Iteration : 490
+Area pattern :nt = 187, area = 0.729625
+Iteration : 491
+Area pattern :nt = 212, area = 0.809225
+Iteration : 492
+Area pattern :nt = 206, area = 0.779325
+Iteration : 493
+Area pattern :nt = 204, area = 0.7862
+Iteration : 494
+Area pattern :nt = 224, area = 0.811
+Iteration : 495
+Area pattern :nt = 225, area = 0.797825
+Iteration : 496
+Area pattern :nt = 213, area = 0.7938
+Iteration : 497
+Area pattern :nt = 188, area = 0.760075
+Iteration : 498
+Area pattern :nt = 210, area = 0.804125
+Iteration : 499
+Area pattern :nt = 192, area = 0.79585
+Iteration : 500
+Area pattern :nt = 179, area = 0.7315
+Iteration : 501
+Area pattern :nt = 194, area = 0.764425
+Iteration : 502
+Area pattern :nt = 200, area = 0.7955
+Iteration : 503
+Area pattern :nt = 177, area = 0.767375
+Iteration : 504
+Area pattern :nt = 185, area = 0.73865
+Iteration : 505
+Area pattern :nt = 217, area = 0.811275
+Iteration : 506
+Area pattern :nt = 188, area = 0.755425
+Iteration : 507
+Area pattern :nt = 199, area = 0.802025
+Iteration : 508
+Area pattern :nt = 212, area = 0.7928
+Iteration : 509
+Area pattern :nt = 207, area = 0.815525
+Iteration : 510
+Area pattern :nt = 195, area = 0.760175
+Iteration : 511
+Area pattern :nt = 202, area = 0.75505
+Iteration : 512
+Area pattern :nt = 153, area = 0.687275
+Iteration : 513
+Area pattern :nt = 194, area = 0.724
+Iteration : 514
+Area pattern :nt = 212, area = 0.7814
+Iteration : 515
+Area pattern :nt = 222, area = 0.825125
+Iteration : 516
+Area pattern :nt = 188, area = 0.749
+Iteration : 517
+Area pattern :nt = 210, area = 0.7848
+Iteration : 518
+Area pattern :nt = 194, area = 0.76275
+Iteration : 519
+Area pattern :nt = 194, area = 0.783275
+Iteration : 520
+Area pattern :nt = 192, area = 0.7622
+Iteration : 521
+Area pattern :nt = 201, area = 0.7291
+Iteration : 522
+Area pattern :nt = 216, area = 0.7911
+Iteration : 523
+Area pattern :nt = 216, area = 0.80975
+Iteration : 524
+Area pattern :nt = 202, area = 0.773325
+Iteration : 525
+Area pattern :nt = 190, area = 0.77505
+Iteration : 526
+Area pattern :nt = 190, area = 0.7684
+Iteration : 527
+Area pattern :nt = 209, area = 0.8054
+Iteration : 528
+Area pattern :nt = 197, area = 0.76255
+Iteration : 529
+Area pattern :nt = 205, area = 0.8045
+Iteration : 530
+Area pattern :nt = 206, area = 0.776775
+Iteration : 531
+Area pattern :nt = 188, area = 0.7409
+Iteration : 532
+Area pattern :nt = 207, area = 0.796925
+Iteration : 533
+Area pattern :nt = 189, area = 0.74845
+Iteration : 534
+Area pattern :nt = 199, area = 0.755275
+Iteration : 535
+Area pattern :nt = 208, area = 0.800475
+Iteration : 536
+Area pattern :nt = 198, area = 0.768525
+Iteration : 537
+Area pattern :nt = 215, area = 0.826075
+Iteration : 538
+Area pattern :nt = 187, area = 0.7692
+Iteration : 539
+Area pattern :nt = 210, area = 0.779625
+Iteration : 540
+Area pattern :nt = 196, area = 0.747725
+Iteration : 541
+Area pattern :nt = 196, area = 0.7632
+Iteration : 542
+Area pattern :nt = 176, area = 0.735275
+Iteration : 543
+Area pattern :nt = 200, area = 0.809175
+Iteration : 544
+Area pattern :nt = 176, area = 0.7372
+Iteration : 545
+Area pattern :nt = 216, area = 0.806325
+Iteration : 546
+Area pattern :nt = 207, area = 0.78635
+Iteration : 547
+Area pattern :nt = 220, area = 0.78405
+Iteration : 548
+Area pattern :nt = 193, area = 0.752625
+Iteration : 549
+Area pattern :nt = 208, area = 0.79605
+Iteration : 550
+Area pattern :nt = 196, area = 0.7738
+Iteration : 551
+Area pattern :nt = 206, area = 0.797175
+Iteration : 552
+Area pattern :nt = 198, area = 0.7891
+Iteration : 553
+Area pattern :nt = 189, area = 0.795525
+Iteration : 554
+Area pattern :nt = 173, area = 0.716375
+Iteration : 555
+Area pattern :nt = 209, area = 0.80375
+Iteration : 556
+Area pattern :nt = 186, area = 0.73745
+Iteration : 557
+Area pattern :nt = 180, area = 0.730875
+Iteration : 558
+Area pattern :nt = 183, area = 0.7233
+Iteration : 559
+Area pattern :nt = 177, area = 0.742975
+Iteration : 560
+Area pattern :nt = 205, area = 0.758525
+Iteration : 561
+Area pattern :nt = 191, area = 0.74635
+Iteration : 562
+Area pattern :nt = 188, area = 0.784175
+Iteration : 563
+Area pattern :nt = 191, area = 0.78295
+Iteration : 564
+Area pattern :nt = 190, area = 0.7547
+Iteration : 565
+Area pattern :nt = 180, area = 0.746875
+Iteration : 566
+Area pattern :nt = 162, area = 0.67225
+Iteration : 567
+Area pattern :nt = 200, area = 0.766225
+Iteration : 568
+Area pattern :nt = 206, area = 0.786675
+Iteration : 569
+Area pattern :nt = 209, area = 0.8041
+Iteration : 570
+Area pattern :nt = 197, area = 0.752375
+Iteration : 571
+Area pattern :nt = 189, area = 0.764425
+Iteration : 572
+Area pattern :nt = 201, area = 0.78235
+Iteration : 573
+Area pattern :nt = 194, area = 0.770175
+Iteration : 574
+Area pattern :nt = 200, area = 0.74325
+Iteration : 575
+Area pattern :nt = 215, area = 0.80675
+Iteration : 576
+Area pattern :nt = 243, area = 0.808775
+Iteration : 577
+Area pattern :nt = 190, area = 0.739475
+Iteration : 578
+Area pattern :nt = 201, area = 0.76585
+Iteration : 579
+Area pattern :nt = 201, area = 0.7715
+Iteration : 580
+Area pattern :nt = 214, area = 0.768725
+Iteration : 581
+Area pattern :nt = 204, area = 0.80815
+Iteration : 582
+Area pattern :nt = 198, area = 0.74755
+Iteration : 583
+Area pattern :nt = 200, area = 0.8073
+Iteration : 584
+Area pattern :nt = 205, area = 0.82795
+Iteration : 585
+Area pattern :nt = 175, area = 0.7392
+Iteration : 586
+Area pattern :nt = 212, area = 0.778
+Iteration : 587
+Area pattern :nt = 209, area = 0.782125
+Iteration : 588
+Area pattern :nt = 197, area = 0.7706
+Iteration : 589
+Area pattern :nt = 213, area = 0.83215
+Iteration : 590
+Area pattern :nt = 203, area = 0.78495
+Iteration : 591
+Area pattern :nt = 203, area = 0.77445
+Iteration : 592
+Area pattern :nt = 178, area = 0.727925
+Iteration : 593
+Area pattern :nt = 213, area = 0.7888
+Iteration : 594
+Area pattern :nt = 208, area = 0.7926
+Iteration : 595
+Area pattern :nt = 210, area = 0.7745
+Iteration : 596
+Area pattern :nt = 176, area = 0.7043
+Iteration : 597
+Area pattern :nt = 194, area = 0.76925
+Iteration : 598
+Area pattern :nt = 214, area = 0.7883
+Iteration : 599
+Area pattern :nt = 203, area = 0.797225
+Iteration : 600
+Area pattern :nt = 201, area = 0.783325
+Iteration : 601
+Area pattern :nt = 200, area = 0.75685
+Iteration : 602
+Area pattern :nt = 199, area = 0.76785
+Iteration : 603
+Area pattern :nt = 192, area = 0.76085
+Iteration : 604
+Area pattern :nt = 205, area = 0.787675
+Iteration : 605
+Area pattern :nt = 182, area = 0.75955
+Iteration : 606
+Area pattern :nt = 194, area = 0.781475
+Iteration : 607
+Area pattern :nt = 214, area = 0.768025
+Iteration : 608
+Area pattern :nt = 217, area = 0.80735
+Iteration : 609
+Area pattern :nt = 208, area = 0.774625
+Iteration : 610
+Area pattern :nt = 192, area = 0.7274
+Iteration : 611
+Area pattern :nt = 196, area = 0.7526
+Iteration : 612
+Area pattern :nt = 212, area = 0.78295
+Iteration : 613
+Area pattern :nt = 174, area = 0.72695
+Iteration : 614
+Area pattern :nt = 205, area = 0.7498
+Iteration : 615
+Area pattern :nt = 202, area = 0.78415
+Iteration : 616
+Area pattern :nt = 180, area = 0.72975
+Iteration : 617
+Area pattern :nt = 188, area = 0.75995
+Iteration : 618
+Area pattern :nt = 206, area = 0.77945
+Iteration : 619
+Area pattern :nt = 207, area = 0.769275
+Iteration : 620
+Area pattern :nt = 208, area = 0.790075
+Iteration : 621
+Area pattern :nt = 180, area = 0.713125
+Iteration : 622
+Area pattern :nt = 184, area = 0.734075
+Iteration : 623
+Area pattern :nt = 197, area = 0.78505
+Iteration : 624
+Area pattern :nt = 194, area = 0.76675
+Iteration : 625
+Area pattern :nt = 222, area = 0.823425
+Iteration : 626
+Area pattern :nt = 194, area = 0.71505
+Iteration : 627
+Area pattern :nt = 194, area = 0.780075
+Iteration : 628
+Area pattern :nt = 185, area = 0.7575
+Iteration : 629
+Area pattern :nt = 186, area = 0.7617
+Iteration : 630
+Area pattern :nt = 174, area = 0.7206
+Iteration : 631
+Area pattern :nt = 201, area = 0.777875
+Iteration : 632
+Area pattern :nt = 197, area = 0.78145
+Iteration : 633
+Area pattern :nt = 197, area = 0.7648
+Iteration : 634
+Area pattern :nt = 182, area = 0.745
+Iteration : 635
+Area pattern :nt = 192, area = 0.782925
+Iteration : 636
+Area pattern :nt = 204, area = 0.8004
+Iteration : 637
+Area pattern :nt = 203, area = 0.78635
+Iteration : 638
+Area pattern :nt = 209, area = 0.788625
+Iteration : 639
+Area pattern :nt = 202, area = 0.763375
+Iteration : 640
+Area pattern :nt = 209, area = 0.78235
+Iteration : 641
+Area pattern :nt = 207, area = 0.761125
+Iteration : 642
+Area pattern :nt = 209, area = 0.79935
+Iteration : 643
+Area pattern :nt = 232, area = 0.8321
+Iteration : 644
+Area pattern :nt = 230, area = 0.8233
+Iteration : 645
+Area pattern :nt = 179, area = 0.752625
+Iteration : 646
+Area pattern :nt = 194, area = 0.749625
+Iteration : 647
+Area pattern :nt = 195, area = 0.79345
+Iteration : 648
+Area pattern :nt = 199, area = 0.7507
+Iteration : 649
+Area pattern :nt = 198, area = 0.7813
+Iteration : 650
+Area pattern :nt = 176, area = 0.712925
+Iteration : 651
+Area pattern :nt = 218, area = 0.802625
+Iteration : 652
+Area pattern :nt = 207, area = 0.814075
+Iteration : 653
+Area pattern :nt = 192, area = 0.76835
+Iteration : 654
+Area pattern :nt = 201, area = 0.77975
+Iteration : 655
+Area pattern :nt = 173, area = 0.702375
+Iteration : 656
+Area pattern :nt = 187, area = 0.751025
+Iteration : 657
+Area pattern :nt = 200, area = 0.775775
+Iteration : 658
+Area pattern :nt = 181, area = 0.73885
+Iteration : 659
+Area pattern :nt = 195, area = 0.767
+Iteration : 660
+Area pattern :nt = 182, area = 0.74585
+Iteration : 661
+Area pattern :nt = 186, area = 0.7726
+Iteration : 662
+Area pattern :nt = 185, area = 0.757925
+Iteration : 663
+Area pattern :nt = 211, area = 0.787625
+Iteration : 664
+Area pattern :nt = 241, area = 0.820325
+Iteration : 665
+Area pattern :nt = 230, area = 0.814425
+Iteration : 666
+Area pattern :nt = 177, area = 0.75235
+Iteration : 667
+Area pattern :nt = 203, area = 0.812
+Iteration : 668
+Area pattern :nt = 192, area = 0.76015
+Iteration : 669
+Area pattern :nt = 210, area = 0.80485
+Iteration : 670
+Area pattern :nt = 197, area = 0.7771
+Iteration : 671
+Area pattern :nt = 183, area = 0.740575
+Iteration : 672
+Area pattern :nt = 197, area = 0.7595
+Iteration : 673
+Area pattern :nt = 223, area = 0.809325
+Iteration : 674
+Area pattern :nt = 201, area = 0.77765
+Iteration : 675
+Area pattern :nt = 198, area = 0.781025
+Iteration : 676
+Area pattern :nt = 194, area = 0.78125
+Iteration : 677
+Area pattern :nt = 205, area = 0.743325
+Iteration : 678
+Area pattern :nt = 212, area = 0.784575
+Iteration : 679
+Area pattern :nt = 180, area = 0.733475
+Iteration : 680
+Area pattern :nt = 200, area = 0.81115
+Iteration : 681
+Area pattern :nt = 213, area = 0.806275
+Iteration : 682
+Area pattern :nt = 195, area = 0.765425
+Iteration : 683
+Area pattern :nt = 197, area = 0.752575
+Iteration : 684
+Area pattern :nt = 203, area = 0.7878
+Iteration : 685
+Area pattern :nt = 188, area = 0.74445
+Iteration : 686
+Area pattern :nt = 203, area = 0.7963
+Iteration : 687
+Area pattern :nt = 215, area = 0.798175
+Iteration : 688
+Area pattern :nt = 217, area = 0.7927
+Iteration : 689
+Area pattern :nt = 194, area = 0.786425
+Iteration : 690
+Area pattern :nt = 192, area = 0.7394
+Iteration : 691
+Area pattern :nt = 199, area = 0.757925
+Iteration : 692
+Area pattern :nt = 211, area = 0.7798
+Iteration : 693
+Area pattern :nt = 178, area = 0.719875
+Iteration : 694
+Area pattern :nt = 208, area = 0.804525
+Iteration : 695
+Area pattern :nt = 205, area = 0.779525
+Iteration : 696
+Area pattern :nt = 206, area = 0.80445
+Iteration : 697
+Area pattern :nt = 196, area = 0.793875
+Iteration : 698
+Area pattern :nt = 197, area = 0.794875
+Iteration : 699
+Area pattern :nt = 200, area = 0.76195
+Iteration : 700
+Area pattern :nt = 181, area = 0.762
+Iteration : 701
+Area pattern :nt = 204, area = 0.7859
+Iteration : 702
+Area pattern :nt = 182, area = 0.720025
+Iteration : 703
+Area pattern :nt = 202, area = 0.769275
+Iteration : 704
+Area pattern :nt = 198, area = 0.76215
+Iteration : 705
+Area pattern :nt = 205, area = 0.8004
+Iteration : 706
+Area pattern :nt = 209, area = 0.797075
+Iteration : 707
+Area pattern :nt = 197, area = 0.78465
+Iteration : 708
+Area pattern :nt = 206, area = 0.80125
+Iteration : 709
+Area pattern :nt = 201, area = 0.7558
+Iteration : 710
+Area pattern :nt = 219, area = 0.78745
+Iteration : 711
+Area pattern :nt = 164, area = 0.70735
+Iteration : 712
+Area pattern :nt = 179, area = 0.749875
+Iteration : 713
+Area pattern :nt = 213, area = 0.79395
+Iteration : 714
+Area pattern :nt = 193, area = 0.760975
+Iteration : 715
+Area pattern :nt = 196, area = 0.7498
+Iteration : 716
+Area pattern :nt = 182, area = 0.722575
+Iteration : 717
+Area pattern :nt = 213, area = 0.8046
+Iteration : 718
+Area pattern :nt = 169, area = 0.7305
+Iteration : 719
+Area pattern :nt = 207, area = 0.7989
+Iteration : 720
+Area pattern :nt = 221, area = 0.81455
+Iteration : 721
+Area pattern :nt = 241, area = 0.839775
+Iteration : 722
+Area pattern :nt = 186, area = 0.763775
+Iteration : 723
+Area pattern :nt = 195, area = 0.760575
+Iteration : 724
+Area pattern :nt = 206, area = 0.7725
+Iteration : 725
+Area pattern :nt = 198, area = 0.812625
+Iteration : 726
+Area pattern :nt = 201, area = 0.78325
+Iteration : 727
+Area pattern :nt = 203, area = 0.7905
+Iteration : 728
+Area pattern :nt = 192, area = 0.752275
+Iteration : 729
+Area pattern :nt = 191, area = 0.788625
+Iteration : 730
+Area pattern :nt = 210, area = 0.7867
+Iteration : 731
+Area pattern :nt = 176, area = 0.765125
+Iteration : 732
+Area pattern :nt = 196, area = 0.75435
+Iteration : 733
+Area pattern :nt = 207, area = 0.809575
+Iteration : 734
+Area pattern :nt = 206, area = 0.790875
+Iteration : 735
+Area pattern :nt = 188, area = 0.774775
+Iteration : 736
+Area pattern :nt = 192, area = 0.740425
+Iteration : 737
+Area pattern :nt = 197, area = 0.753875
+Iteration : 738
+Area pattern :nt = 209, area = 0.781
+Iteration : 739
+Area pattern :nt = 183, area = 0.7563
+Iteration : 740
+Area pattern :nt = 194, area = 0.8086
+Iteration : 741
+Area pattern :nt = 199, area = 0.774175
+Iteration : 742
+Area pattern :nt = 182, area = 0.761825
+Iteration : 743
+Area pattern :nt = 205, area = 0.76755
+Iteration : 744
+Area pattern :nt = 205, area = 0.770725
+Iteration : 745
+Area pattern :nt = 201, area = 0.779925
+Iteration : 746
+Area pattern :nt = 217, area = 0.77255
+Iteration : 747
+Area pattern :nt = 199, area = 0.7839
+Iteration : 748
+Area pattern :nt = 204, area = 0.785825
+Iteration : 749
+Area pattern :nt = 206, area = 0.7629
+Iteration : 750
+Area pattern :nt = 176, area = 0.753425
+Iteration : 751
+Area pattern :nt = 215, area = 0.81175
+Iteration : 752
+Area pattern :nt = 203, area = 0.76375
+Iteration : 753
+Area pattern :nt = 207, area = 0.758525
+Iteration : 754
+Area pattern :nt = 204, area = 0.756975
+Iteration : 755
+Area pattern :nt = 189, area = 0.78155
+Iteration : 756
+Area pattern :nt = 197, area = 0.753025
+Iteration : 757
+Area pattern :nt = 219, area = 0.8059
+Iteration : 758
+Area pattern :nt = 208, area = 0.8168
+Iteration : 759
+Area pattern :nt = 195, area = 0.772575
+Iteration : 760
+Area pattern :nt = 189, area = 0.777275
+Iteration : 761
+Area pattern :nt = 201, area = 0.8047
+Iteration : 762
+Area pattern :nt = 204, area = 0.7579
+Iteration : 763
+Area pattern :nt = 198, area = 0.764075
+Iteration : 764
+Area pattern :nt = 205, area = 0.789025
+Iteration : 765
+Area pattern :nt = 191, area = 0.7525
+Iteration : 766
+Area pattern :nt = 196, area = 0.779875
+Iteration : 767
+Area pattern :nt = 200, area = 0.7602
+Iteration : 768
+Area pattern :nt = 197, area = 0.76045
+Iteration : 769
+Area pattern :nt = 209, area = 0.77595
+Iteration : 770
+Area pattern :nt = 201, area = 0.758625
+Iteration : 771
+Area pattern :nt = 206, area = 0.792825
+Iteration : 772
+Area pattern :nt = 204, area = 0.793225
+Iteration : 773
+Area pattern :nt = 237, area = 0.85175
+Iteration : 774
+Area pattern :nt = 209, area = 0.818975
+Iteration : 775
+Area pattern :nt = 195, area = 0.74965
+Iteration : 776
+Area pattern :nt = 219, area = 0.829775
+Iteration : 777
+Area pattern :nt = 183, area = 0.7189
+Iteration : 778
+Area pattern :nt = 195, area = 0.74715
+Iteration : 779
+Area pattern :nt = 188, area = 0.76325
+Iteration : 780
+Area pattern :nt = 205, area = 0.797025
+Iteration : 781
+Area pattern :nt = 213, area = 0.76295
+Iteration : 782
+Area pattern :nt = 200, area = 0.7772
+Iteration : 783
+Area pattern :nt = 192, area = 0.75385
+Iteration : 784
+Area pattern :nt = 204, area = 0.801525
+Iteration : 785
+Area pattern :nt = 193, area = 0.8144
+Iteration : 786
+Area pattern :nt = 216, area = 0.8089
+Iteration : 787
+Area pattern :nt = 194, area = 0.764725
+Iteration : 788
+Area pattern :nt = 212, area = 0.78625
+Iteration : 789
+Area pattern :nt = 182, area = 0.726975
+Iteration : 790
+Area pattern :nt = 200, area = 0.7944
+Iteration : 791
+Area pattern :nt = 218, area = 0.81825
+Iteration : 792
+Area pattern :nt = 188, area = 0.7926
+Iteration : 793
+Area pattern :nt = 205, area = 0.799925
+Iteration : 794
+Area pattern :nt = 187, area = 0.7322
+Iteration : 795
+Area pattern :nt = 214, area = 0.784375
+Iteration : 796
+Area pattern :nt = 175, area = 0.715575
+Iteration : 797
+Area pattern :nt = 191, area = 0.759875
+Iteration : 798
+Area pattern :nt = 197, area = 0.796625
+Iteration : 799
+Area pattern :nt = 193, area = 0.756125
+Iteration : 800
+Area pattern :nt = 188, area = 0.759875
+Iteration : 801
+Area pattern :nt = 220, area = 0.83825
+Iteration : 802
+Area pattern :nt = 199, area = 0.7936
+Iteration : 803
+Area pattern :nt = 180, area = 0.729
+Iteration : 804
+Area pattern :nt = 179, area = 0.736475
+Iteration : 805
+Area pattern :nt = 211, area = 0.78285
+Iteration : 806
+Area pattern :nt = 166, area = 0.753975
+Iteration : 807
+Area pattern :nt = 179, area = 0.764625
+Iteration : 808
+Area pattern :nt = 172, area = 0.734025
+Iteration : 809
+Area pattern :nt = 203, area = 0.762925
+Iteration : 810
+Area pattern :nt = 194, area = 0.75725
+Iteration : 811
+Area pattern :nt = 190, area = 0.731125
+Iteration : 812
+Area pattern :nt = 217, area = 0.793
+Iteration : 813
+Area pattern :nt = 197, area = 0.759675
+Iteration : 814
+Area pattern :nt = 198, area = 0.762025
+Iteration : 815
+Area pattern :nt = 182, area = 0.761625
+Iteration : 816
+Area pattern :nt = 203, area = 0.739
+Iteration : 817
+Area pattern :nt = 194, area = 0.765825
+Iteration : 818
+Area pattern :nt = 209, area = 0.794575
+Iteration : 819
+Area pattern :nt = 197, area = 0.7695
+Iteration : 820
+Area pattern :nt = 168, area = 0.722275
+Iteration : 821
+Area pattern :nt = 179, area = 0.757325
+Iteration : 822
+Area pattern :nt = 204, area = 0.76485
+Iteration : 823
+Area pattern :nt = 204, area = 0.813825
+Iteration : 824
+Area pattern :nt = 193, area = 0.7721
+Iteration : 825
+Area pattern :nt = 232, area = 0.8032
+Iteration : 826
+Area pattern :nt = 211, area = 0.802
+Iteration : 827
+Area pattern :nt = 187, area = 0.75315
+Iteration : 828
+Area pattern :nt = 185, area = 0.742775
+Iteration : 829
+Area pattern :nt = 205, area = 0.7778
+Iteration : 830
+Area pattern :nt = 194, area = 0.7907
+Iteration : 831
+Area pattern :nt = 200, area = 0.77445
+Iteration : 832
+Area pattern :nt = 205, area = 0.800675
+Iteration : 833
+Area pattern :nt = 197, area = 0.754225
+Iteration : 834
+Area pattern :nt = 213, area = 0.770175
+Iteration : 835
+Area pattern :nt = 195, area = 0.75825
+Iteration : 836
+Area pattern :nt = 206, area = 0.8047
+Iteration : 837
+Area pattern :nt = 210, area = 0.79455
+Iteration : 838
+Area pattern :nt = 199, area = 0.76515
+Iteration : 839
+Area pattern :nt = 216, area = 0.780175
+Iteration : 840
+Area pattern :nt = 191, area = 0.74835
+Iteration : 841
+Area pattern :nt = 184, area = 0.763825
+Iteration : 842
+Area pattern :nt = 199, area = 0.77845
+Iteration : 843
+Area pattern :nt = 171, area = 0.727775
+Iteration : 844
+Area pattern :nt = 201, area = 0.7817
+Iteration : 845
+Area pattern :nt = 190, area = 0.762425
+Iteration : 846
+Area pattern :nt = 212, area = 0.802375
+Iteration : 847
+Area pattern :nt = 178, area = 0.7279
+Iteration : 848
+Area pattern :nt = 190, area = 0.76055
+Iteration : 849
+Area pattern :nt = 208, area = 0.7755
+Iteration : 850
+Area pattern :nt = 195, area = 0.800275
+Iteration : 851
+Area pattern :nt = 219, area = 0.8141
+Iteration : 852
+Area pattern :nt = 209, area = 0.771375
+Iteration : 853
+Area pattern :nt = 206, area = 0.79245
+Iteration : 854
+Area pattern :nt = 208, area = 0.8199
+Iteration : 855
+Area pattern :nt = 210, area = 0.77675
+Iteration : 856
+Area pattern :nt = 171, area = 0.7074
+Iteration : 857
+Area pattern :nt = 146, area = 0.677725
+Iteration : 858
+Area pattern :nt = 193, area = 0.745025
+Iteration : 859
+Area pattern :nt = 181, area = 0.737525
+Iteration : 860
+Area pattern :nt = 199, area = 0.7469
+Iteration : 861
+Area pattern :nt = 190, area = 0.75285
+Iteration : 862
+Area pattern :nt = 204, area = 0.761775
+Iteration : 863
+Area pattern :nt = 198, area = 0.724725
+Iteration : 864
+Area pattern :nt = 201, area = 0.7648
+Iteration : 865
+Area pattern :nt = 217, area = 0.805425
+Iteration : 866
+Area pattern :nt = 187, area = 0.762075
+Iteration : 867
+Area pattern :nt = 198, area = 0.739225
+Iteration : 868
+Area pattern :nt = 183, area = 0.733525
+Iteration : 869
+Area pattern :nt = 202, area = 0.7896
+Iteration : 870
+Area pattern :nt = 180, area = 0.7293
+Iteration : 871
+Area pattern :nt = 185, area = 0.783025
+Iteration : 872
+Area pattern :nt = 199, area = 0.7906
+Iteration : 873
+Area pattern :nt = 180, area = 0.7215
+Iteration : 874
+Area pattern :nt = 208, area = 0.791
+Iteration : 875
+Area pattern :nt = 189, area = 0.76415
+Iteration : 876
+Area pattern :nt = 194, area = 0.748775
+Iteration : 877
+Area pattern :nt = 183, area = 0.768225
+Iteration : 878
+Area pattern :nt = 188, area = 0.71305
+Iteration : 879
+Area pattern :nt = 217, area = 0.78435
+Iteration : 880
+Area pattern :nt = 181, area = 0.725625
+Iteration : 881
+Area pattern :nt = 178, area = 0.74725
+Iteration : 882
+Area pattern :nt = 209, area = 0.803425
+Iteration : 883
+Area pattern :nt = 204, area = 0.7886
+Iteration : 884
+Area pattern :nt = 189, area = 0.740925
+Iteration : 885
+Area pattern :nt = 216, area = 0.78595
+Iteration : 886
+Area pattern :nt = 207, area = 0.800025
+Iteration : 887
+Area pattern :nt = 221, area = 0.821825
+Iteration : 888
+Area pattern :nt = 211, area = 0.771125
+Iteration : 889
+Area pattern :nt = 222, area = 0.7723
+Iteration : 890
+Area pattern :nt = 181, area = 0.749675
+Iteration : 891
+Area pattern :nt = 197, area = 0.781975
+Iteration : 892
+Area pattern :nt = 190, area = 0.742325
+Iteration : 893
+Area pattern :nt = 171, area = 0.70625
+Iteration : 894
+Area pattern :nt = 192, area = 0.7532
+Iteration : 895
+Area pattern :nt = 189, area = 0.7717
+Iteration : 896
+Area pattern :nt = 232, area = 0.807225
+Iteration : 897
+Area pattern :nt = 208, area = 0.789775
+Iteration : 898
+Area pattern :nt = 197, area = 0.775125
+Iteration : 899
+Area pattern :nt = 204, area = 0.80315
+Iteration : 900
+Area pattern :nt = 215, area = 0.7969
+Iteration : 901
+Area pattern :nt = 196, area = 0.78525
+Iteration : 902
+Area pattern :nt = 184, area = 0.744075
+Iteration : 903
+Area pattern :nt = 193, area = 0.76335
+Iteration : 904
+Area pattern :nt = 189, area = 0.74115
+Iteration : 905
+Area pattern :nt = 213, area = 0.79085
+Iteration : 906
+Area pattern :nt = 201, area = 0.798075
+Iteration : 907
+Area pattern :nt = 208, area = 0.799375
+Iteration : 908
+Area pattern :nt = 222, area = 0.79695
+Iteration : 909
+Area pattern :nt = 213, area = 0.8196
+Iteration : 910
+Area pattern :nt = 182, area = 0.7112
+Iteration : 911
+Area pattern :nt = 191, area = 0.759925
+Iteration : 912
+Area pattern :nt = 212, area = 0.7961
+Iteration : 913
+Area pattern :nt = 185, area = 0.759775
+Iteration : 914
+Area pattern :nt = 200, area = 0.766775
+Iteration : 915
+Area pattern :nt = 169, area = 0.69635
+Iteration : 916
+Area pattern :nt = 173, area = 0.735825
+Iteration : 917
+Area pattern :nt = 182, area = 0.74955
+Iteration : 918
+Area pattern :nt = 189, area = 0.74945
+Iteration : 919
+Area pattern :nt = 226, area = 0.7893
+Iteration : 920
+Area pattern :nt = 212, area = 0.80485
+Iteration : 921
+Area pattern :nt = 174, area = 0.711525
+Iteration : 922
+Area pattern :nt = 201, area = 0.76665
+Iteration : 923
+Area pattern :nt = 198, area = 0.73965
+Iteration : 924
+Area pattern :nt = 189, area = 0.77205
+Iteration : 925
+Area pattern :nt = 183, area = 0.73815
+Iteration : 926
+Area pattern :nt = 185, area = 0.723475
+Iteration : 927
+Area pattern :nt = 188, area = 0.7714
+Iteration : 928
+Area pattern :nt = 223, area = 0.823775
+Iteration : 929
+Area pattern :nt = 194, area = 0.764125
+Iteration : 930
+Area pattern :nt = 211, area = 0.811975
+Iteration : 931
+Area pattern :nt = 220, area = 0.776275
+Iteration : 932
+Area pattern :nt = 198, area = 0.766425
+Iteration : 933
+Area pattern :nt = 209, area = 0.7642
+Iteration : 934
+Area pattern :nt = 207, area = 0.797075
+Iteration : 935
+Area pattern :nt = 201, area = 0.789125
+Iteration : 936
+Area pattern :nt = 195, area = 0.73665
+Iteration : 937
+Area pattern :nt = 206, area = 0.81015
+Iteration : 938
+Area pattern :nt = 188, area = 0.746825
+Iteration : 939
+Area pattern :nt = 213, area = 0.781725
+Iteration : 940
+Area pattern :nt = 206, area = 0.772325
+Iteration : 941
+Area pattern :nt = 215, area = 0.788525
+Iteration : 942
+Area pattern :nt = 202, area = 0.76795
+Iteration : 943
+Area pattern :nt = 198, area = 0.759725
+Iteration : 944
+Area pattern :nt = 208, area = 0.756925
+Iteration : 945
+Area pattern :nt = 187, area = 0.762875
+Iteration : 946
+Area pattern :nt = 197, area = 0.77545
+Iteration : 947
+Area pattern :nt = 218, area = 0.818
+Iteration : 948
+Area pattern :nt = 204, area = 0.791975
+Iteration : 949
+Area pattern :nt = 219, area = 0.8102
+Iteration : 950
+Area pattern :nt = 202, area = 0.752175
+Iteration : 951
+Area pattern :nt = 174, area = 0.7807
+Iteration : 952
+Area pattern :nt = 198, area = 0.787575
+Iteration : 953
+Area pattern :nt = 204, area = 0.78865
+Iteration : 954
+Area pattern :nt = 182, area = 0.74425
+Iteration : 955
+Area pattern :nt = 198, area = 0.7865
+Iteration : 956
+Area pattern :nt = 215, area = 0.812875
+Iteration : 957
+Area pattern :nt = 206, area = 0.776025
+Iteration : 958
+Area pattern :nt = 207, area = 0.779675
+Iteration : 959
+Area pattern :nt = 202, area = 0.80465
+Iteration : 960
+Area pattern :nt = 216, area = 0.7862
+Iteration : 961
+Area pattern :nt = 191, area = 0.7106
+Iteration : 962
+Area pattern :nt = 219, area = 0.81775
+Iteration : 963
+Area pattern :nt = 194, area = 0.744175
+Iteration : 964
+Area pattern :nt = 202, area = 0.7698
+Iteration : 965
+Area pattern :nt = 193, area = 0.7522
+Iteration : 966
+Area pattern :nt = 177, area = 0.74545
+Iteration : 967
+Area pattern :nt = 204, area = 0.787775
+Iteration : 968
+Area pattern :nt = 206, area = 0.779575
+Iteration : 969
+Area pattern :nt = 208, area = 0.80925
+Iteration : 970
+Area pattern :nt = 206, area = 0.78535
+Iteration : 971
+Area pattern :nt = 189, area = 0.76485
+Iteration : 972
+Area pattern :nt = 175, area = 0.70765
+Iteration : 973
+Area pattern :nt = 207, area = 0.803675
+Iteration : 974
+Area pattern :nt = 192, area = 0.723325
+Iteration : 975
+Area pattern :nt = 210, area = 0.794075
+Iteration : 976
+Area pattern :nt = 202, area = 0.754475
+Iteration : 977
+Area pattern :nt = 217, area = 0.816075
+Iteration : 978
+Area pattern :nt = 189, area = 0.781275
+Iteration : 979
+Area pattern :nt = 181, area = 0.751875
+Iteration : 980
+Area pattern :nt = 197, area = 0.778725
+Iteration : 981
+Area pattern :nt = 201, area = 0.78835
+Iteration : 982
+Area pattern :nt = 174, area = 0.7355
+Iteration : 983
+Area pattern :nt = 202, area = 0.775125
+Iteration : 984
+Area pattern :nt = 216, area = 0.7946
+Iteration : 985
+Area pattern :nt = 198, area = 0.753075
+Iteration : 986
+Area pattern :nt = 194, area = 0.7842
+Iteration : 987
+Area pattern :nt = 163, area = 0.698125
+Iteration : 988
+Area pattern :nt = 189, area = 0.7287
+Iteration : 989
+Area pattern :nt = 194, area = 0.743825
+Iteration : 990
+Area pattern :nt = 200, area = 0.7836
+Iteration : 991
+Area pattern :nt = 201, area = 0.7841
+Iteration : 992
+Area pattern :nt = 209, area = 0.8006
+Iteration : 993
+Area pattern :nt = 187, area = 0.735275
+Iteration : 994
+Area pattern :nt = 200, area = 0.79725
+Iteration : 995
+Area pattern :nt = 195, area = 0.79365
+Iteration : 996
+Area pattern :nt = 196, area = 0.773125
+Iteration : 997
+Area pattern :nt = 192, area = 0.7578
+Iteration : 998
+Area pattern :nt = 191, area = 0.734175
+Iteration : 999
+Area pattern :nt = 183, area = 0.764075

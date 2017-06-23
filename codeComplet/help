@@ -1,0 +1,4 @@
+pour lancer
+./sim_cftp.exe ../PARAMS/p_str_cftp_A.txt
+
+/!\ Il faut un R commun et donc une surface commune

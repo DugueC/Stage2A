@@ -1,3 +1,0 @@
-2999
-42.1401
-POINTS/test.txt
