@@ -1,0 +1,66 @@
+@startuml
+Quadrillage --|> Position
+Point --|> Position
+
+class Position{
+   #double x;
+   #double y;
+   #double distanceBord;
+
+   +Position(){};
+   +~Position(){};
+   +Position(double x, double y, double dist);
+   +double getDistBord();
+   +double getX();
+   +double getY();
+   +bool operator > (Position &p);
+}
+
+class Point{
+   -std::vector<double> listeDistancePoints;
+
+   +Point(){};
+   +~Point(){};
+   +Point(double x, double y, double dist);
+   +void ajoutDistance(double d);
+   +void getListeDistance(std::vector<Point> &listePoints, int i, double rMax);
+   +double getDistanceDuPoint(int i);
+   +void trierListe();
+   +void printListe();
+   +int getSizeListe();
+}
+
+class Quadrillage{
+   -double distanceVide;
+
+   +Quadrillage(){};
+   +~Quadrillage(){};
+   +Quadrillage(double x, double y, double dist);
+   +void setDistanceVide(std::vector<Point> &points);
+   +double getDistanceVide();
+}
+
+class Rectangle {
+   -double xMin;
+   -double xMax;
+   -double yMin;
+   -double yMax;
+
+   +Rectangle(){};
+   +Rectangle(double x1, double x2, double y1, double y2);
+   +double getXmin();
+   +double getXmax();
+   +double getYmin();
+   +double getYmax();
+   +double distanceSurface(double x, double y);
+   +double getAire();   
+}
+
+class Main
+hide Main circle
+hide Main members
+
+Main -- "n " Point
+Main -- "m" Quadrillage
+Main -- "  1" Rectangle
+@enduml

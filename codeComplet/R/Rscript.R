@@ -1,0 +1,102 @@
+#
+# Clean memory
+#
+#rm(list=ls())
+#setwd("/home/clement/Documents/Stage2A/codeComplet/R")
+
+## myScript.R
+args = commandArgs(TRUE)
+
+params0 = args[1]
+
+
+# on lit les paramètres
+#params0="../PARAMS/p_str_cftp_A.txt"
+params=read.table(params0,header=F)
+n=dim(params)[1]
+dossier=as.character(params[n,1])
+
+# on se place dans le bon dossier
+setwd(dossier)
+
+
+rFGJ0=read.table("./rayonsFGJ.txt",header=F)
+rFGJ=rFGJ0[,1]
+rK0=read.table("./rayonsK.txt",header=F)
+rK=rK0[,1]
+
+f = read.table("./F.txt",header=F)
+minF = apply(f,2,min)
+maxF = apply(f,2,max)
+f_test=f[1,]
+
+g = read.table("./G.txt",header=F)
+minG = apply(g,2,min)
+maxG = apply(g,2,max)
+g_test=g[1,]
+
+j = read.table("./J.txt",header=F)
+minJ = apply(j,2,min)
+maxJ = apply(j,2,max)
+j_test=j[1,]
+
+k = read.table("./K.txt",header=F)
+minK = apply(k,2,min)
+maxK = apply(k,2,max)
+k_test=k[1,]
+
+
+
+### figure
+
+x11()
+par(mfrow=c(2,2))
+
+# F
+yMin = min(minF)
+yMax = max(maxF)
+plot(rFGJ, minF, type="l", col="black", xlab="r", ylab="F(r)", ylim=c(yMin,yMax))
+polygon(c(rFGJ,rev(rFGJ)),c(minF,rev(maxF)),col="blue")
+lines(rFGJ, maxF, type="l", col="black")
+lines(rFGJ, f_test, type="l", col="red")
+title(main="enveloppe de F")
+
+
+# G
+yMin = min(minG)
+yMax = max(maxG)
+plot(rFGJ, minG, type="l", col="black", xlab="r", ylab="G(r)", ylim=c(yMin,yMax))
+polygon(c(rFGJ,rev(rFGJ)),c(minG,rev(maxG)),col="blue")
+lines(rFGJ, maxG, type="l", col="black")
+lines(rFGJ, g_test, type="l", col="red")
+title(main="enveloppe de G")
+
+
+# J
+yMin = min(minJ)
+yMax = max(maxJ)
+plot(rFGJ, minJ, type="l", col="black", xlab="r", ylab="J(r)", ylim=c(yMin,yMax))
+polygon(c(rFGJ,rev(rFGJ)),c(minJ,rev(maxJ)),col="blue")
+lines(rFGJ, maxJ, type="l", col="black")
+lines(rFGJ, j_test, type="l", col="red")
+title(main="enveloppe de J")
+
+
+# K
+yMin = min(minK)
+yMax = max(maxK)
+plot(rK, minK, type="l", col="black", xlab="r", ylab="K(r)", ylim=c(yMin,yMax))
+polygon(c(rK,rev(rK)),c(minK,rev(maxK)),col="blue")
+lines(rK, maxK, type="l", col="black")
+lines(rK, k_test, type="l", col="red")
+title(main="enveloppe de K")
+
+
+
+#
+# boucle infini pour que les courbes ne disparaissent pas
+#
+somme=0
+while(1) {
+  somme=somme+1
+}

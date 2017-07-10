@@ -17,7 +17,8 @@
 //r_model_:_interaction_radius_of_the_model
 0.1
 //nom_list_upper_:_fichier_liste
-../RESULTS/Y_strauss_cftp_C.txt
+../TEMP/Y_strauss_cftp_C.txt
 //statistics_file
-../RESULTS/stat_strauss_cftp_C.txt
-
+../TEMP/stat_strauss_cftp_C.txt
+//name_folder
+../RESULTS/strauss_cftp_C

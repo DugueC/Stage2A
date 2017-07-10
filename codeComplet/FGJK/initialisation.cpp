@@ -8,43 +8,7 @@
 using namespace std;
 
 
-void lectureParams(string &fichier, int &tailleR, double &tauxR, int &tailleQuadri){	
-	ifstream params("../PARAMS/p_fgjk.txt", ios::in);
-
-	if(!params){
-               cerr << "Impossible d'ouvrir le fichier de paramètres !" << endl;
-        }
-
-	string ligne;
-	int i=0;
-
-	// lecture fichier par lignes
-	while(getline(params, ligne)){
-		if( (ligne[0] != 0) && (ligne[0] != '/') ){
-			if(i==0){
-				fichier = ligne;
-			}
-			if(i==1){
-				stringstream ss1(ligne);
-				ss1 >> tailleR;
-			}
-			if(i==2){
-				stringstream ss2(ligne);
-				ss2 >> tauxR;
-			}
-			if(i==3){
-				stringstream ss2(ligne);
-				ss2 >> tailleQuadri;
-			}
-			i++;
-		}
-	}
-
-	params.close();
-}
-
-
-Rectangle creationSurface(string fichier0){
+Rectangle creationSurface(char fichier0[]){
 
 	string ligne, mot1, mot2;
 	double x=0;
@@ -56,7 +20,7 @@ Rectangle creationSurface(string fichier0){
 
 
 	// ouverture fichier
-	ifstream fichier(fichier0.c_str(), ios::in);
+	ifstream fichier(fichier0, ios::in);
 
         if(!fichier){
 		cerr << "Impossible d'ouvrir le fichier contenant les points!" << endl;
@@ -95,7 +59,7 @@ Rectangle creationSurface(string fichier0){
 	return rectangle;
 }
 
-vector<Point> creationListePoints(string fichier0, Rectangle &surface){
+vector<Point> creationListePoints(char fichier0[], Rectangle &surface){
 
 	vector<Point> listePoints;
 
@@ -105,7 +69,7 @@ vector<Point> creationListePoints(string fichier0, Rectangle &surface){
 	double distance=0;
 
 	// ouverture fichier
-	ifstream fichier(fichier0.c_str(), ios::in);
+	ifstream fichier(fichier0, ios::in);
 
         if(!fichier){
 		cerr << "Impossible d'ouvrir le fichier contenant les points!" << endl;
@@ -139,71 +103,6 @@ vector<Point> creationListePoints(string fichier0, Rectangle &surface){
 	return listePoints;
 }
 
-vector<double> creationRdeK(Rectangle &surface){
-	
-	vector<double> r;	
-
-	double xMax = surface.getXmax();
-	double xMin = surface.getXmin();
-	double yMax = surface.getYmax();
-	double yMin = surface.getYmin();
-
-	// on prend le R maximum égale à "taux"% du plus petit coté
-	double rMax = ( xMax-xMin < yMax-yMin ) ? 0.25*(xMax-xMin) : 0.25*(yMax-yMin);
-
-	//cout << "rMaxK : " << rMax << endl;
-
-
-
-	// ouverture en écriture avec effacement du fichier ouvert
-        ofstream fichier("../TEMP/rayonsK.txt", ios::out | ios::trunc);  
-
-        if(!fichier){
-		cerr << "Impossible d'ouvrir le fichier pour écrire les rayons K !" << endl;
-	}
-
-	
-	// on remplit la liste et le fichier de sortie
-	int i;
-	double pas = rMax/512;
-	for(i=0;i<513;i++){
-		r.push_back(pas*i);
-		fichier << pas*i << endl;
-	}
-
-	fichier.close();
-
-
-	return r;
-}
-
-vector<double> creationRdeFGJ(int n,double W,int tailleR){
-
-	vector<double> r;
-
-	double rMax = sqrt(W/n);
-	//cout << "rMaxFGJ : " << rMax << endl << endl;
-
-	// ouverture en écriture avec effacement du fichier ouvert
-        ofstream fichier("../TEMP/rayonsFGJ.txt", ios::out | ios::trunc);  
-
-        if(!fichier){
-		cerr << "Impossible d'ouvrir le fichier pour écrire les rayons FGJ !" << endl;
-	}
-
-	
-	// on remplit la liste et le fichier de sortie
-	int i;
-	double pas = rMax/(tailleR-1);
-	for(i=0;i<tailleR;i++){
-		r.push_back(pas*i);
-		fichier << pas*i << endl;
-	}
-
-	fichier.close();
-
-	return r;
-}
 
 vector<Quadrillage> creationQuadrillage(Rectangle &surface, int m, vector<Point> &listePoints){
 

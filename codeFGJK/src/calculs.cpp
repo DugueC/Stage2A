@@ -158,5 +158,3 @@ void calculFGJ(vector<double> &R, vector<Point> &point, vector<Quadrillage> &qua
 	fichierF.close();
 	fichierJ.close();
 }
-
-

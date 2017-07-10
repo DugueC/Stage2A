@@ -184,7 +184,7 @@ vector<double> creationRdeK(Rectangle &surface){
 	// on prend le R maximum égale à "taux"% du plus petit coté
 	double rMax = ( xMax-xMin < yMax-yMin ) ? 0.25*(xMax-xMin) : 0.25*(yMax-yMin);
 
-	//cout << "rMaxK : " << rMax << endl;
+	cout << "rMaxK : " << rMax << endl;
 
 
 
@@ -215,7 +215,7 @@ vector<double> creationRdeFGJ(int n,double W,int tailleR){
 	vector<double> r;
 
 	double rMax = sqrt(W/n);
-	//cout << "rMaxFGJ : " << rMax << endl << endl;
+	cout << "rMaxFGJ : " << rMax << endl << endl;
 
 	// ouverture en écriture avec effacement du fichier ouvert
         ofstream fichier("RESULTS/rayonsFGJ.txt", ios::out | ios::trunc);  

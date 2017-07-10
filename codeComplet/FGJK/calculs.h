@@ -7,7 +7,7 @@
 
 void calculDistances(std::vector<Point> &point, double rMax);
 void triDistances(std::vector<Point> &point);
-void calculK(std::vector<double> &R, std::vector<Point> &point, double aire);
-void calculFGJ(std::vector<double> &R, std::vector<Point> &point, std::vector<Quadrillage> &quadri);
+void calculK(std::vector<double> &R, std::vector<Point> &point, double aire, char dossier[]);
+void calculFGJ(std::vector<double> &R, std::vector<Point> &point, std::vector<Quadrillage> &quadri, char dossier[]);
 
 #endif

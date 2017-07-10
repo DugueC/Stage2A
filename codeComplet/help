@@ -1,4 +1,12 @@
-pour lancer
-./sim_cftp.exe ../PARAMS/p_str_cftp_A.txt
+pour lancer dans EXE
 
-/!\ Il faut un R commun et donc une surface commune
+./sim_cftp.exe ../PARAMS/p_str_cftp_A.txt
+ou
+./sim_areaint.exe ../PARAMS/p_aint_mh_A.txt
+ou
+./enveloppes_sim_cftp.sh ../PARAMS/p_str_cftp_A.txt
+ou
+./enveloppes_sim_areaint.sh ../PARAMS/p_aint_mh_A.txt
+
+pour les enveloppes si ça ne marche pas enssayer de donner les droits:
+chmod 777 ./enveloppes_sim_areaint.sh

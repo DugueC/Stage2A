@@ -1,8 +1,8 @@
 //fichier de points
 //POINTS/Y_strauss_cftp_0A.txt
 //POINTS/Y_strauss_cftp_A.txt
-POINTS/Y_strauss_cftp_B.txt
-//POINTS/Y_strauss_cftp_C.txt
+//POINTS/Y_strauss_cftp_B.txt
+POINTS/Y_strauss_cftp_C.txt
 //POINTS/Y_strauss_cftp_D.txt
 //POINTS/test.txt
 
@@ -14,5 +14,3 @@ POINTS/Y_strauss_cftp_B.txt
 
 // matrice de cadrillage M x M
 100
-
-//todo : regarder les valeurs, faire en sorte que ça soit joli, puis enveloppe

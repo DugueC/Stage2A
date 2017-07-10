@@ -20,4 +20,5 @@
 ../TEMP/Y_strauss_cftp_B.txt
 //statistics_file
 ../TEMP/stat_strauss_cftp_B.txt
-
+//name_folder
+../RESULTS/strauss_cftp_B

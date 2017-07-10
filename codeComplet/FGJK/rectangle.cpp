@@ -38,5 +38,5 @@ double Rectangle::distanceSurface(double x, double y) const{
 }
 
 double Rectangle::getAire() const{
-	return((xMax - xMin)*(yMax - yMin))-0.03;
+	return((xMax - xMin)*(yMax - yMin));
 }

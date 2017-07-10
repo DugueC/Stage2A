@@ -11,7 +11,7 @@ library(spatstat)
 #
 # Set working directory
 #
-setwd("/home/clement/Documents/Stage2A/code")
+setwd("/home/clement/Documents/Stage2A/codeFGJK")
 
 #
 # Source program functions
@@ -58,7 +58,7 @@ par(mfrow=c(2,2))
 # F
 yMin = min(f[1],Fpois[1])
 yMax = max(f[length(f)],Fpois[length(f)])
-plot(rFGJ, f, type="l", col="blue", xlab="r", ylab="F(r)", ylim=c(yMin,yMax))
+plot(rFGJ, Fpois, type="l", col="blue", xlab="r", ylab="F(r)", ylim=c(yMin,yMax))
 lines(rFGJ, Fpois, lty=2, col=2)
 title(main="Fonction F")
 legend(0, 0.98*yMax, legend=c("F calcul", "F poisson"), col=c("blue", "red"), lty=1:2, cex=0.8)
@@ -105,16 +105,25 @@ GGG = Gest(X,r=rFGJ)
 JJJ = Jest(X,r=rFGJ)
 KKK = Kest(X,r=rK)
 
+
 x11()
 par(mfrow=c(2,2))
 plot(rFGJ,FFF$rs,main="F",type="l",col="blue",xlab="r", ylab="F(r)")
 lines(rFGJ, f, lty=2, col=2)
+legend(0, 0.98*f[length(f)], legend=c("F spatstat","F calcul"), col=c("blue", "red"), lty=1:2, cex=0.8)
+
 plot(rFGJ,GGG$rs,main="G",type="l",col="blue",xlab="r", ylab="G(r)")
 lines(rFGJ, g, lty=2, col=2)
+legend(0, 0.98*g[length(g)], legend=c("G spatstat","G calcul"), col=c("blue", "red"), lty=1:2, cex=0.8)
+
 plot(rFGJ,JJJ$rs,main="J",type="l",col="blue",xlab="r", ylab="J(r)")
 lines(rFGJ, j, lty=2, col=2)
+legend(0, 0.98*JJJ$rs[length(j)], legend=c("J spatstat","J calcul"), col=c("blue", "red"), lty=1:2, cex=0.8)
+
 plot(rK,KKK$border,main="K",type="l",col="blue",xlab="r", ylab="K(r)")
 lines(rK, k, lty=2, col=2)
+legend(0, 0.98*k[length(k)], legend=c("K spatstat","K calcul"), col=c("blue", "red"), lty=1:2, cex=0.8)
+
 title(main="Spatstat",outer=TRUE,line=-1.5)
 
 #k

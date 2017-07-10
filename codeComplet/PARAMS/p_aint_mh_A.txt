@@ -25,7 +25,8 @@
 //r_model_:_interaction_radius_of_the_model
 0.05
 //nom_list_upper_:_fichier_liste
-../RESULTS/Y_aint_mh_A.txt
+../TEMP/Y_aint_mh_A.txt
 //statistics_file
-../RESULTS/stat_aint_mh_A.txt
-
+../TEMP/stat_aint_mh_A.txt
+//name_folder
+../RESULTS/aint_mh_A

@@ -3,6 +3,8 @@
 #include <iostream>
 #include <sstream> 
 #include <fstream>
+#include <stdio.h>
+#include <string.h>
 
 using namespace std;
 
@@ -23,7 +25,7 @@ void triDistances(vector<Point> &point){
 	}
 }
 
-void calculK(vector<double> &r, vector<Point> &point, double aire){
+void calculK(vector<double> &r, vector<Point> &point, double aire, char dossier[]){
 	int i=0;
 	int j=0;
 	int k=0;
@@ -56,9 +58,14 @@ void calculK(vector<double> &r, vector<Point> &point, double aire){
 		}
 	}
 
+	
+	// gestion des fichiers
+	char nomK[100];
+	strcpy (nomK,dossier);
+  	strcat (nomK,"/K.txt");
 
-	// ouverture en écriture avec effacement du fichier ouvert
-        ofstream fichierK("../RESULTS/K.txt", ios::out | ios::app);  
+	// ouverture en écriture sans effacement du fichier ouvert
+        ofstream fichierK(nomK, ios::out | ios::app);  
 
         if(!fichierK){
 		cerr << "Impossible d'ouvrir le fichier pour écrire K !" << endl;
@@ -70,11 +77,11 @@ void calculK(vector<double> &r, vector<Point> &point, double aire){
 		fichierK << histogramme[j]*aire/((n-1)*bords[j]) << " ";
 	}
 
-
+	fichierK << endl;
 	fichierK.close();
 }
 
-void calculFGJ(vector<double> &R, vector<Point> &point, vector<Quadrillage> &quadri){
+void calculFGJ(vector<double> &R, vector<Point> &point, vector<Quadrillage> &quadri, char dossier[]){
 	int k = 0; //indiceDeR
 	int i = 0; //nbPointsDansZone
 	int j = 0;
@@ -89,10 +96,21 @@ void calculFGJ(vector<double> &R, vector<Point> &point, vector<Quadrillage> &qua
 	double G = 0;
 	double F = 0;
 
-	// ouverture en écriture avec effacement du fichier ouvert
-	ofstream fichierG("../RESULTS/G.txt", ios::out | ios::app);  
-	ofstream fichierF("../RESULTS/F.txt", ios::out | ios::app);
-	ofstream fichierJ("../RESULTS/J.txt", ios::out | ios::app);
+	// gestion des fichiers
+	char nomG[100];
+	strcpy (nomG,dossier);
+  	strcat (nomG,"/G.txt");
+	char nomF[100];
+	strcpy (nomF,dossier);
+  	strcat (nomF,"/F.txt");
+	char nomJ[100];
+	strcpy (nomJ,dossier);
+  	strcat (nomJ,"/J.txt");
+
+	// ouverture en écriture sans effacement du fichier ouvert
+	ofstream fichierG(nomG, ios::out | ios::app);  
+	ofstream fichierF(nomF, ios::out | ios::app);
+	ofstream fichierJ(nomJ, ios::out | ios::app);
 
         if(!fichierG){
 		cerr << "Impossible d'ouvrir le fichier pour écrire G !" << endl;
@@ -114,6 +132,8 @@ void calculFGJ(vector<double> &R, vector<Point> &point, vector<Quadrillage> &qua
 		i = 0;
 		j = 0;
 
+		/////////////// G ///////////////////
+
 		// pour chaque point dans la zone de sureté
 		while((i < nP) && ( point[i].getDistBord() >= r)  ){
 
@@ -125,6 +145,8 @@ void calculFGJ(vector<double> &R, vector<Point> &point, vector<Quadrillage> &qua
 			//incrémentation du nombre de point dans la zone de sureté
 			i++;
 		}
+
+		/////////////// F ///////////////////
 
 		// pour chaque quadrillage dans la zone de sureté
 		while((j < nQ) && (quadri[j].getDistBord() > r) ){
@@ -145,6 +167,7 @@ void calculFGJ(vector<double> &R, vector<Point> &point, vector<Quadrillage> &qua
 		fichierG << G << " ";
 		fichierF << F << " ";
 
+		/////////////// J ///////////////////
 		if(F==1){
 			fichierJ << "inf" << " ";
 		}
@@ -153,6 +176,9 @@ void calculFGJ(vector<double> &R, vector<Point> &point, vector<Quadrillage> &qua
 		}
 		
 	}
+	fichierF << endl;
+	fichierG << endl;
+	fichierJ << endl;
 
 	fichierG.close();
 	fichierF.close();
