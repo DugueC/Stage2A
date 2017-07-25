@@ -1,18 +1,15 @@
 # Stage2A
 
 *Analyse exploratoire des données spatialisées en utilisant des processus ponctuels*
-<br/>
 
 ## Auteur
  - DUGUE Clément
-<br/>
 
 ## Dépendances
  - gcc
  - g++
  - R
 <br/>
-
 ## Dossier calculFGJK
 
 Ce dossier contient la partie de calcul de fonction uniquement
