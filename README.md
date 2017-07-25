@@ -10,6 +10,7 @@
  - g++
  - R
 <br/>
+
 ## Dossier calculFGJK
 
 Ce dossier contient la partie de calcul de fonction uniquement
