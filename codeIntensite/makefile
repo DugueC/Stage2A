@@ -1,8 +1,8 @@
 CC= g++
 CFLAGS= -Wall 
 DIR= src/
-OBJ= main.o position.o points.o quadrillage.o rectangle.o initialisation.o calculs.o
-NAME= calcul
+OBJ= main.o position.o rectangle.o initialisation.o calculs.o
+NAME= intensite
 
 %.o: $(DIR)%.cpp
 	$(CC) $(CFLAGS) -c $(DIR)$*.cpp -g

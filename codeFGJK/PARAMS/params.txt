@@ -2,9 +2,9 @@
 //POINTS/Y_strauss_cftp_0A.txt
 //POINTS/Y_strauss_cftp_A.txt
 //POINTS/Y_strauss_cftp_B.txt
-POINTS/Y_strauss_cftp_C.txt
+//POINTS/Y_strauss_cftp_C.txt
 //POINTS/Y_strauss_cftp_D.txt
-//POINTS/test.txt
+POINTS/test.txt
 
 // n : nombre de points de l'axe de r
 512

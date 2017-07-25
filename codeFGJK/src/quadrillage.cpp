@@ -21,7 +21,7 @@ void Quadrillage::setDistanceVide(vector<Point> &point){
 		distance = dX*dX + dY*dY;
 
 		if(dmin > distance){
-			dmin  = distance ;
+			dmin = distance ;
 		}
 	}
 

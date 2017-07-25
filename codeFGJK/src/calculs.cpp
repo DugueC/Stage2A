@@ -5,6 +5,8 @@
 #include <fstream>
 
 using namespace std;
+ 
+
 
 
 void calculDistances(vector<Point> &point, double rMax){
@@ -21,6 +23,7 @@ void triDistances(vector<Point> &point){
 	for(i=0;i<n;i++){
 		point[i].trierListe();
 	}
+
 }
 
 void calculK(vector<double> &r, vector<Point> &point, double aire){

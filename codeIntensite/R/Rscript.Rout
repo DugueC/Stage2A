@@ -1,0 +1,96 @@
+
+R version 3.4.1 (2017-06-30) -- "Single Candle"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R est un logiciel libre livré sans AUCUNE GARANTIE.
+Vous pouvez le redistribuer sous certaines conditions.
+Tapez 'license()' ou 'licence()' pour plus de détails.
+
+R est un projet collaboratif avec de nombreux contributeurs.
+Tapez 'contributors()' pour plus d'information et
+'citation()' pour la façon de le citer dans les publications.
+
+Tapez 'demo()' pour des démonstrations, 'help()' pour l'aide
+en ligne ou 'help.start()' pour obtenir l'aide au format HTML.
+Tapez 'q()' pour quitter R.
+
+[Sauvegarde de la session précédente restaurée]
+
+> #
+> # Clean memory
+> #
+> rm(list=ls())
+> library(spatstat)
+Le chargement a nécessité le package : nlme
+Le chargement a nécessité le package : rpart
+
+spatstat 1.51-0       (nickname: ‘Poetic Licence’) 
+For an introduction to spatstat, type ‘beginner’ 
+
+
+Note: spatstat version 1.51-0 is out of date by more than 11 weeks; a newer version should be available.
+> require(grDevices) # for colours
+> setwd("/home/clement/Documents/Stage2A/codeIntensite")
+> source("R/pointPatternAnalysisTools.R")
+> 
+> 
+> # on lit les paramètres
+> params=read.table("./PARAMS/params.txt",header=F,fill=TRUE)
+> 
+> 
+> # on récupère le nom du fichier de point utilisé et on l'affiche 
+> i=1
+> while(substring(as.character(params[i,1]),1,2)=="//") {
++   i=i+1
++ }
+> name.file=as.character(params[i,1],1,2)
+> print.pattern.strauss(name.file)
+> 
+> X=read.point.pattern(name.file)
+> x11()
+> par(mfrow=c(2,2))
+> aaaaa= density(X, sigma=0.08, kernel="gaussian", edge=TRUE)
+> plot(density(X, sigma=0.08, kernel="gaussian", edge=FALSE), main="gauss")
+> plot(density(X, sigma=0.08, kernel="gaussian", edge=TRUE), main="gauss bord")
+> plot(density(X, sigma=0.08, kernel="disc", edge=FALSE), main="disque")
+> plot(density(X, sigma=0.08, kernel="disc", edge=TRUE), main="disque bord")
+> 
+> # on se place dans le bon dossier
+> n=dim(params)[1]
+> dossier=as.character(params[n,1])
+> setwd(dossier)
+> 
+> 
+> # on recupere les valeurs calculées
+> Carre = read.table("./Carre.txt",header=F)
+> Rond = read.table("./Rond.txt",header=F)
+> Gauss = read.table("./Gauss.txt",header=F)
+> GaussCorr = read.table("./GaussCorr.txt",header=F)
+> 
+> # on transforme en matrice
+> matriceCarre = as.matrix(Carre)
+> matriceRond = as.matrix(Rond)
+> matriceGauss = as.matrix(Gauss)
+> matriceGaussCorr = as.matrix(GaussCorr)
+> 
+> # on affiche
+> x11()
+> par(mfrow=c(2,2))
+> image(matriceCarre, axes = FALSE, xlab = "Carré")
+> image(matriceRond, axes = FALSE, xlab = "Rond")
+> image(matriceGauss, axes = FALSE, xlab = "Gauss")
+> image(matriceGaussCorr, axes = FALSE, xlab = "Gauss corrigé")
+> title(main="Intensité",outer=TRUE,line=-2)
+> 
+> 
+> 
+> #
+> # boucle infini pour que les courbes ne disparaissent pas
+> #
+> somme=0
+> while(1) {
++   somme=somme+1
++ }
+
+Exécution arrêtée

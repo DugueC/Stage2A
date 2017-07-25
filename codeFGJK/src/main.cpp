@@ -60,13 +60,21 @@ int main(){
 	rK = creationRdeK(surface);
 	r = creationRdeFGJ(n,surface.getAire(),tailleR);
 
+
 	
-	// création du quadrillage pour F
+	// création du quadrillage pour F -> long (0.5)
+	t1 = clock();
 	listeQuadrillage = creationQuadrillage(surface,tailleQuadri, listePoints);
+	t2 = clock();	
+	temps = (float)(t2-t1)/CLOCKS_PER_SEC;
+	cout << "temps creation quadrillage: " << temps << " sec" << endl;
 
 	// Calculs distances entre chaque points
+	t1 = clock();
 	calculDistances(listePoints, rK.back());
-	
+	t2 = clock();	
+	temps = (float)(t2-t1)/CLOCKS_PER_SEC;
+	cout << "temps calculs distance: " << temps << " sec" << endl;	
 
 
 
@@ -76,6 +84,7 @@ int main(){
 	// on trie les points dans l'ordre décroissant de leur distance au bord
 	sort(listePoints.begin(), listePoints.end(), greater<Point>());
 
+
 	// on trie chaque liste de distance de point dans l'odre croissant
 	t1 = clock();
 	triDistances(listePoints);
@@ -83,12 +92,10 @@ int main(){
 	temps = (float)(t2-t1)/CLOCKS_PER_SEC;
 	cout << "temps tris distances: " << temps << " sec" << endl;
 
-
 	// on trie les quadrillages dans l'ordre décroissant de leur distance au bord
 	sort(listeQuadrillage.begin(),listeQuadrillage.end(), greater<Quadrillage>());
 
-
-
+	
 
 
 	////// Calculs des fonctions
@@ -99,7 +106,7 @@ int main(){
 	calculK(rK, listePoints, surface.getAire());
 	t2 = clock();	
 	temps = (float)(t2-t1)/CLOCKS_PER_SEC;
-	cout << "K calculé : " << temps << " sec" << endl;
+	cout << endl << "K calculé : " << temps << " sec" << endl;
 
 	//calcul de G
 	t1 = clock();
