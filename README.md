@@ -11,7 +11,7 @@
  - R
 
 
-### Dossier calculFGJK
+## Dossier calculFGJK
 
 Ce dossier contient la partie de calcul de fonction uniquement
 
@@ -28,7 +28,7 @@ Ce dossier contient la partie de calcul de fonction uniquement
 
 
 
-##### Dossier codeComplet
+## Dossier codeComplet
 
 Ce dossier contient le code permettant de faire la génération des tests d'enveloppe.
 
@@ -44,11 +44,16 @@ Pour génération de type "AREAINT":
 #### Execute
  - changer les paramètres au besoin dans le dossier "PARAMS"
  - aller dans le dossier "EXEC"
+
+Pour génération de type "STRAUSS":
  - au choix:
 	 - `./sim_cftp.exe ../PARAMS/nom_param.txt`
+	 - `./enveloppes_sim_cftp.sh ../PARAMS/nom_param.txt`
+
+Pour génération de type "AREAINT":
+ - au choix:
 	 - `./sim\_areaint.exe ../PARAMS/nom\_param.txt`
-	 - `./enveloppes\_sim\_cftp.sh ../PARAMS/nom\_param.txt`
-	 - `./enveloppes\_sim\_areaint.sh ../PARAMS/nom\_param.txt`
+	 - `./enveloppes_sim_areaint.sh ../PARAMS/nom_param.txt`
 
 Les 2 scripts permettent d'avoir une visualisation juste après les calculs.
 
