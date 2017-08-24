@@ -1,5 +1,5 @@
 
-R version 3.4.0 (2017-04-21) -- "You Stupid Darkness"
+R version 3.4.1 (2017-06-30) -- "Single Candle"
 Copyright (C) 2017 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
@@ -32,11 +32,13 @@ Le chargement a nécessité le package : rpart
 spatstat 1.51-0       (nickname: ‘Poetic Licence’) 
 For an introduction to spatstat, type ‘beginner’ 
 
+
+Note: spatstat version 1.51-0 is out of date by more than 3 months; we recommend upgrading to the latest version.
 > 
 > #
 > # Set working directory
 > #
-> setwd("/home/clement/Documents/Stage2A/code")
+> setwd("/home/clement/Documents/Stage2A/codeFGJK")
 > 
 > #
 > # Source program functions
@@ -68,6 +70,7 @@ For an introduction to spatstat, type ‘beginner’
 > n=as.numeric(as.character(sufficient.stat[1,1]))
 > W=as.numeric(as.character(sufficient.stat[2,1]))
 > 
+> 
 > lambda = n/W
 > Fpois = 1-exp(-lambda*pi*rFGJ*rFGJ)
 > Jpois = rep(1,length(rFGJ))
@@ -77,6 +80,7 @@ For an introduction to spatstat, type ‘beginner’
 > #
 > # Affichage des fonctions
 > #
+> 
 > x11()
 > par(mfrow=c(2,2))
 > 
@@ -130,33 +134,54 @@ For an introduction to spatstat, type ‘beginner’
 > JJJ = Jest(X,r=rFGJ)
 > KKK = Kest(X,r=rK)
 > 
+> 
 > x11()
 > par(mfrow=c(2,2))
 > plot(rFGJ,FFF$rs,main="F",type="l",col="blue",xlab="r", ylab="F(r)")
 > lines(rFGJ, f, lty=2, col=2)
+> legend(0, 0.98*f[length(f)], legend=c("F spatstat","F calcul"), col=c("blue", "red"), lty=1:2, cex=0.8)
+> 
 > plot(rFGJ,GGG$rs,main="G",type="l",col="blue",xlab="r", ylab="G(r)")
 > lines(rFGJ, g, lty=2, col=2)
+> legend(0, 0.98*g[length(g)], legend=c("G spatstat","G calcul"), col=c("blue", "red"), lty=1:2, cex=0.8)
+> 
 > plot(rFGJ,JJJ$rs,main="J",type="l",col="blue",xlab="r", ylab="J(r)")
 > lines(rFGJ, j, lty=2, col=2)
+> legend(0, 0.98*JJJ$rs[length(j)], legend=c("J spatstat","J calcul"), col=c("blue", "red"), lty=1:2, cex=0.8)
+> 
 > plot(rK,KKK$border,main="K",type="l",col="blue",xlab="r", ylab="K(r)")
 > lines(rK, k, lty=2, col=2)
+> legend(0, 0.98*k[length(k)], legend=c("K spatstat","K calcul"), col=c("blue", "red"), lty=1:2, cex=0.8)
+> 
 > title(main="Spatstat",outer=TRUE,line=-1.5)
 > 
 > #k
 > #KKK$border
-> #k2k = k-KKK$border
-> #k2k
+> #k2k = abs(k-KKK$borde)
+> #mean(k2k)
+> #max(k2k)
+> #sd(k2k)
 > 
 > #g
 > #GGG$rs
-> #g2g = g-GGG$rs
-> #g2g
+> #g2g = abs(g-GGG$rs)
+> #mean(g2g)
+> #max(g2g)
+> #sd(g2g)
 > 
 > #f
 > #FFF$rs
-> #f2f = f-FFF$rs
-> #f2f
+> #f2f = abs(f-FFF$rs)
+> #mean(f2f)
+> #max(f2f)
+> #sd(f2f)
 > 
+> #j
+> #JJJ$rs
+> #j2j = abs(f-FFF$rs)
+> #mean(j2j)
+> #max(j2j)
+> #sd(j2j)
 > 
 > #
 > # boucle infini pour que les courbes ne disparaissent pas

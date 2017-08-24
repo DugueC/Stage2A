@@ -1,0 +1,3 @@
+4125
+16353.9
+POINTS/dataset1.txt

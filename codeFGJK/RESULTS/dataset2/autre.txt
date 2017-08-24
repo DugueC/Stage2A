@@ -1,0 +1,3 @@
+4250
+16372.7
+POINTS/dataset2.txt

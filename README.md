@@ -57,3 +57,21 @@ Pour génération de type "AREAINT":
 
 Les 2 scripts permettent d'avoir une visualisation juste après les calculs.
 
+<br/>
+
+## Dossier intensite
+
+Ce dossier contient le code pour les calculs d'intensité.
+
+#### Build
+ - `cd ./codeIntensite`
+ - `make `
+
+
+#### Execute
+ - mettre un fichier avec la liste des points dans le dossier "POINTS"
+ - changer les paramètres au besoin dans le dossier "PARAMS"
+ - au choix:
+	- `./intensite`
+	- `./visualisation.sh` - si vous voulez afficher les courbes également
+

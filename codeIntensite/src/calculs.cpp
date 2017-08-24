@@ -78,7 +78,7 @@ void calcul(Rectangle &surface, int m, vector<Position> &point, double c, double
 				dY = y - point[k].getY();
 
 				// le point est-il à la bonne distance?
-				intensiteCarre += indicatriceCarre(dX, dY, r);
+				intensiteCarre += indicatriceCarre(dX, dY, c);
 				intensiteRond += indicatriceRond(dX, dY, r);
 				intensiteGaussienne += gaussienne(dX, dY, sigma);
 				intensiteGaussienneCorr += gaussienne(dX, dY, sigma)/point[k].getE();

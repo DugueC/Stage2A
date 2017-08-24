@@ -25,9 +25,10 @@ x11()
 par(mfrow=c(2,2))
 aaaaa= density(X, sigma=0.08, kernel="gaussian", edge=TRUE)
 plot(density(X, sigma=0.08, kernel="gaussian", edge=FALSE), main="gauss")
-plot(density(X, sigma=0.08, kernel="gaussian", edge=TRUE), main="gauss bord")
+plot(density(X, sigma=0.08, kernel="gaussian", edge=TRUE), main="gauss corrigé")
 plot(density(X, sigma=0.08, kernel="disc", edge=FALSE), main="disque")
-plot(density(X, sigma=0.08, kernel="disc", edge=TRUE), main="disque bord")
+plot(density(X, sigma=0.08, kernel="disc", edge=TRUE), main="disque corrigé")
+title(main="Intensité spatstat",outer=TRUE,line=-2)
 
 # on se place dans le bon dossier
 n=dim(params)[1]
@@ -50,10 +51,10 @@ matriceGaussCorr = as.matrix(GaussCorr)
 # on affiche
 x11()
 par(mfrow=c(2,2))
-image(matriceCarre, axes = FALSE, xlab = "Carré")
-image(matriceRond, axes = FALSE, xlab = "Rond")
-image(matriceGauss, axes = FALSE, xlab = "Gauss")
-image(matriceGaussCorr, axes = FALSE, xlab = "Gauss corrigé")
+image(matriceCarre, axes = FALSE, main="Carré")
+image(matriceRond, axes = FALSE, main="Disque")
+image(matriceGauss, axes = FALSE, main="Gauss")
+image(matriceGaussCorr, axes = FALSE, main="Gauss corrigé")
 title(main="Intensité",outer=TRUE,line=-2)
 
 

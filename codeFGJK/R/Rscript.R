@@ -43,6 +43,7 @@ sufficient.stat=read.table("./RESULTS/autre.txt",header=F)
 n=as.numeric(as.character(sufficient.stat[1,1]))
 W=as.numeric(as.character(sufficient.stat[2,1]))
 
+
 lambda = n/W
 Fpois = 1-exp(-lambda*pi*rFGJ*rFGJ)
 Jpois = rep(1,length(rFGJ))
@@ -52,13 +53,14 @@ Kpois = pi*rK*rK
 #
 # Affichage des fonctions
 #
+
 x11()
 par(mfrow=c(2,2))
 
 # F
 yMin = min(f[1],Fpois[1])
 yMax = max(f[length(f)],Fpois[length(f)])
-plot(rFGJ, Fpois, type="l", col="blue", xlab="r", ylab="F(r)", ylim=c(yMin,yMax))
+plot(rFGJ, f, type="l", col="blue", xlab="r", ylab="F(r)", ylim=c(yMin,yMax))
 lines(rFGJ, Fpois, lty=2, col=2)
 title(main="Fonction F")
 legend(0, 0.98*yMax, legend=c("F calcul", "F poisson"), col=c("blue", "red"), lty=1:2, cex=0.8)
@@ -128,19 +130,31 @@ title(main="Spatstat",outer=TRUE,line=-1.5)
 
 #k
 #KKK$border
-#k2k = k-KKK$border
-#k2k
+#k2k = abs(k-KKK$borde)
+#mean(k2k)
+#max(k2k)
+#sd(k2k)
 
 #g
 #GGG$rs
-#g2g = g-GGG$rs
-#g2g
+#g2g = abs(g-GGG$rs)
+#mean(g2g)
+#max(g2g)
+#sd(g2g)
 
 #f
 #FFF$rs
-#f2f = f-FFF$rs
-#f2f
+#f2f = abs(f-FFF$rs)
+#mean(f2f)
+#max(f2f)
+#sd(f2f)
 
+#j
+#JJJ$rs
+#j2j = abs(j-JJJ$rs)
+#mean(j2j)
+#max(j2j)
+#sd(j2j)
 
 #
 # boucle infini pour que les courbes ne disparaissent pas
@@ -149,3 +163,14 @@ somme=0
 while(1) {
   somme=somme+1
 }
+
+# pour rapport
+#rr = seq(0,0.34,0.01)
+#lambda = 40
+#Fpois = 1-exp(-lambda*pi*rr*rr)
+#x11()
+#par(mfrow=c(2,2))
+#yMin = Fpois[1]
+#yMax = Fpois[length(Fpois)]
+#plot(rr, Fpois, type="l", col="blue", xlab="r", ylab="F(r)", ylim=c(yMin,yMax))
+#title(main="Fonction F")

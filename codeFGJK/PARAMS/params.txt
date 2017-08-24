@@ -5,9 +5,12 @@
 //POINTS/Y_strauss_cftp_C.txt
 //POINTS/Y_strauss_cftp_D.txt
 POINTS/test.txt
+//POINTS/dataset1.txt
+//POINTS/dataset2.txt
+//POINTS/dataset3.txt
 
 // n : nombre de points de l'axe de r
-512
+513
 
 //"taux"% du plus petit coté
 0.1

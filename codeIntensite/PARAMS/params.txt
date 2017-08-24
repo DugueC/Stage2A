@@ -1,22 +1,28 @@
 //fichier de points
 //POINTS/Y_strauss_cftp_0A.txt
 //POINTS/Y_strauss_cftp_A.txt
-POINTS/Y_strauss_cftp_B.txt
+//POINTS/Y_strauss_cftp_B.txt
 //POINTS/Y_strauss_cftp_C.txt
 //POINTS/Y_strauss_cftp_D.txt
 //POINTS/test.txt
+//POINTS/dataset1.txt
+//POINTS/dataset2.txt
+POINTS/dataset3.txt
 
 // m - matrice de cadrillage m x m
-200
+100
 
 // c - taille du demi coté pour un observateur carré
-0.1
+//0.152
+10
 
 // r - rayon pour un observateur rond
-0.08
+//0.08
+8
 
 //sigma - largeur cloche pour un observateur gaussien
-0.08
+//0.08
+7
 
 //nom du dossier
-RESULTS/strauss_cftp_B
+RESULTS/dataset3
