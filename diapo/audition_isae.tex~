@@ -1,0 +1,790 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage{palatino}
+\usepackage{graphicx}
+\graphicspath{{../illustrations/}}
+\usepackage{colortbl}
+\usepackage{ragged2e} % Pour justifier le texte dans les blocks
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{mindmap,trees}
+\usepackage{pgfplots}
+% and optionally (as of Pgfplots 1.3):
+\pgfplotsset{compat=newest}
+\pgfplotsset{plot coordinates/math parser=false}
+\newlength\figureheight
+\newlength\figurewidth
+\usepackage{ifthen}
+\usepackage{subfigure}
+\usepackage{animate}
+\usepackage{pbox}
+\usepackage{pgf-pie}
+% Préparation à l'impression
+%\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{eurosym}
+\usepackage{wasysym}
+
+% Environnements maths
+\newcommand*{\SET}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand*{\VEC}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand*{\MAT}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand*{\OP}[1]  {\ensuremath{\text{#1}}}
+\newcommand*{\NORM}[1]  {\ensuremath{\left\|#1\right\|}}
+\newcommand*{\DPR}[2]  {\ensuremath{\left \langle #1,#2 \right \rangle}}
+\newcommand*{\calbf}[1]  {\ensuremath{\boldsymbol{\mathcal{#1}}}}
+\newcommand*{\shift}[1]  {\ensuremath{\boldsymbol{#1}}}
+% Raccourcis
+\newcommand{\eqdef}{\stackrel{\mathrm{def}}{=}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\ud}{\, \text{d}}
+\newcommand{\vect}{\text{Vect}}
+\newcommand{\sinc}{\text{sinc}}
+\newcommand{\esp}{\ensuremath{\mathbb{E}}}
+\newcommand{\hilbert}{\ensuremath{\mathcal{H}}}
+\newcommand{\fourier}{\ensuremath{\mathcal{F}}}
+\newcommand{\sgn}{\text{sgn}}
+\newcommand{\intTT}{\int_{-T}^{T}}
+\newcommand{\intT}{\int_{-\frac{T}{2}}^{\frac{T}{2}}}
+\newcommand{\intinf}{\int_{-\infty}^{+\infty}}
+\newcommand{\Sh}{\ensuremath{\boldsymbol{S}}}
+\newcommand{\Cpx}{\ensuremath{\mathbb{C}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\K}{\ensuremath{\mathbb{K}}}
+\newcommand{\reel}{\mathcal{R}}
+\newcommand{\imag}{\mathcal{I}}
+\newcommand{\cmnr}{c_{m,n}^\reel}
+\newcommand{\cmni}{c_{m,n}^\imag}
+\newcommand{\cnr}{c_{n}^\reel}
+\newcommand{\cni}{c_{n}^\imag}
+\newcommand{\LR}{\mathcal{L}_2(\R)}
+\newcommand{\tproto}{g}
+\newcommand{\rproto}{\check{g}}
+\newcommand{\Tproto}{G}
+\newcommand{\Rproto}{\check{G}}
+
+\newcommand{\avec}{\qquad \text{avec} \qquad}
+
+%\theoremstyle{definition}
+%\newtheorem{definition}{Définition}[subsection]
+
+\theoremstyle{remark}
+\newtheorem{remarque}{Remarque}[subsection]
+
+\theoremstyle{plain}
+\newtheorem{propriete}{Propriété}[subsection]
+\newtheorem{exemple}{Exemple}[subsection]
+
+% Définition des couleurs
+\colorlet{vert}{green!50!black}
+\colorlet{rouge}{red}
+\xdefinecolor{violet}{rgb}{0.34,0.18,0.35}
+
+% Couleur GIPSA-lab à la place du bleu standard
+%\usecolortheme[named=violet]{structure}
+
+% Sélection d'un thème principal et d'un thème de couleur
+\mode<presentation> {
+  %\usetheme{Warsaw}
+  %\usetheme{Darmstadt}
+  \usetheme{Madrid}
+  \usecolortheme{seahorse}
+}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=4pt] at (current page.north east) {\includegraphics[height=0.85cm]{logo-isae-long-sans-texte}};
+\end{tikzpicture}}
+
+\title[Candidature poste E/C com. num.]{Candidature à un poste d'enseignant-chercheur en communications numériques}
+
+\author{Damien Roque}
+\date{16 septembre 2013}
+\institute[GIPSA-lab]
+{
+\vspace{0.5cm}
+%\includegraphics[height=1.5cm]{../illustrations/logo_dga}\hspace{1cm}
+\includegraphics[height=3cm]{images/logo_isae}
+%\includegraphics[height=1.5cm]{../illustrations/logo_orange}
+}
+
+% Suppression de la barre de navigation
+\setbeamertemplate{navigation symbols}{}
+ 
+\subject{Audition poste ISAE}
+
+\begin{document}
+% Ne pas compter les dernières diapos dans la numérotation
+%\renewcommand*{\inserttotalframenumber}{\pageref{lastframe}}
+
+
+% % Ajout de numéros de pages
+% \newcommand*\oldmacro{}%
+% \let\oldmacro\insertshorttitle%
+% \renewcommand*\insertshorttitle{%
+%   \oldmacro\hfill%
+%   \insertframenumber\,/\,\inserttotalframenumber}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Un logo sur chaque diapo
+%\logo{\includegraphics[height=1.5cm]{../illustrations/logo-gipsa-sans-texte}}
+
+
+
+\begin{frame}
+  \frametitle{Plan}
+  \small
+  \tableofcontents[hideallsubsections]
+  %\tableofcontents[currentsection,currentsubsection]
+  %\tableofcontents
+  \normalsize
+\end{frame}
+
+% Répétition du plan au début de chaque section
+\AtBeginSubsection[]
+{
+\begin{frame}
+  \frametitle{Plan}
+  \small
+  %\tableofcontents[hideothersubsections]
+  %\tableofcontents[currentsubsection,hideothersubsections]
+  \tableofcontents[currentsubsection]
+  \normalsize
+\end{frame}
+}
+
+\section{Présentation personnelle}
+
+\begin{frame}
+  \frametitle{Formation et parcours professionnel}
+  \footnotesize
+  \def\largeurlogo{1.3cm}
+  \begin{block}{2006--2009 Élève ingénieur, TELECOM Bretagne}
+    \colorbox{white}{
+    \begin{minipage}{0.25\linewidth}
+      \begin{center}
+        \includegraphics[width=\largeurlogo]{images/logo_telecom_bretagne}
+        \hspace{0.1cm}
+        \includegraphics[width=\largeurlogo]{images/logo_dga}
+      \end{center}
+    \end{minipage}}
+  \hspace{0.1cm}
+    \begin{minipage}{0.7\linewidth}
+      \setlength{\parskip}{0.1cm}
+      Formation en apprentissage avec DGA/CELAR.
+      
+      \og \alert{Adaptation des protocoles} de systèmes d'information opérationnels à l'environnement \alert{tactique}.\fg
+    \end{minipage}
+  \end{block}
+  \begin{block}{2009--2012 Doctorant, GIPSA-lab}
+    \colorbox{white}{
+    \begin{minipage}{0.25\linewidth}
+      \begin{center}
+        \includegraphics[width=\largeurlogo]{images/logo_gipsa}
+        \hspace{0.1cm}
+        \includegraphics[width=\largeurlogo]{images/logo_dga}\\
+        %\vspace{0.1cm}
+        %\includegraphics[width=\largeurlogo+0.5cm]{images/logo_ensimag}
+      \end{center}
+    \end{minipage}}
+  \hspace{0.1cm}
+     \begin{minipage}{0.7\linewidth}
+       \setlength{\parskip}{0.1cm}
+      GIPSA-lab, financement DGA (J.M. Brossier et C. Siclet).
+
+      \og Développement de modulations \alert{multiporteuses} de faible complexité pour la transmission sur canal \alert{radiomobile}.\fg
+    \end{minipage}
+  \end{block}
+  \begin{block}{2012--2013 Attaché d'enseignement et de recherche, ENSIMAG}
+    \colorbox{white}{
+    \begin{minipage}{0.25\linewidth}
+      \begin{center}
+        \includegraphics[width=\largeurlogo]{images/logo_gipsa}
+        \hspace{0.1cm}
+        \includegraphics[width=\largeurlogo]{images/logo_ensimag}\\
+        %\vspace{0.1cm}
+        %\includegraphics[width=\largeurlogo+0.5cm]{images/logo_ensimag}
+      \end{center}
+    \end{minipage}}
+  \hspace{0.1cm}
+     \begin{minipage}{0.7\linewidth}
+       \setlength{\parskip}{0.1cm}
+      Diversification des thématiques de recherche :
+      \begin{itemize}
+      \item transmission à \alert{haute efficacité spectrale} ;
+      \item création d'une plate-forme de \alert{radio logicielle}.
+      \end{itemize}
+    \end{minipage}
+  \end{block}
+\end{frame}
+
+\subsection{Travaux de recherche effectués}
+
+\begin{frame}
+  \frametitle{Vue d'ensemble des travaux de recherche}
+  \footnotesize
+  \begin{center}
+    \begin{tikzpicture}
+      \tikzstyle{block} = [draw, fill=blue!20, rectangle, minimum height=2em, minimum width=6em,text width=6em,text centered]
+      \tikzstyle{voidblock} = [draw, fill=white, rectangle, minimum height=2em, minimum width=6em,text width=6em]
+      \tikzstyle{bigblock} = [draw, fill=blue!20, rectangle, minimum height=2em, minimum width=6em,text width=8.5em,text centered]
+      \tikzstyle{bigvoidblock} = [draw, fill=white, rectangle, minimum height=2em, minimum width=6em,text width=8.5em]
+      \tikzstyle{transition} = [text width=6.6em,text centered]
+      \def\espacementlong{4.6cm}
+      \def\espacementcourt{1.6cm}
+      \node[block] (canal) {Canal radiomobile};
+      \node[bigblock, left of=canal, node distance=\espacementlong] (multiporteuse) {Signalisation robuste (multiporteuse)};
+      \node[bigblock, fill=red!20, right of=canal, node distance=\espacementlong] (ftn) {Reconstruction robuste (multiporteuse)};
+      \node[block, below of=canal, node distance=\espacementcourt] (realisation) {Schémas de faible complexité};
+      \node[block, fill=red!20,below of=realisation, node distance=\espacementcourt] (rl) {Radio logicielle};
+      %\node[block, fill=red!20,below of=rl, node distance=\espacementcourt] (generalisation) {Densité et complexité variables};
+     
+
+      %\node[voidblock,below of=multiporteuse, node distance=\espacementcourt] (descmultiporteuse) {\scriptsize $\bullet$ étude des filtres de mise en forme\\ $\bullet$ évaluation du PAPR\\ $\bullet$ égalisation de faible complexité};
+
+      \draw[->,thick] (canal) -- node[transition,above=1em] {\scriptsize Minimisation des interférences} (multiporteuse);
+      \draw[->,thick] (canal) -- node[transition,above] {\scriptsize Maximisation de l'efficacité spectrale} (ftn);
+      \draw[->,thick] (multiporteuse) -- node[below left] {\scriptsize Filtres courts} (realisation);
+      \draw[->,thick] (ftn) -- node[below right] {\scriptsize Méthodes turbo} (realisation);
+      \draw[->,thick] (realisation) -- node[transition,right,text width=8em,text centered] {\scriptsize Éval. performances} (rl);
+      %\draw[->,dashed] (multiporteuse) |- (generalisation);
+      %\draw[->,dashed] (ftn) |- (generalisation);
+      %\draw[->,thick] (generalisation) -- node[transition,right,text width=8em,text centered] {\scriptsize Systèmes adaptatifs} (rl);
+      
+      % \draw (multiporteuse.south) node[bigvoidblock,below=0.5cm] (descmultiporteuse) {\scriptsize
+      %   $\bullet$ Modulations multiporteuses à densité sous-critique.\\
+      %   $\bullet$ Optimisation des formes d'ondes.};
+      % \draw[dashed] (multiporteuse) -- (descmultiporteuse);
+      % \draw (ftn.south) node[bigvoidblock,below=0.5cm] (descftn) {\scriptsize
+      %   $\bullet$ Modulations multiporteuses à densité sur-critique.\\
+      %   $\bullet$ Méthodes de codage et égalisation.};
+      % \draw[dashed] (ftn) -- (descftn);
+      % \draw (descmultiporteuse.south) node[bigvoidblock,below=0.5cm] (axemultiporteuse) {\scriptsize
+      %   Axe choisi : \textbf{Modulations WCP-OFDM et égalisation linéaire}.};
+      % \draw (descftn.south) node[bigvoidblock,below=0.5cm] (axeftn) {\scriptsize
+      %   Axe choisi : \textbf{Transmission FTN-OFDM et turbo-égalisation}.};
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Modulations multiporteuses de faible complexité}
+  \footnotesize
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/tmux-short-filters-blue}
+  \end{figure}
+  \begin{columns}
+    \begin{column}{0.65\linewidth}
+      \begin{minipage}[c]{0.1\linewidth}
+        \includegraphics[width=\linewidth]{images/logo_orange}          
+      \end{minipage}
+      \begin{minipage}[c]{0.85\linewidth}
+        Collaboration Orange--Labs (2 projets).
+      \end{minipage}
+      \begin{block}{Classification en fonction de la densité}
+        \begin{itemize}
+        \item $M/N \leq 1$ : reconstruction parfaite possible.
+        \item $M/N > 1$ : reconstruction parfaite impossible.
+        \end{itemize}
+        Publications : \cite{Roque2012-these,Roque2012,Roque2012b,Roque2012d}
+      \end{block}
+    \end{column}
+    \begin{column}{0.3\linewidth}
+      Thématiques connexes :
+      \begin{itemize}
+      \item limitation du PAPR ;
+      \item estimation de canal ;
+      \item égalisation ;
+      \item extension des modèles de canaux.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  % \begin{figure}
+  %   \centering
+  %   \setlength{\figureheight}{3cm}
+  %   \setlength{\figurewidth}{9cm}
+  %   \input{images/teb-ldpc-tfl-M2048-fast}
+  % \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Plate-forme de radio logicielle RIESCO}
+  \footnotesize
+  \begin{block}{Objectifs}
+    \begin{itemize}
+    \item \alert{Évaluer les performances} des algorithmes de communication numérique.
+    \item Créer des \alert{systèmes adaptatifs}.
+    \item Développer des projets pour la \alert{formation} des élèves ingénieurs.
+    \end{itemize}
+  \end{block}
+  \begin{columns}
+    \begin{column}{0.67\linewidth}
+      \begin{block}{Exemple de projet (PFE B. Gallet)}
+        \og Localisation de victimes d'accidents à l'aide de leur GSM en environnement faiblement connecté \fg.
+        \begin{enumerate}
+        \item Analyse de l'environnement réseau.
+        \item Usurpation d'une station de base.
+        \item Connexion au mobile et estimation de la puissance reçue \cite{Gallet2013}.
+        \end{enumerate}
+        %\includegraphics[width=\linewidth]{images/rap2}
+      \end{block}
+    \end{column}
+    \begin{column}{0.3\linewidth}
+      \begin{center}
+        \includegraphics[width=\linewidth]{images/station-riesco}
+        
+        Exemple de station de radio logicielle Ettus USRP N210.
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Publications, animations et rayonnement scientifique}
+  \begin{itemize}
+  \item \textbf{Productions scientifiques} :
+    \begin{itemize}
+    \item \alert{1+(3)} articles de revues internationales (IEEE COMML) ;
+    \item \alert{3} conférences internationales (IEEE ICT, IEEE MILCOM, IEEE ASILOMARSSC) ;
+    \item \alert{3} rapports techniques (Orange--Labs) ;
+    \item \alert{1} logiciel pour la simulation des systèmes WCP-OFDM sur canaux radiomobiles.
+    \end{itemize}
+  \item \textbf{Relecteur} pour IEEE COMML.
+  \item \textbf{Collaborations} : \alert{DGA-MI, Orange--Labs, Aston University, CITI}.
+  \item \textbf{Projet} :\alert{ RIESCO (34 k\euro)} pour la création d'une plate-forme de radio logicielle (financement de l'université de Grenoble).
+  \item \textbf{Responsabilités administratives} :
+    \begin{itemize}
+    \item membre du \alert{conseil de laboratoire} ;
+    \item membre du groupe de travail \alert{informatique et réseaux}.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% \begin{frame}
+%   \frametitle{Collaboration et évolution des travaux}
+% \centerline{\resizebox{0.9\textwidth}{!}{
+% \begin{tikzpicture}
+%   \path[mindmap,concept color=blue,text=white]
+%     node[concept] (ensta) {ENSTA Bretagne\\ pôle STIC/IDM\\ (A. Mansour)\\ (F. Le Roy)}
+%     [clockwise from=60]
+%     child[concept color=orange] { node[concept] (thales) {Thales Com\\ (S. Traverso)} }
+%     child[concept color=green!50!black] {
+%       node[concept] {Lab-STICC}
+%       [clockwise from=0]
+%       child { node[concept] (cacs) {pôle CACS\\ équipe COM} }
+%     }
+%     child[concept color=red] { node[concept] (gipsa) {\underline{GIPSA-lab}\\ (C. Siclet)} }
+%     child[concept color=red] { node[concept] (tb) {TELECOM-Bretagne\\ (S. Houcke)} }
+%     child[concept color=orange] { node[concept] (orange) {\underline{Orange--Labs}\\ (P. Siohan)} }
+%     child[concept color=orange] { node[concept] (dgami) {\underline{DGA-MI}\\ (S. Mallier)} };
+% \end{tikzpicture}}}
+% \end{frame}
+
+\subsection{Travaux d'enseignement effectués}
+
+\begin{frame}
+  \frametitle{Synthèse des activités d'enseignement}
+  \footnotesize
+  \begin{block}{Expériences d'enseignement : environ \textbf{360} heures eq. TD}
+    \begin{itemize}
+    \item 2007-2009 : formateur réserviste à l'\alert{ESAT} - 120 h.
+    \item 2009-2012 : vacataire à l'\alert{ENSIMAG}, \alert{PHELMA} et l'\alert{UJF} - 150 h.
+    \item 2012-2013 : ATER à l'\alert{ENSIMAG} - 96 h.
+    \end{itemize}
+  \end{block}
+  \begin{block}{Modalités d'enseignement}
+    \begin{itemize}
+      \item \alert{Équirépartition} CM, TD, TP.
+      \item Encadrement de stagiaires : 4.
+      \end{itemize}
+      \begin{tikzpicture}[scale=0.8]
+        \pie[radius=1.5]{24/IUT, 76/Écoles d'ingénieurs}
+      \end{tikzpicture}
+      \hspace{1cm}
+      \begin{tikzpicture}[scale=0.8]
+        \pie[radius=1.5]{46/Réseaux, 15/Info, 25/Télécoms, 14/Maths}
+      \end{tikzpicture}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Matières enseignées}
+  \footnotesize
+  \begin{columns}
+    \begin{column}{0.65\linewidth}
+      \begin{itemize}
+      \item \textbf{Réseaux (46 \%)} :
+        \begin{itemize}
+          \footnotesize
+        \item modèles en couches ;
+        \item protocoles de transfert et de routage ;
+        \item sécurité des systèmes de l'information ;
+        \item architecture des systèmes d'information.
+        \end{itemize}
+      \item \textbf{Télécommunications (25 \%)} :
+        \begin{itemize}
+          \footnotesize
+        \item communications numériques ;
+        \item systèmes de transmission numériques ;
+        \item égalisation et estimation de canal.
+        \end{itemize}
+      \item \textbf{Mathématiques et traitement du signal (14 \%)}
+        \begin{itemize}
+          \footnotesize
+        \item analyse spectrale ;
+        \item échantillonnage et quantification ;
+        \item synthèse de filtres linéaires.
+        \end{itemize}
+      \item \textbf{Informatique (15 \%)} :
+        \begin{itemize}
+          \footnotesize
+        \item systèmes d'exploitation UNIX ;
+        \item programmation Shell et UNIX avancé.
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.3\linewidth}
+      \begin{block}{}
+        Création d'un \alert{module d'enseignement complet} : bases des réseaux (ESAT).
+      \end{block}
+      \begin{block}{}
+        Création de \alert{séances de TP} : Matlab, Octave, GNU Radio.
+      \end{block}
+       \begin{block}{}
+        Création de \alert{séances de TD} : réseaux, maths, télécoms.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% \begin{frame}
+%   \frametitle{Répartition des enseignements 2/3}
+%   \begin{center}
+%     \begin{figure}
+%       \begin{tikzpicture}
+%         \pie{27/Cours, 41/TD, 32/TP}
+%       \end{tikzpicture}
+%     \caption{Répartition des heures enseignées par type d'enseignement}
+%   \end{figure}
+%   \end{center}
+% \end{frame}
+
+% \begin{frame}
+%   \frametitle{Responsabilités d'enseignements}
+%   \footnotesize
+%   \begin{block}{Intégration dans les équipes pédagogiques}
+%     \begin{itemize}
+%     \item \alert{Création complète} du module \emph{base des réseaux} ESAT, (CM20, TD3, TP7).
+%     \item Participation à l'\alert{évolution des modules} (création de sujets de TD et TP).
+%     \end{itemize}
+%   \end{block}
+%   \begin{block}{Encadrement de stagiaires}
+%     \begin{itemize}
+%     \item Minh Hung Nguyen, \alert{DUT RT}, \og Génération automatique d'exercices et de corrections avec Xcas et \LaTeX \fg.
+%     \item Yoann Roth, \alert{2A PHELMA}, \og Étude des techniques de transmission sous-échantillonnées \fg{}.
+%     \item Chouaibou Nsangou, \alert{PFE CNAM}, \og Techniques de réduction du PAPR pour les modulations OFDM suréchantillonnées \fg{}.
+%     \end{itemize}
+%     Participation aux \alert{évaluations de stage et jury de soutenance} (UJF, PHELMA).
+%   \end{block}
+% \end{frame}
+
+
+
+\section{Projet de recherche et d'enseignement à l'ISAE}
+
+\subsection{Contexte du poste proposé}
+% Comment comprenez-vous le poste à pourvoir et son contexte ?
+
+\begin{frame}
+  \frametitle{Environnement de recherche}
+  \framesubtitle{Augmenter la capacité des systèmes des communication par satellite}
+  % \footnotesize
+  % \begin{block}{Utiliser de nouvelles bandes de fréquence}
+  %   \begin{itemize}
+  %   \item Exploiter la \alert{bande EHF}.
+  %   \end{itemize}
+  %   $\Rightarrow$ Modélisation du \alert{canal} [ONERA/DEMR], estimation du canal, techniques de transmission \alert{adaptatives}.
+  % \end{block}
+  % \begin{block}{Gérer efficacement des ressources}
+  %   \begin{itemize}
+  %   \item Utiliser plus de ressources par cellule.
+  %   \item Définir des modulations et codages à \alert{haute efficacité spectrale}.
+  %   %\item Diminuer les tailles des intervalles de gardes et des données de signalisation.
+  %   \item Différencier les flux et optimiser les \alert{protocoles de transport} [DMIA/MARS].
+  %   \end{itemize}
+  %   $\Rightarrow$ Lutte contre les \alert{interférences} en émission et réception, techniques d'allocation dynamique.
+  % \end{block}
+\textbf{Moyens :}
+\begin{itemize}
+\item exploiter la bande \alert{EHF} et/ou \alert{optique} ;
+\item utiliser \alert{plus de ressources par cellule} ;
+\item augmenter l'\alert{efficacité spectrale} des modulations et des protocoles.
+\end{itemize}
+\textbf{Défis :}
+\begin{enumerate}
+\item modéliser la \alert{propagation} dans les nouvelles bandes [ONERA/DEMR] ;
+\item \alert{compenser les interférences} tout en conservant une \alert{complexité} acceptable ;
+%\item \alert{allouer} les ressources efficacement et \alert{adapter} la modulation et le codage [thèse Aroumont] ;
+\item développer des protocoles de \alert{transport efficaces} pour préserver l'\alert{interactivité} des services [DMIA/MARS].
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Axes de recherche suggérés}
+  \framesubtitle{Schémas de faible complexité pour la compensation des interférences}
+  \footnotesize
+  % \begin{block}{Thème 1 : Analyse du canal de transmission}
+  %   \begin{itemize}
+  %   \item \alert{Modèles} d'atténuation à long et court terme.
+  %   \item Prise en compte des effets \alert{non-linéaires} \cite{Ampeliotis2008}.
+  %   %\item Caractéristiques et quantification des \alert{sources d'interférences}.
+  %   \end{itemize}
+  % \end{block}
+  % \begin{exampleblock}{Thème 2 : Techniques de lutte contre les interférences}
+  %   \begin{itemize}
+  %   \item \alert{Adaptation} des signaux au canal.
+  %   \item \alert{Méthodes itératives} pour la lutte contre les interférences \cite{ElGamal2000,Beidas2002}.
+  %   \item \alert{Alignement} d'interférences \cite{Cadambe2008}.
+  %   \item Techniques de \alert{diversité spatiale} \cite{Arapoglou2011}.
+  %   \end{itemize}
+  % \end{exampleblock}
+  % \begin{block}{Thème 3 : Adaptation de la couche physique au matériel et aux applications}
+  %   \begin{itemize}
+  %   \item \alert{Adaptation dynamique} de la modulation et du codage au canal \cite{Aroumont2007}.
+  %   \item \alert{Allocation dynamique} de ressources aux utilisateurs \cite{Aroumont2009}.
+  %   \end{itemize}
+  % \end{block}
+  \begin{exampleblock}{Thème 1 : Compensation des interférences}
+    \begin{itemize}
+    \item \alert{Méthodes itératives} pour la lutte contre les interférences \cite{ElGamal2000,Beidas2002}.
+    \item \alert{Alignement} d'interférences et \alert{précodage} \cite{Costa1983,Cadambe2008}.
+    \item Techniques de \alert{diversité spatiale} \cite{Arapoglou2011}.
+    \end{itemize}
+  \end{exampleblock}
+  \begin{block}{Thème 2 : Transmission à haute efficacité spectrale}
+    \begin{itemize}
+    \item Modulations codées et modulations avec mémoire \cite{Rusek2007b}.
+    \item Techniques de \alert{réception partielle}.
+    \end{itemize}
+  \end{block}
+  \begin{block}{Thème 3 : Adaptation au canal et aux couches supérieures}
+    \begin{itemize}
+    \item Estimation et \alert{prédiction} de canal.
+    \item Allocation dynamique de ressources et adaptation de la modulation et du codage.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Environnement d'enseignement}
+  \framesubtitle{Approche système et pédagogie active}
+  \begin{block}{Formations en télécommunications spatiales}
+    \footnotesize
+    \begin{itemize}
+    \item SUPAERO et ENSICA 3A : \alert{approfondissement TN} et domaine SSP.
+    \item MS EAS : \alert{électronique et télécommunications aérospatiales}.
+    \item MS SCS : \alert{space communication systems}.
+    \item MS TAS Astro : space systems engineering.
+    \item MSc AESS : aeronautical and space systems.
+    \item M2R IT : informatique et télécommunications.
+    \end{itemize}
+    De \alert{nombreux projets} dans ces différentes filières.
+  \end{block}
+  \begin{block}{Axes d'enseignement}
+    \footnotesize
+    \begin{itemize}
+    \item Outils fondamentaux pour les communications numériques.
+    \item Chaîne de transmission et réseaux satellite.
+%    \item Réseaux de communication par satellite (approche application)
+    \end{itemize}
+    Objectifs : \alert{dimensionnement}, relations entre les \alert{blocs fonctionnels}.
+  \end{block}
+\end{frame}
+
+\subsection{Projection dans le poste proposé}
+% Parmi vos goûts, vos compétences et votre expérience, quels sont ceux qui vous permettent de vous y projeter ?
+
+\begin{frame}
+  \frametitle{Projet de recherche à l'ISAE}
+  %\framesubtitle{De l'environnement radiomobile aux communications par satellite...}
+  \footnotesize
+  \begin{center}
+    \begin{tikzpicture}
+      \tikzstyle{block} = [draw, fill=blue!20, rectangle, minimum height=2em, minimum width=6em,text width=6em,text centered]
+      \tikzstyle{voidblock} = [draw, fill=white, rectangle, minimum height=2em, minimum width=6em,text width=6em]
+      \tikzstyle{bigblock} = [draw, fill=blue!20, rectangle, minimum height=2em, minimum width=6em,text width=12em,text centered]
+      \tikzstyle{bigvoidblock} = [draw, fill=white, rectangle, minimum height=2em, minimum width=6em,text width=12em,text centered]
+      \tikzstyle{transition} = [text width=6.6em,text centered]
+      \def\espacementlong{7cm}
+      \def\espacementcourt{1.6cm}
+      \node[bigvoidblock] (theme2) {Thème 2 : transmission à haute efficacité spectrale};
+      \node[bigvoidblock, above of=theme2, node distance=\espacementcourt] (theme1) {Thème 1 : compensation des interférences};
+      \node[bigvoidblock, below of=theme2, node distance=\espacementcourt] (theme3) {Thème 3 : adaptation au canal et aux couches supérieures};
+      \node[bigblock, right of=theme1, node distance=\espacementlong] (wcp) {Modulations multiporteuses à densité variable};
+      \node[bigblock, below of=wcp , node distance=\espacementcourt] (canal) {Canal radiomobile};
+      \node[bigblock, below of=canal , node distance=\espacementcourt] (sio) {Systèmes d'information opérationnels et réseaux tactiques};
+      \node[bigblock, below of=sio, node distance=\espacementcourt] (rl) {Radio logicielle};
+
+
+      \draw[->,thick] (wcp.west) -- node[below] {\scriptsize \alert{turbo égal.}} node[above] {\scriptsize \alert{signaux robustes}} (theme1.east);
+      \draw[->,thick] (wcp.west) -- node[below,sloped] {\scriptsize \alert{FTN}} (theme2.east);
+      \draw[->,thick] (canal.west) -- node[above,sloped] {\scriptsize modèles stat.}  (theme3.east);
+      \draw[->,thick] (sio.west) -- node[above] {\scriptsize QoS} node[below] {\scriptsize opt. transport} (theme3.east);
+      \draw[->,dashed] (rl.west) -| node[above,near start] {\scriptsize évaluation des performances} node[below, near start] {\scriptsize démonstrateurs adaptatifs}  (theme3.south);
+      \draw[->,dashed] (theme3.north) -- (theme2.south);
+      \draw[->,dashed] (theme2.north) -- (theme1.south);
+
+      \node[above of=theme1, node distance=1cm] {\textbf{Thèmes identifiés}};
+      \node[above of=wcp, node distance=1cm] {\textbf{Expériences de recherche}};
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+% \begin{frame}
+%   \frametitle{Projet d'enseignement à l'ISAE}
+%   \framesubtitle{Vers la conception d'ensemble de systèmes de communication par satellite...}
+%   \begin{block}{Renforcer les bases théoriques}
+%     \begin{itemize}
+%     \item \alert{Harmoniser} les compétences dans les domaines transverses.
+%     \item Présenter les communications numériques sous l'\alert{axe électronique}.
+%     \end{itemize}
+%   \end{block}
+%   \begin{block}{Mettre en avant l'approche système}
+%     \begin{itemize}
+%     \item Présenter les spécificités des systèmes de communication \alert{aérospatiaux}.
+%     \item Renforcer les \alert{liens entre les couches}.
+%     \item Veiller au bon \alert{dimensionnement} des systèmes.
+%     \end{itemize}
+%   \end{block}
+% \end{frame}
+
+\begin{frame}
+  \frametitle{Projet d'enseignement à l'ISAE}
+  %\footnotesize
+  \begin{block}{Domaines de compétence}
+    \begin{enumerate}
+    \item \alert{Réseaux} et \alert{communications numériques} (256 heures).
+    \item Traitement du signal et informatique (104 heures).
+    \end{enumerate}
+  \end{block}
+  
+  \begin{block}{Création d'une plate-forme de radio logicielle}
+    \begin{columns}
+      \begin{column}{0.75\linewidth}
+        Exemples de travaux pratiques et projets :
+        \begin{itemize}
+        %\item \alert{Simulation} d'une chaîne de communication numérique sous Matlab.
+        \item TP - réception des messages des \alert{transpondeurs ADS-B} ;
+        \item TP - réception via \alert{satellite} NOAA APT d'\alert{images météo} ;
+        \item Projet - émetteur/récepteur COFDM pour la \alert{transmission vidéo} des \alert{drones} tactiques.
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.2\linewidth}
+        \includegraphics[width=\linewidth]{images/noaa_mx}\\
+        \includegraphics[width=\linewidth]{images/usrp_n210}
+      \end{column}
+    \end{columns}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Résumé - Damien Roque}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      \begin{block}{Bibliométrie}
+        \begin{tabular}{|l|c|}
+          \hline
+          Publications & \alert{7 + (3)}\\
+          \hline
+          Enseignement & \alert{360 h}\\
+          \hline
+          Stages & \alert{4}\\
+          \hline
+          Collab. Indus. & \alert{2}\\
+          \hline
+          Collab. Univ. & \alert{2}\\
+          \hline
+        \end{tabular}
+      \end{block}
+      \begin{exampleblock}{Spécificités}
+        \begin{itemize}
+        \item Culture \alert{réseaux} et \alert{SIO}.
+        \item Techniques de transmission de faible complexité.
+        \item Expérience de \alert{projets de recherche}.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+    \begin{column}{0.55\linewidth}
+      \begin{block}{Recherche}
+        \small
+        \begin{itemize}
+        \item \textbf{Thème actuel} : modulations multiporteuses à densité variable.
+        \item \textbf{Évolution court terme} : \alert{canal} de transmission par satellite et lutte contre les \alert{interférences}.
+        \item \textbf{Évolution moyen terme} : réseaux \alert{MIMO} et approches \alert{intercouches}.
+        \end{itemize}
+      \end{block}
+      \begin{block}{Enseignement}
+        \small
+        \begin{itemize}
+        \item \alert{Réseaux}, \alert{télécoms}, maths, info.
+        \item Travaux pratiques et projets autour de la \alert{radio logicielle}.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  % \begin{block}{Recherche}
+  %   \begin{itemize}
+  %   \item Traitement du signal pour les \alert{modulations multiporteuses}.
+  %   \item Vers les représentations \alert{parcimonieuses}.
+  %   \item Mise en œuvre d'émetteur-récepteurs \alert{agiles}.
+  %   \end{itemize}
+  % \end{block}
+  % \begin{block}{Enseignement}
+  %   \begin{itemize}
+  %   \item Formation en \alert{télécommunications et réseaux}.
+  %   \end{itemize}
+  % \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Collaborations possibles}
+  \centerline{\resizebox{0.9\textwidth}{!}{
+      \begin{tikzpicture}
+        \path[mindmap,concept color=blue,text=white]
+        node[concept] (scan) {ISAE\\DEOS\\SCAN}
+        [clockwise from=0]
+        child[concept color=blue!50!black] { node[concept] {Projets de recherche}
+          [clockwise from=120]
+          child[concept color=orange] { node[concept] (thales) {EADS Astrium} }
+          child[concept color=orange] { node[concept] (thales) {Thales Alenia Space} }
+          child[concept color=red] { node[concept] (thales) {CNES} }
+          child[concept color=red] { node[concept] (thales) {DGA} }
+          child[concept color=red] { node[concept] (thales) {ESA} }
+        }
+        child[concept color=orange] { node[concept] (orange) {Orange--Labs} }
+        child[concept color=red] { node[concept] (dgami) {GIPSA-lab} }
+        child[concept color=red] { node[concept] (tesa) {TeSA} }
+        child[concept color=red] { node[concept] (onera) {ONERA\\DEMR} }
+        child[concept color=blue] { node[concept] (mars) {ISAE\\DMIA\\MARS} };
+      \end{tikzpicture}}}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References}
+\bibliographystyle{authoryear-fr}
+\bibliography{publications.bib}
+\nocite{*}
+\end{frame}
+
+\end{document}

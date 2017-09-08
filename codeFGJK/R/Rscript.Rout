@@ -33,7 +33,7 @@ spatstat 1.51-0       (nickname: ‘Poetic Licence’)
 For an introduction to spatstat, type ‘beginner’ 
 
 
-Note: spatstat version 1.51-0 is out of date by more than 3 months; we recommend upgrading to the latest version.
+Note: spatstat version 1.51-0 is out of date by more than 4 months; we recommend upgrading to the latest version.
 > 
 > #
 > # Set working directory
@@ -178,7 +178,7 @@ Note: spatstat version 1.51-0 is out of date by more than 3 months; we recommend
 > 
 > #j
 > #JJJ$rs
-> #j2j = abs(f-FFF$rs)
+> #j2j = abs(j-JJJ$rs)
 > #mean(j2j)
 > #max(j2j)
 > #sd(j2j)

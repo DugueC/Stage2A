@@ -1,0 +1,434 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage{palatino}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage{colortbl}
+\usepackage{ragged2e} % Pour justifier le texte dans les blocks
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{mindmap,trees}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+% and optionally (as of Pgfplots 1.3):
+\pgfplotsset{compat=newest}
+\pgfplotsset{plot coordinates/math parser=false}
+\newlength\figureheight
+\newlength\figurewidth
+\usepackage{ifthen}
+\usepackage{subfigure}
+\usepackage{animate}
+\usepackage{pbox}
+\usepackage{pgf-pie}
+\usepackage[underline=false]{pgf-umlsd}
+% Préparation à l'impression
+%\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{eurosym}
+\usepackage{wasysym}
+
+% Environnements maths
+\newcommand*{\SET}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand*{\VEC}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand*{\MAT}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand*{\OP}[1]  {\ensuremath{\text{#1}}}
+\newcommand*{\NORM}[1]  {\ensuremath{\left\|#1\right\|}}
+\newcommand*{\DPR}[2]  {\ensuremath{\left \langle #1,#2 \right \rangle}}
+\newcommand*{\calbf}[1]  {\ensuremath{\boldsymbol{\mathcal{#1}}}}
+\newcommand*{\shift}[1]  {\ensuremath{\boldsymbol{#1}}}
+% Raccourcis
+\newcommand{\eqdef}{\stackrel{\mathrm{def}}{=}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\ud}{\, \text{d}}
+\newcommand{\vect}{\text{Vect}}
+\newcommand{\sinc}{\text{sinc}}
+\newcommand{\esp}{\ensuremath{\mathbb{E}}}
+\newcommand{\hilbert}{\ensuremath{\mathcal{H}}}
+\newcommand{\fourier}{\ensuremath{\mathcal{F}}}
+\newcommand{\sgn}{\text{sgn}}
+\newcommand{\intTT}{\int_{-T}^{T}}
+\newcommand{\intT}{\int_{-\frac{T}{2}}^{\frac{T}{2}}}
+\newcommand{\intinf}{\int_{-\infty}^{+\infty}}
+\newcommand{\Sh}{\ensuremath{\boldsymbol{S}}}
+\newcommand{\Cpx}{\ensuremath{\mathbb{C}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\K}{\ensuremath{\mathbb{K}}}
+\newcommand{\reel}{\mathcal{R}}
+\newcommand{\imag}{\mathcal{I}}
+\newcommand{\cmnr}{c_{m,n}^\reel}
+\newcommand{\cmni}{c_{m,n}^\imag}
+\newcommand{\cnr}{c_{n}^\reel}
+\newcommand{\cni}{c_{n}^\imag}
+\newcommand{\LR}{\mathcal{L}_2(\R)}
+\newcommand{\tproto}{g}
+\newcommand{\rproto}{\check{g}}
+\newcommand{\Tproto}{G}
+\newcommand{\Rproto}{\check{G}}
+
+\newcommand{\avec}{\qquad \text{avec} \qquad}
+
+%\theoremstyle{definition}
+%\newtheorem{definition}{Définition}[subsection]
+
+\theoremstyle{remark}
+\newtheorem{remarque}{Remarque}[subsection]
+
+\theoremstyle{plain}
+\newtheorem{propriete}{Propriété}[subsection]
+\newtheorem{exemple}{Exemple}[subsection]
+
+% Couleur GIPSA-lab à la place du bleu standard
+%\usecolortheme[named=violet]{structure}
+
+% Sélection d'un thème principal et d'un thème de couleur
+\mode<presentation> {
+  %\usetheme{Warsaw}
+  \usetheme{Madrid}
+  %\usetheme{Frankfurt}
+  \usecolortheme{seahorse}
+}
+
+
+\addtobeamertemplate{frametitle}{}{%
+\vskip-1em
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=4pt] at (current page.north east) {\includegraphics[height=0.8cm]{images/logo-isae-long-sans-texte}};
+\end{tikzpicture}}
+
+\title[Introduction à Subversion]{Introduction à Subversion}
+
+\author[Damien Roque]{Damien Roque\\ Enseignant chercheur en communications numériques}
+%\date{23 janvier 2014}
+\institute[ISAE/DEOS/SCAN]
+{
+\vspace{0.5cm}
+%\includegraphics[height=1.5cm]{../illustrations/logo_dga}\hspace{1cm}
+\includegraphics[height=3cm]{images/logo-isae-long}
+%\includegraphics[height=1.5cm]{../illustrations/logo_orange}
+}
+
+% Suppression de la barre de navigation
+\setbeamertemplate{navigation symbols}{}
+ 
+\subject{Forges et Subversion}
+
+\begin{document}
+% Ne pas compter les dernières diapos dans la numérotation
+%\renewcommand*{\inserttotalframenumber}{\pageref{lastframe}}
+
+
+% % Ajout de numéros de pages
+% \newcommand*\oldmacro{}%
+% \let\oldmacro\insertshorttitle%
+% \renewcommand*\insertshorttitle{%
+%   \oldmacro\hfill%
+%   \insertframenumber\,/\,\inserttotalframenumber}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Un logo sur chaque diapo
+%\logo{\includegraphics[height=1.5cm]{../illustrations/logo-gipsa-sans-texte}}
+
+
+
+\begin{frame}
+  \frametitle{Plan}
+  \small
+  %\tableofcontents[hideallsubsections]
+  %\tableofcontents[currentsection,currentsubsection]
+  \tableofcontents
+  \normalsize
+\end{frame}
+
+% Répétition du plan au début de chaque section
+\AtBeginSubsection[]
+{%
+\begin{frame}
+  \frametitle{Plan}
+  \small
+  %\tableofcontents[hideothersubsections]
+  %\tableofcontents[currentsubsection,hideothersubsections]
+  \tableofcontents[currentsubsection]
+  \normalsize
+\end{frame}
+}
+
+\section{Besoin et principe de fonctionnement}
+
+\begin{frame}
+  \frametitle{Cas d'utilisation}
+  \framesubtitle{Qu'est-ce qu'un gestionnaire de révisions ? Pourquoi est-ce utile ?}
+  \footnotesize
+  \begin{block}{Définition}
+    Outil permettant le suivi et l'édition distribuée d'un ensemble de fichiers composant un projet (ex. : article, rapport, logiciel...).
+  \end{block}
+  \begin{block}{Services rendus}
+    \begin{itemize}
+    \item Sauvegarde (mono-utilisateur, mono-ordinateur).
+    \item Synchronisation (mono-utilisateur, multi-ordinateur).
+    \item Suivi des versions (consultation des différences).
+    \item Collaboration entre plusieurs utilisateurs.
+    \item Notifications (suivi d'avancement).
+    \end{itemize}
+  \end{block}
+  \begin{block}{Contraintes}
+    \begin{itemize}
+    \item Surtout adapté aux fichiers textes.
+    \item Nécessite de la rigueur et de la stabilité.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pourquoi utiliser Subversion (SVN) ?}
+  Quelques gestionnaires de révisions : CVS, Subversion, Git, Bazaar...
+  \begin{block}{Alors pourquoi SVN et pas autre chose ?}
+    \begin{itemize}
+    \item Facilité d'utilisation.
+    \item Intégration par défaut dans les forges de l'ISAE.
+    \item Portabilité (Windows, Linux, MacOS).
+    \item Logiciel libre.
+    \end{itemize}
+  \end{block}
+  \begin{block}{En particulier, pourquoi pas Dropbox ?}
+    \begin{itemize}
+    \item Propriété des données.
+    \item Création des révisions à la demande.
+    \item Sélection des fichiers à prendre en charge.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Principe de fonctionnement de SVN}
+  Fonctionnement en mode clients/serveur.
+
+  \begin{block}{Phase 1 : création et souscription}
+    \begin{enumerate}
+    \item un projet est \alert{créé} sur un serveur SVN ;
+    \item les clients s'\alert{abonnent} au projet ; ils obtiennent une copie locale ;
+    \end{enumerate}
+  \end{block}
+ \begin{block}{Phase 2 : édition collaborative}
+    \begin{enumerate}
+    \item le client \alert{met à jour} sa copie locale ;
+    \item des fichiers et répertoires sont \alert{ajoutés}, \alert{modifiés} ou \alert{supprimés} ;
+    \item le client \alert{applique} ses modifications.
+    \end{enumerate}
+  \end{block}
+
+  Si plusieurs clients appliquent des modifications concernant un même fichier, un conflit apparaît. Ils doivent se coordonner pour le résoudre.
+\end{frame}
+
+\section{Cas d'utilisation basique}
+\label{sec:cas-basiques}
+
+\subsection{Scénario 1 : tout va bien}
+\label{sec:scenario1}
+
+\begin{frame}
+  \frametitle{Création d'un dépôt SVN}
+  
+  \textbf{Description} : Alice veut créer un dépôt SVN.
+  \begin{center}
+    \begin{sequencediagram}
+      \newthread{a}{Alice}
+      \newinst[6]{s}{Serveur SVN}
+      % \mess{a}{Création de dépôt SVN}{s}
+      \begin{call}{a}{Création de dépôt (Web, SSH...)}{s}{URL du dépôt}
+      \end{call}
+    \end{sequencediagram}
+  \end{center}
+  
+  \begin{block}{Le saviez-vous ?}
+    Lorsque l'on créé un projet sur OpenForge, un dépôt SVN est automatiquement créé et son URL est sous la forme :\\
+    \url{https://openforge.isae.fr/svn/nom-projet}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Souscription au dépôt}
+  \textbf{Description} : Alice récupère une copie locale du dépôt.
+  \begin{center}
+    \begin{sequencediagram}
+      \newthread{a}{Alice}
+      \newinst[6]{s}{Serveur SVN}
+      \begin{call}{a}{\texttt{svn checkout URL}}{s}{\texttt{Completed, at revision n}}
+      \end{call}
+    \end{sequencediagram}
+  \end{center}
+  \begin{block}{Le saviez-vous ?}
+    Sous OpenForge, si l'on souhaite obtenir une copie locale de mon-projet, la commande à taper serait :
+\begin{verbatim}
+svn checkout https://openforge.isae.fr/svn/nom-projet
+\end{verbatim}
+    La transaction sera chiffrée et une authentification sera nécessaire.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Approvisionnement du dépôt}
+  \textbf{Description} : Alice créé un fichier dans le dépôt, l'ajoute aux fichiers versionnés, puis envoie les changements.
+  \begin{center}
+    \begin{sequencediagram}
+      \newthread{a}{Alice}
+      \newinst[6]{s}{Serveur SVN}
+      \begin{call}{a}{\texttt{echo "blabla" > fichier.txt}}{a}{}
+      \end{call}
+      \begin{call}{a}{\texttt{svn add fichier.txt}}{a}{\texttt{A fichier.txt}}
+      \end{call}
+      %\postlevel
+
+      \begin{call}{a}{\texttt{svn commit -m "Ajout fichier."}}{s}{\texttt{Completed, at revision n+1}}
+      \end{call}
+    \end{sequencediagram}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Modification d'un fichier}
+  \textbf{Description} : Bob récupère une copie locale du dépôt, modifie le fichier puis envoie les modifications.
+  \begin{center}
+    \begin{sequencediagram}
+      \newthread{b}{Bob}
+      \newinst[6]{s}{Serveur SVN}
+      \begin{call}{b}{\texttt{svn checkout URL}}{s}{\texttt{Completed, at revision n+1}}
+      \end{call}
+      \begin{call}{b}{\texttt{sed -i "s/bla/bli/g" fichier.txt}}{b}{\texttt{A fichier.txt}}
+      \end{call}
+      %\postlevel
+
+      \begin{call}{b}{\texttt{svn commit -m "Modif. fichier."}}{s}{\texttt{Completed, at revision n+2}}
+      \end{call}
+    \end{sequencediagram}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Mise à jour et opérations sur les fichiers}
+  \textbf{Description} : Alice met à ses fichiers après les modifications de Bob.
+  \begin{center}
+    \begin{sequencediagram}
+      \newthread{a}{Alice}
+      \newinst[6]{s}{Serveur SVN}
+      \begin{call}{a}{\texttt{svn update}}{s}{\texttt{Completed, at revision n+2}}
+      \end{call}
+      \begin{call}{a}{\texttt{svn rename fichier.txt fichier2.txt}}{a}{\texttt{A fichier2.txt}}
+      \end{call}
+      %\postlevel
+
+      \begin{call}{a}{\texttt{svn commit -m "Copie fichier."}}{s}{\texttt{Completed, at revision n+3}}
+      \end{call}
+    \end{sequencediagram}
+  \end{center}
+  \begin{block}{Le saviez-vous ?}
+    Autres commandes de gestion de fichiers avec SVN : \texttt{list, cat, delete, move, mkdir, prop*}.
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Fonctionnalités utiles en vrac}
+  \begin{block}{Le plus important...}
+\begin{verbatim}
+svn help [commande]
+\end{verbatim}
+  \end{block}
+
+  Autres commandes informatives...
+  \begin{itemize}
+  \item Connaitre l'historique des révisions : \texttt{svn log}.
+  \item Affichage des informations sur un objet : \texttt{svn info}.
+  \item Affichage du statut des fichiers locaux : \texttt{svn status}.
+  \end{itemize}
+  Quelques astuces...
+  \begin{itemize}
+  \item Exportation d'un dépôt vers un répertoire : \texttt{svn export}.
+  \item Importation d'un répertoire vers un dépôt : \texttt{svn import}.
+  \item Spécification de la révision souhaitée : \texttt{svn <commande> -r N}.
+  \item Avoir plus de détails : \texttt{svn <commande> -v}.
+  \end{itemize}
+\end{frame}
+
+\subsection{Scénario 2 : création et résolution d'un conflit}
+\label{sec:scenario2}
+
+\begin{frame}
+  \frametitle{Création d'un conflit}
+  \textbf{Description} : Alice et Bob modifient simultanément un fichier.
+  \begin{center}
+    \begin{sequencediagram}
+      \newthread{a}{Alice}
+      \newthread{b}{Bob}
+      \newinst[3]{s}{Serveur SVN}
+      \begin{call}{a}{\texttt{svn update}}{s}{\texttt{At revision n+3}}
+      \end{call}
+      \begin{call}{b}{\texttt{svn update}}{s}{\texttt{At revision n+3}}
+      \end{call}
+    \end{sequencediagram}
+  \end{center}
+\end{frame}
+
+\section{Démonstration}
+\label{sec:demonstration}
+
+% Serveur : machine virtuelle GNU/Linux Debian.
+% Protocole de transport utilisé par SVN : SSH.
+% Utilisateurs : alice, bob.
+% Copies locales : /tmp/projet_alice et /tmp/projet_bob.
+
+\section{Bonus : autres modules de Redmine}
+\label{sec:bonus}
+
+\begin{frame}
+  \frametitle{Vue d'ensemble}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Wiki : support de documentation technique}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Forums : discussions ciblées}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tickets : répartition et suivi des demandes}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Questions}
+  \begin{center}
+    Merci pour votre attention.
+
+    Avez-vous des questions ?
+
+    \includegraphics[scale=0.4]{images/url-roque}
+
+    \url{http://personnel.isae.fr/damien-roque}
+  \end{center}
+\end{frame}
+
+\newcounter{lastframe}
+\setcounter{lastframe}{\insertframenumber}
+
+\begin{frame}[allowframebreaks]{References}
+\bibliographystyle{authoryear-fr}
+\bibliography{publications.bib}
+\nocite{*}
+\end{frame}
+
+\setcounter{framenumber}{\thelastframe}
+
+\end{document}

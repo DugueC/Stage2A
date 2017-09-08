@@ -29,7 +29,7 @@ spatstat 1.51-0       (nickname: ‘Poetic Licence’)
 For an introduction to spatstat, type ‘beginner’ 
 
 
-Note: spatstat version 1.51-0 is out of date by more than 3 months; we recommend upgrading to the latest version.
+Note: spatstat version 1.51-0 is out of date by more than 4 months; we recommend upgrading to the latest version.
 > require(grDevices) # for colours
 > setwd("/home/clement/Documents/Stage2A/codeIntensite")
 > source("R/pointPatternAnalysisTools.R")
@@ -50,11 +50,11 @@ Note: spatstat version 1.51-0 is out of date by more than 3 months; we recommend
 > X=read.point.pattern(name.file)
 > x11()
 > par(mfrow=c(2,2))
-> aaaaa= density(X, sigma=0.08, kernel="gaussian", edge=TRUE)
-> plot(density(X, sigma=0.08, kernel="gaussian", edge=FALSE), main="gauss")
-> plot(density(X, sigma=0.08, kernel="gaussian", edge=TRUE), main="gauss corrigé")
-> plot(density(X, sigma=0.08, kernel="disc", edge=FALSE), main="disque")
-> plot(density(X, sigma=0.08, kernel="disc", edge=TRUE), main="disque corrigé")
+> aaaaa= density(X, sigma=5, kernel="gaussian", edge=TRUE)
+> plot(density(X, sigma=5, kernel="gaussian", edge=FALSE), main="gauss")
+> plot(density(X, sigma=5, kernel="gaussian", edge=TRUE), main="gauss corrigé")
+> plot(density(X, sigma=5, kernel="disc", edge=FALSE), main="disque")
+> plot(density(X, sigma=5, kernel="disc", edge=TRUE), main="disque corrigé")
 > title(main="Intensité spatstat",outer=TRUE,line=-2)
 > 
 > # on se place dans le bon dossier

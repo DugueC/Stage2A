@@ -22,7 +22,7 @@ POINTS/dataset3.txt
 
 //sigma - largeur cloche pour un observateur gaussien
 //0.08
-7
+5
 
 //nom du dossier
 RESULTS/dataset3
